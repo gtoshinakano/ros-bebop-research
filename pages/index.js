@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { i18n, Link, withTranslation } from '../i18n'
 
-export default function Home() {
+
+function Home({t}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,13 +13,20 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          {t('h1')}
         </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <button
+          type='button'
+          onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'pt' : 'en')}
+        >
+          {t('change-locale')}
+        </button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -63,3 +72,9 @@ export default function Home() {
     </div>
   )
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'footer'],
+})
+
+export default withTranslation('common')(Home)
