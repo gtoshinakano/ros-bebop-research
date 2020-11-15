@@ -1,6 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { i18n, Link, withTranslation } from '../i18n'
+import styled from 'styled-components'
+
+const DIV = styled.div`
+  color: blue;
+`
+
 
 
 function Home({t}) {
@@ -15,6 +21,7 @@ function Home({t}) {
         <h1 className={styles.title}>
           {t('h1')}
         </h1>
+        <DIV>sadas</DIV>
 
         <p className={styles.description}>
           Get started by editing{' '}

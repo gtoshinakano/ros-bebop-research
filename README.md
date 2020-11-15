@@ -12,7 +12,7 @@ cd wedoit-homepage
 npm install
 ```
 
-##### Run de Development Server
+##### Run the Development Server
 ```bash
 npm run dev
 ```
