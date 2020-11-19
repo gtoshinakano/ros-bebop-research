@@ -1,7 +1,7 @@
 import React, {FunctionComponent} from 'react'
-import Bra from "../../../../public/static/images/flag-br.svg"
-import Eng from "../../../../public/static/images/flag-en.svg"
-import Jap from "../../../../public/static/images/flag-jp.svg"
+import Bra from "@Static/images/flag-br.svg"
+import Eng from "@Static/images/flag-en.svg"
+import Jap from "@Static/images/flag-jp.svg"
 
 interface IProps {
   width ?: number | string;
@@ -18,11 +18,11 @@ const Flag:FunctionComponent<IProps> = (props) => {
 
   switch (props.flag) {
     case "br":
-      return <><Bra style={style} /></>
+      return <img src={Bra} style={style} />
     case "en":
-      return <>{"<Eng style={style} />"}</>
+      return <img src={Eng} style={style} />
     case "jp":
-      return <>{"<Jap style={style} />"}</>
+      return <img src={Jap} style={style} />
   }
 }
 
