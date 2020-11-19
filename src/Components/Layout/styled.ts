@@ -9,7 +9,7 @@ export const Dimmer = styled.div<DimmerProps>`
   background-color: rgb(0, 0, 0, 0.8);
   height: 100%;
   width:100%;
-  position: absolute;
+  position: fixed;
   width: ${props => (props.isOpen ? "100%" : 0)};
   top: 0;
   left: 0;

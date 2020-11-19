@@ -7,8 +7,8 @@ type ContainerProps = {
 }
 
 export const Container = styled.div<ContainerProps>`
-    position: absolute;
-    min-height: 100vh;
+    position: fixed;
+    min-height: 100%;
     background-color: white;
     transition: width .3s cubic-bezier(0.6, 0.05, 0.28, 0.91);
     overflow: hidden;

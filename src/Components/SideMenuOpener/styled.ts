@@ -8,7 +8,7 @@ type Container = {
 }
 
 export const Container = styled.div<Container>`
-    position: absolute;
+    position: fixed;
     right: 20px;
     width: 30px;
     height: 30px;

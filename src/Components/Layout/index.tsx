@@ -13,7 +13,9 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 		<div className="layout">
 			<SideMenu isOpen={isOpen} />
 			<SideMenuOpener isOpen={isOpen} onOpen={setIsOpen} />
-			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))} />
+			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))}>
+				
+			</Dimmer>
 			{children}
 		</div>
 	)
