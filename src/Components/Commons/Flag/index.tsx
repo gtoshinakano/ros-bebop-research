@@ -4,7 +4,7 @@ import Eng from "@Static/images/flag-en.svg"
 import Jap from "@Static/images/flag-jp.svg"
 
 interface IProps {
-  width ?: number | string;
+  width ?: number;
   height ?: number | string;
   flag: string;
 }
