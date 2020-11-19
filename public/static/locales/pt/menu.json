@@ -1,0 +1,22 @@
+{
+  "home": "Home",
+  "introduction": "Introdução",
+  "overview": "Visão Geral",
+  "research": "A Pesquisa",
+  "about-bebop": "Sobre o Bebop",
+  "about-ros": "Sobre o ROS",
+  "ros-bebop": "Bebop e ROS",
+  "guide": "Guia Prático",
+  "requirements": "Requisitos",
+  "getting-started": "Colocando em Prática",
+  "takeoff-land": "Decolando e Aterrissando",
+  "controlling": "Controlando o Drone",
+  "reading": "Lendo dados do Bebop",
+  "gps-settings": "Sobre o GPS do Bebop",
+  "mission": "Enviando à uma missão",
+  "precautions": "Problemas e Precauções",
+  "try-node": "Tente com NodeJS",
+  "node-bebop": "O Pacote node-bebop",
+  "packing-up": "Empacotando Tudo",
+  "about": "Sobre mim"
+}

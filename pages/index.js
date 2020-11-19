@@ -12,7 +12,7 @@ function Home({t}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {t('h1')}
+          {t('Hello')}
         </h1>
 
         <p className={styles.description}>

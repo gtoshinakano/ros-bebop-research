@@ -1,0 +1,22 @@
+{
+  "home": "ホーム",
+  "introduction": "Introdu",
+  "overview": "Overview",
+  "research": "本研究",
+  "about-bebop": "Bebopについて",
+  "about-ros": "ROSについて",
+  "ros-bebop": "BebopとROS",
+  "guide": "ガイド",
+  "requirements": "Requirements",
+  "getting-started": "Getting Started",
+  "takeoff-land": "離着陸",
+  "controlling": "ドローン制御",
+  "reading": "Bebopデータ読み取り",
+  "gps-settings": "BebopのGPS",
+  "mission": "Sending to a Mission",
+  "precautions": "Issues and Precautions",
+  "try-node": "Try with NodeJS",
+  "node-bebop": "node-bebopパッケージ",
+  "packing-up": "全部をまとめて",
+  "about": "研究者について"
+}
