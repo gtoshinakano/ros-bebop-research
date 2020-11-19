@@ -18,11 +18,11 @@ const Flag:FunctionComponent<IProps> = (props) => {
 
   switch (props.flag) {
     case "br":
-      return "<Bra style={style} />"
+      return <>{"<Bra style={style} />"}</>
     case "en":
-      return "<Eng style={style} />"
+      return <>{"<Eng style={style} />"}</>
     case "jp":
-      return "<Jap style={style} />"
+      return <>{"<Jap style={style} />"}</>
   }
 }
 
