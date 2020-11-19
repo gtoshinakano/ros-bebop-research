@@ -12,8 +12,8 @@ interface IProps {
 const Flag:FunctionComponent<IProps> = (props) => {
 
   const style = {
-    display: "inline",
-    width: 22
+    width: props.width || 20,
+    float: "left"
   }
 
   switch (props.flag) {

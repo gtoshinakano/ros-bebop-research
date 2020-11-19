@@ -32,3 +32,8 @@ export const Header = styled.div<HeaderProps>`
 export const MenuContainer = styled.div`
   flex-grow:1;
 `
+
+export const LangContainer = styled.div`
+  align-self: flex-end;
+  margin:7px 7px;
+`
