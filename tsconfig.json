@@ -21,6 +21,7 @@
     "paths": {
       "@Components/*": ["src/Components/*"],
       "@Components": ["src/Components"],
+      "@Commons": ["src/Components/Commons"],
       "@Definitions/*": ["src/Definitions/*"],
       "@Definitions": ["src/Definitions"],
       "@Interfaces": ["src/Interfaces"],

@@ -17,7 +17,11 @@ export const Container = styled.div<ContainerProps>`
     z-index: 1000;
 `;
 
-export const Header = styled.div`
+type HeaderProps= {
+  theme : any
+}
+
+export const Header = styled.div<HeaderProps>`
   width: 100%;
   padding: 10px;
   text-align: center;
