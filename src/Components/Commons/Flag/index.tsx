@@ -4,7 +4,7 @@ import Eng from "@Static/images/flag-en.svg"
 import Jap from "@Static/images/flag-jp.svg"
 
 interface IProps {
-  width ?: number;
+  width ?: number | string;
   height ?: number | string;
   flag: string;
 }
@@ -14,7 +14,7 @@ const Flag:FunctionComponent<IProps> = (props) => {
   const style = {
     width: props.width || 20,
     float: "left"
-  }
+  } as React.CSSProperties
 
   switch (props.flag) {
     case "br":
