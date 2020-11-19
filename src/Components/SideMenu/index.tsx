@@ -2,7 +2,7 @@
 import React from "react";
 //import {firebase} from "@Services/Firebase"
 //import {useQuery} from 'react-query'
-import { withTranslation } from "@Server/i18n"
+import { withTranslation } from "../../../i18n"
 //import {withTranslation} from "../"
 // #endregion Global Imports
 
