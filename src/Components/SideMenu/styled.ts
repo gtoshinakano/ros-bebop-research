@@ -10,9 +10,10 @@ export const Container = styled.div<ContainerProps>`
     position: fixed;
     min-height: 100%;
     background-color: white;
-    transition: width .3s cubic-bezier(0.6, 0.05, 0.28, 0.91);
+    transition: left .3s cubic-bezier(0.6, 0.05, 0.28, 0.91);
     overflow: hidden;
-    width: ${props => (props.isOpen ? "250px" : 0)};  
+    left: ${props => (props.isOpen ? 0 : "-250px")};  
+    width: 250px;
     z-index: 1000;
 `;
 
