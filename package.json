@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.2",
     "babel-plugin-styled-components": "^1.11.1",
     "bootstrap": "^4.5.3",
     "next": "10.0.1",
@@ -17,7 +18,8 @@
     "react-dom": "17.0.1",
     "react-query": "^2.26.2",
     "react-query-devtools": "^2.6.3",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "styled-icons": "^10.22.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.56",

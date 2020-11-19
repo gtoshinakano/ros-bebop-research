@@ -15,6 +15,8 @@ export const Container = styled.div<ContainerProps>`
     left: ${props => (props.isOpen ? 0 : "-250px")};  
     width: 250px;
     z-index: 1000;
+    display: flex;
+    flex-direction:column;
 `;
 
 type HeaderProps= {
@@ -25,4 +27,8 @@ export const Header = styled.div<HeaderProps>`
   width: 100%;
   padding: 10px;
   text-align: center;
+`
+
+export const MenuContainer = styled.div`
+  flex-grow:1;
 `

@@ -5,7 +5,7 @@ import { SideMenu, SideMenuOpener } from "@Components"
 import {Dimmer} from "./styled"
 import { ThemeProvider } from 'styled-components'
 import {light, dark} from '@Definitions/Styled'
-import {Button} from "@Commons"
+
 const Layout: React.FunctionComponent<LayoutProps> = ({
 		children,
 }): JSX.Element => {

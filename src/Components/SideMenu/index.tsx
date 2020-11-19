@@ -1,6 +1,5 @@
 // #region Global Imports
 import React from "react";
-import {Button} from "@Commons"
 //import {firebase} from "@Services/Firebase"
 //import {useQuery} from 'react-query'
 import { withTranslation } from "../../../i18n"
@@ -8,9 +7,11 @@ import { withTranslation } from "../../../i18n"
 // #endregion Global Imports
 
 // #region Local Imports
-import { Container, Header } from "./styled";
-
+import { Container, Header, MenuContainer } from "./styled";
 import ListGroup from 'react-bootstrap/ListGroup'
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import {Flag} from '@Commons'
 // #endregion Local Imports
 
 // #region Interface Imports
@@ -39,10 +40,17 @@ const Comp: React.FunctionComponent<
         <h5 className="logo-text">ROS Bebop Research</h5>
         <small className="logo-text">By: {t("common:author")}</small>
       </Header>
-      <ListGroup as='ul'>
-        <ListGroup.Item >oioi </ListGroup.Item>
-        <Button>Oi</Button>
-      </ListGroup>
+      <MenuContainer>
+        <ListGroup as='ul'>
+          <ListGroup.Item >oioi </ListGroup.Item>
+          
+        </ListGroup>
+      </MenuContainer>
+      <ButtonGroup style={{margin:7}}>
+        <Button variant="secondary"><Flag flag="br" /> pt-br</Button>
+        <Button variant="secondary"><Flag flag="en" /> en</Button>
+        <Button variant="secondary"><Flag flag="jp" /> jp</Button>
+      </ButtonGroup>
     </Container>
   );
 };
