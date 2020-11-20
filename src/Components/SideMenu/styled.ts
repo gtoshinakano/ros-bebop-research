@@ -37,5 +37,4 @@ export const LangContainer = styled.div`
   align-self: flex-end;
   margin:7px 7px;
   font-family: "Noto Sans JP";
-  font-weight: 400;
 `

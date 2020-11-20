@@ -54,13 +54,25 @@ const Comp: React.FunctionComponent<
           {t("common:language")}
         </small>{" "}
         <ButtonGroup size="sm">
-          <Button onClick={() => i18n.changeLanguage("pt")} disabled={language==="pt"} variant="secondary">
+          <Button 
+            onClick={() => i18n.changeLanguage("pt")} 
+            disabled={language==="pt"} 
+            variant="secondary"
+          >
             <Flag flag="br" width={25} />
           </Button>
-          <Button onClick={() => i18n.changeLanguage("en")} disabled={language==="en"} variant="secondary">
+          <Button 
+            onClick={() => i18n.changeLanguage("en")} 
+            disabled={language==="en"} 
+            variant="secondary"
+          >
             <Flag flag="en" width={25} />
           </Button>
-          <Button onClick={() => i18n.changeLanguage("jp")} disabled={language==="jp"} variant="secondary">
+          <Button 
+            onClick={() => i18n.changeLanguage("jp")} 
+            disabled={language==="jp"} 
+            variant="secondary"
+          >
             <Flag flag="jp" width={25} />
           </Button>
         </ButtonGroup>
