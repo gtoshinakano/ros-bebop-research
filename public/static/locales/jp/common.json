@@ -2,6 +2,8 @@
   "Hello": "こんにちは",
   "World": "世界",
   "Error": "エラー!",
-  "author": "中野ガブリエル寿則"
+  "author": "中野ガブリエル寿則",
+  "language": "言語",
+  "change-language": "言語変更"
 
 }

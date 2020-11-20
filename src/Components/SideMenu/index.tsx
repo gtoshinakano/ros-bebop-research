@@ -13,6 +13,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import {Flag} from '@Commons'
+import {Globe} from '@styled-icons/entypo/Globe'
 // #endregion Local Imports
 
 // #region Interface Imports
@@ -48,6 +49,10 @@ const Comp: React.FunctionComponent<
         </ListGroup>
       </MenuContainer>
       <LangContainer>
+        <small>
+          <Globe size={18} title={t("common:change-language")} />{" "} 
+          {t("common:language")}
+        </small>{" "}
         <ButtonGroup size="sm">
           <Button onClick={() => i18n.changeLanguage("pt")} disabled={language==="pt"} variant="secondary">
             <Flag flag="br" width={25} />

@@ -5,6 +5,7 @@ import {Layout} from "@Components"
 import { ReactQueryDevtools } from "react-query-devtools"
 import { QueryCache, ReactQueryCacheProvider } from "react-query"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@Static/css/main.css'
 
 
 const queryCache = new QueryCache()

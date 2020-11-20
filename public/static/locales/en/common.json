@@ -4,5 +4,7 @@
   "Error": "Errr!",
   "NotFound": "Page not found!",
   "BackHome": "Back to home",
-  "author": "Gabriel Toshinori Nakano"
+  "author": "Gabriel Toshinori Nakano",
+  "language": "Language",
+  "change-language": "Change Language"
 }

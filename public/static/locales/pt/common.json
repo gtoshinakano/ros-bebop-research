@@ -2,5 +2,7 @@
   "Hello": "Ola",
   "World": "Mundo",
   "Error": "Err!",
-  "author": "Gabriel Toshinori Nakano"
+  "author": "Gabriel Toshinori Nakano",
+  "language": "Idioma",
+  "change-language": "Alterar Idioma"
 }
