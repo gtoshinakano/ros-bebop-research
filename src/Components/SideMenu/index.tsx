@@ -8,7 +8,7 @@ import { i18n, withTranslation } from "../../../i18n"
 // #endregion Global Imports
 
 // #region Local Imports
-import { Container, Header, MenuContainer, LangContainer } from "./styled";
+import { Container, Header, MenuContainer, DefaultChangerContainer } from "./styled";
 import ListGroup from 'react-bootstrap/ListGroup'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
@@ -51,7 +51,7 @@ const Comp: React.FunctionComponent<
           
         </ListGroup>
       </MenuContainer>
-      <LangContainer>
+      <DefaultChangerContainer>
         <Button
           onClick={toggleTheme}
           style={{color: "yellow"}}
@@ -60,8 +60,8 @@ const Comp: React.FunctionComponent<
         >
           {theme === defaultTheme ? <Sun size={18} /> : <Moon size={18} />}
         </Button>
-        <Globe style={{marginLeft: 10}} size={18} title={t("common:change-language")} />
-        <small style={{flexGrow:1,  marginLeft: 5}}>
+        <Globe style={{margin: "4px 7px 3px 10px"}} size={18} title={t("common:change-language")} />
+        <small style={{flexGrow:1}}>
           {" "} 
           {t("common:language")}
         </small>{" "}
@@ -74,21 +74,21 @@ const Comp: React.FunctionComponent<
             <Flag flag="br" width={23} />
           </Button>
           <Button 
-            onClick={() => i18n.changeLanguage("en")} 
-            disabled={language==="en"} 
-            variant="secondary"
-          >
-            <Flag flag="en" width={23} />
-          </Button>
-          <Button 
             onClick={() => i18n.changeLanguage("jp")} 
             disabled={language==="jp"} 
             variant="secondary"
           >
             <Flag flag="jp" width={23} />
           </Button>
+          <Button 
+            onClick={() => i18n.changeLanguage("en")} 
+            disabled={language==="en"} 
+            variant="secondary"
+          >
+            <Flag flag="en" width={23} />
+          </Button>
         </ButtonGroup>
-      </LangContainer>
+      </DefaultChangerContainer>
     </Container>
   );
 };
