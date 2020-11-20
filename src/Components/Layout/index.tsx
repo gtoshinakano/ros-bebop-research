@@ -20,7 +20,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 
 	return (
 		<ThemeProvider theme={theme}>
-			<SideMenu isOpen={isOpen} />
+			<SideMenu isOpen={isOpen} toggleTheme={toggleTheme} theme={theme} defaultTheme={light} />
 			<SideMenuOpener isOpen={isOpen} onOpen={setIsOpen} />
 			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))} />
 			{children}

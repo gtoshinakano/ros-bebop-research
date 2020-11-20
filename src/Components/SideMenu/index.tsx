@@ -14,6 +14,9 @@ import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import {Flag} from '@Commons'
 import {Globe} from '@styled-icons/entypo/Globe'
+import {Sun} from '@styled-icons/feather/Sun'
+import {Moon} from '@styled-icons/feather/Moon'
+
 // #endregion Local Imports
 
 // #region Interface Imports
@@ -22,7 +25,7 @@ import { ISideMenu } from "./SideMenu";
 
 const Comp: React.FunctionComponent<
   ISideMenu.IProps
-> = ({t, i18n, isOpen}) => {
+> = ({t, i18n, isOpen, toggleTheme, theme, defaultTheme}) => {
 
   /*const { isLoading, error, data } = useQuery('menuItems', () => {
     return firebase
@@ -44,12 +47,20 @@ const Comp: React.FunctionComponent<
       </Header>
       <MenuContainer>
         <ListGroup as='ul'>
-          <ListGroup.Item >oioi </ListGroup.Item>
+          <ListGroup.Item >oiolá</ListGroup.Item>
           
         </ListGroup>
       </MenuContainer>
       <LangContainer>
-        <small>
+        <Button
+          onClick={toggleTheme}
+          style={{color: "yellow"}}
+          size="sm"
+          variant="secondary"
+        >
+          {theme === defaultTheme ? <Sun size={18} /> : <Moon size={18} />}
+        </Button>
+        <small style={{flexGrow:1,  marginLeft: 7}}>
           <Globe size={18} title={t("common:change-language")} />{" "} 
           {t("common:language")}
         </small>{" "}
@@ -59,21 +70,21 @@ const Comp: React.FunctionComponent<
             disabled={language==="pt"} 
             variant="secondary"
           >
-            <Flag flag="br" width={25} />
+            <Flag flag="br" width={23} />
           </Button>
           <Button 
             onClick={() => i18n.changeLanguage("en")} 
             disabled={language==="en"} 
             variant="secondary"
           >
-            <Flag flag="en" width={25} />
+            <Flag flag="en" width={23} />
           </Button>
           <Button 
             onClick={() => i18n.changeLanguage("jp")} 
             disabled={language==="jp"} 
             variant="secondary"
           >
-            <Flag flag="jp" width={25} />
+            <Flag flag="jp" width={23} />
           </Button>
         </ButtonGroup>
       </LangContainer>

@@ -12,8 +12,8 @@ export const Container = styled.div<ContainerProps>`
     background-color: white;
     transition: left .3s cubic-bezier(0.6, 0.05, 0.28, 0.91);
     overflow: hidden;
-    left: ${props => (props.isOpen ? 0 : "-250px")};  
-    width: 250px;
+    left: ${props => (props.isOpen ? 0 : "-270px")};  
+    width: 270px;
     z-index: 1000;
     display: flex;
     flex-direction:column;
@@ -34,7 +34,12 @@ export const MenuContainer = styled.div`
 `
 
 export const LangContainer = styled.div`
-  align-self: flex-end;
-  margin:7px 7px;
-  font-family: "Noto Sans JP";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding:7px 7px;
+  font-family: Noto Sans JP;
+  font-weight: 200;
+  background-color: #6C767D;
 `

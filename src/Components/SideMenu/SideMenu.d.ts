@@ -3,7 +3,10 @@ import { WithTranslation } from "next-i18next";
 
 export declare namespace ISideMenu {
     export interface IProps extends WithTranslation { 
-        isOpen: boolean | false
+        isOpen: boolean | false,
+        toggleTheme: function,
+        theme: any,
+        defaultTheme: any
     }
 
     export interface InitialProps {
