@@ -41,5 +41,5 @@ export const DefaultChangerContainer = styled.div`
   padding:2px 4px;
   font-family: Noto Sans JP;
   font-weight: 200;
-  background-color: #6C767D;
+  background-color: palevioletred;
 `

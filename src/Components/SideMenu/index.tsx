@@ -10,7 +10,7 @@ import { i18n, withTranslation } from "../../../i18n"
 // #region Local Imports
 import { Container, Header, MenuContainer, DefaultChangerContainer } from "./styled";
 import ListGroup from 'react-bootstrap/ListGroup'
-import Button from 'react-bootstrap/Button'
+import {CustomButton as Button} from '@Commons'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import {Flag} from '@Commons'
 import {Globe} from '@styled-icons/entypo/Globe'
