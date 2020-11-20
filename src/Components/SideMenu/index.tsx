@@ -60,8 +60,9 @@ const Comp: React.FunctionComponent<
         >
           {theme === defaultTheme ? <Sun size={18} /> : <Moon size={18} />}
         </Button>
-        <small style={{flexGrow:1,  marginLeft: 7}}>
-          <Globe size={18} title={t("common:change-language")} />{" "} 
+        <Globe style={{marginLeft: 10}} size={18} title={t("common:change-language")} />
+        <small style={{flexGrow:1,  marginLeft: 5}}>
+          {" "} 
           {t("common:language")}
         </small>{" "}
         <ButtonGroup size="sm">

@@ -38,7 +38,7 @@ export const LangContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
-  padding:7px 7px;
+  padding:2px 4px;
   font-family: Noto Sans JP;
   font-weight: 200;
   background-color: #6C767D;
