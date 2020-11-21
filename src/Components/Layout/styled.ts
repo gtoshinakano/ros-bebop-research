@@ -1,4 +1,11 @@
-import  styled from "styled-components";
+import  styled, {createGlobalStyle} from "styled-components";
+
+export const ThemedGlobal = createGlobalStyle`
+  body{
+    background-color: ${props => props.theme.backgroundColor};
+    color: ${props => props.theme.palette.common.color};
+  }
+`
 
 type DimmerProps = {
   isOpen: boolean;

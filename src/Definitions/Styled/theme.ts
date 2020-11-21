@@ -4,9 +4,10 @@ import { DefaultTheme } from "styled-components";
 
 const light: DefaultTheme = {
     borderRadius: '4px',
+    backgroundColor: "white",
     palette: {
       common: {
-        black: '#222831',
+        color: '#222831',
         white: '#ffffff'
       },
       primary: {
@@ -22,9 +23,10 @@ const light: DefaultTheme = {
 
 const dark: DefaultTheme = {
     borderRadius: '4px',
+    backgroundColor: "#131313",
     palette: {
       common: {
-        black: '#ffffff',
+        color: '#ffffff',
         white: '#222831'
       },
       primary: {

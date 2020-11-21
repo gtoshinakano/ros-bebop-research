@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { LayoutProps } from "./Layout";
 import { SideMenu, SideMenuOpener } from "@Components"
-import {Dimmer} from "./styled"
+import {Dimmer, ThemedGlobal} from "./styled"
 import { ThemeProvider } from 'styled-components'
 import {light, dark} from '@Definitions/Styled'
 
@@ -20,6 +20,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 
 	return (
 		<ThemeProvider theme={theme}>
+			<ThemedGlobal />
 			<SideMenu isOpen={isOpen} toggleTheme={toggleTheme} theme={theme} defaultTheme={light} />
 			<SideMenuOpener isOpen={isOpen} onOpen={setIsOpen} />
 			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))} />
