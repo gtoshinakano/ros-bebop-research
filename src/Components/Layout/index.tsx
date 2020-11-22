@@ -10,7 +10,19 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 		children,
 }): JSX.Element => {
 
-	const [isDark, setIsDark] = React.useState(typeof window !== "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	let isLocalDark: boolean = false
+	if(typeof window !== "undefined"){
+		const localDark = window.localStorage.getItem("isDark") === "true"
+		const schemaIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+		if(localDark) isLocalDark = true
+		else if(!schemaIsDark) window.localStorage.setItem("isDark", "false")
+		else if(schemaIsDark && !window.localStorage.getItem("isDark")){
+			isLocalDark = true
+			window.localStorage.setItem("isDark", "true")
+		}
+	}
+
+	const [isDark, setIsDark] = React.useState(isLocalDark)
 	const [isOpen, setIsOpen] = React.useState(true)
 	const [theme, setTheme] = React.useState(!isDark ? light : dark)
 
@@ -18,10 +30,12 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 		if(!isDark) {
 			setTheme(dark)
 			setIsDark(true)
+			window.localStorage.setItem("isDark", "true")
 		}
 		else {
 			setTheme(light)
 			setIsDark(false)
+			window.localStorage.setItem("isDark", "false")
 		}
 	}
 
