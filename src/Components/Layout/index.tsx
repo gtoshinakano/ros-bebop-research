@@ -10,18 +10,25 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 		children,
 }): JSX.Element => {
 
+	const [isDark, setIsDark] = React.useState(typeof window !== "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches)
 	const [isOpen, setIsOpen] = React.useState(true)
-	const [theme, setTheme] = React.useState(light)
+	const [theme, setTheme] = React.useState(!isDark ? light : dark)
 
 	const toggleTheme = () => {
-		if(theme === light) setTheme(dark)
-		else setTheme(light)
+		if(!isDark) {
+			setTheme(dark)
+			setIsDark(true)
+		}
+		else {
+			setTheme(light)
+			setIsDark(false)
+		}
 	}
 
 	return (
 		<ThemeProvider theme={theme}>
 			<ThemedGlobal />
-			<SideMenu isOpen={isOpen} toggleTheme={toggleTheme} theme={theme} defaultTheme={light} />
+			<SideMenu isOpen={isOpen} toggleTheme={toggleTheme} isDark={isDark} />
 			<SideMenuOpener isOpen={isOpen} onOpen={setIsOpen} />
 			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))} />
 			{children}

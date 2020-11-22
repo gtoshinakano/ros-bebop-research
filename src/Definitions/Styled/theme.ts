@@ -4,7 +4,7 @@ import { DefaultTheme } from "styled-components";
 
 const light: DefaultTheme = {
     borderRadius: '4px',
-    backgroundColor: "white",
+    backgroundColor: "#fafafa",
     palette: {
       common: {
         color: '#222831',
