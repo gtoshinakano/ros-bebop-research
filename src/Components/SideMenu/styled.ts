@@ -9,7 +9,7 @@ type ContainerProps = {
 export const Container = styled.div<ContainerProps>`
     position: fixed;
     min-height: 100%;
-    background-color: white;
+    background-color: ${props => props.theme.palette.sideMenu.backgroundColor};
     transition: left .3s cubic-bezier(0.6, 0.05, 0.28, 0.91);
     overflow: hidden;
     left: ${props => (props.isOpen ? 0 : "-270px")};  

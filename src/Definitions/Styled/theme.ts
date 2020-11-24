@@ -17,13 +17,16 @@ const light: DefaultTheme = {
       secondary: {
         main: '#709fb0',
         contrastText: '#ffffff'
+      },
+      sideMenu: {
+        backgroundColor: '#fff'
       }
     }
 };
 
 const dark: DefaultTheme = {
     borderRadius: '4px',
-    backgroundColor: "#131313",
+    backgroundColor: "#16181A",
     palette: {
       common: {
         color: '#ffffff',
@@ -36,6 +39,9 @@ const dark: DefaultTheme = {
       secondary: {
         main: '#ffffff',
         contrastText: '#709fb0'
+      },
+      sideMenu: {
+        backgroundColor: '#272A2E'
       }
     }
 };
