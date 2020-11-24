@@ -11,6 +11,7 @@ import { i18n, withTranslation } from "../../../i18n"
 import { Container, Header, MenuContainer, DefaultChangerContainer } from "./styled";
 import ListGroup from 'react-bootstrap/ListGroup'
 import {CustomButton as Button} from '@Commons'
+import {Menu} from "@Components"
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import {Flag} from '@Commons'
 import {Globe} from '@styled-icons/entypo/Globe'
@@ -46,10 +47,7 @@ const Comp: React.FunctionComponent<
         <small className="logo-text">By: {t("common:author")}</small>
       </Header>
       <MenuContainer>
-        <ListGroup as='ul'>
-          <ListGroup.Item >oiolá</ListGroup.Item>
-          
-        </ListGroup>
+        <Menu />
       </MenuContainer>
       <DefaultChangerContainer>
         <Button

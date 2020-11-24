@@ -3,20 +3,20 @@ import React from "react";
 // #endregion Global Imports
 
 // #region Local Imports
-import { Container } from "./styled";
+import { Container, Item } from "./styled";
 // #endregion Local Imports
 
 // #region Interface Imports
-import { IMenuItem } from "./MenuItem";
+import { IMenu } from "./Menu";
 // #endregion Interface Imports
 
-export const MenuItem: React.FunctionComponent<
-		IMenuItem.IProps
-> = (props: IMenuItem.IProps) => {
+export const Menu: React.FunctionComponent<
+		IMenu.IProps
+> = (props: IMenu.IProps) => {
 
 		return (
 				<Container>
-						MenuItem Page
+					<Item header>Home</Item>
 				</Container>
 		);
 };
