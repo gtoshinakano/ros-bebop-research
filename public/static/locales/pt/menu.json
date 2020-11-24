@@ -6,16 +6,13 @@
   "about-ros": "Sobre o ROS",
   "ros-bebop": "Bebop e ROS",
   "guide": "Guia",
-  "requirements": "Requisitos",
-  "getting-started": "Colocando em Prática",
-  "takeoff-land": "Decolando e Aterrissando",
+  "installation": "Instalação e Requisitos",
   "controlling": "Controlando o Drone",
   "reading": "Lendo dados do Bebop",
-  "bebop-gps": "Sobre o GPS do Bebop",
-  "mission": "Enviando à uma missão",
+  "bebop-gps": "GPS e Missões MAVLINK",
   "precautions": "Problemas e Precauções",
   "try-node": "Tente com NodeJS",
   "node-bebop": "O Pacote node-bebop",
-  "packing-up": "Empacotando Tudo",
-  "about": "Sobre mim"
+  "web-service": "Criando o WEB Service",
+  "about": "Sobre o Autor"
 }

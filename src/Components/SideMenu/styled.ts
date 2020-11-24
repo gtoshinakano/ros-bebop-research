@@ -11,7 +11,6 @@ export const Container = styled.div<ContainerProps>`
     min-height: 100%;
     background-color: ${props => props.theme.palette.sideMenu.backgroundColor};
     transition: left .3s cubic-bezier(0.6, 0.05, 0.28, 0.91);
-    overflow: hidden;
     left: ${props => (props.isOpen ? 0 : "-270px")};  
     width: 270px;
     z-index: 1000;

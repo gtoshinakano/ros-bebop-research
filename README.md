@@ -1,14 +1,14 @@
-# WeDoIT Website source
+# My ROS Bebop Research source
 
 ##### Clone the repo with
 
 ```
-git clone https://github.com/gtoshinakano/wedoit-homepage.git
+git clone https://github.com/gtoshinakano/ros-bebop-research.git
 ```
 
 ##### Go to directory and install NPM Dependencies
 ```
-cd wedoit-homepage
+cd ros-bebop-research
 npm install
 ```
 
