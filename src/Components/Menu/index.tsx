@@ -4,20 +4,33 @@ import React from "react";
 
 // #region Local Imports
 import { Container, Item } from "./styled";
+import { withTranslation } from "../../../i18n"
 // #endregion Local Imports
 
 // #region Interface Imports
 import { IMenu } from "./Menu";
 // #endregion Interface Imports
 
-export const Menu: React.FunctionComponent<
+const Comp: React.FunctionComponent<
 		IMenu.IProps
-> = (props: IMenu.IProps) => {
+> = ({t, i18n}) => {
 
 		return (
 				<Container>
-					<Item header>Home</Item>
+					<Item header={1}>{t("the-research")}</Item>
+					<Item action>{t("introduction")}</Item>
+					<Item header={1}>{t("content")}</Item>
+					<Item action>{t("about-bebop")}</Item>
+					<Item action>{t("about-ros")}</Item>
+					<Item action>{t("ros-bebop")}</Item>
+					<Item header={1}>{t("guide")}</Item>
+					<Item action>{t("requirements")}</Item>
+					<Item action>{t("getting-started")}</Item>	
+
+
 				</Container>
 		);
 };
 
+const Menu = withTranslation('menu')(Comp)
+export {Menu}

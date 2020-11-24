@@ -3,7 +3,7 @@ import React from "react";
 //import {firebase} from "@Services/Firebase"
 //import {useQuery} from 'react-query'
 import { I18nContext } from 'next-i18next'
-import { i18n, withTranslation } from "../../../i18n"
+import { withTranslation } from "../../../i18n"
 //import {withTranslation} from "../"
 // #endregion Global Imports
 
@@ -90,5 +90,5 @@ const Comp: React.FunctionComponent<
     </Container>
   );
 };
-const SideMenu = withTranslation(['menu', 'common'])(Comp)
+const SideMenu = withTranslation(['common'])(Comp)
 export {SideMenu}

@@ -7,13 +7,17 @@ export const Container = styled(ListGroup)`
 		background-color: ${props => props.theme.palette.sideMenu.backgroundColor};
 `;
 
-export const Item = styled(ListGroup.Item).attrs((props) => ({
-	header: props.header
-}))`
+type ItemProps = {
+  header: boolean | false;
+}
+
+export const Item = styled(ListGroup.Item)<ItemProps>`
 		color: ${props => props.theme.palette.common.color};
 		background-color: ${props => props.theme.palette.sideMenu.backgroundColor};
 		border: 0;
-		font-weight: ${props => props.header && 700}
+		font-weight: ${props => props.header ? 700 : 200};
+		font-size: ${props => props.header ? "1.1em" : "1em"};
+		padding: 4px 20px;
 
 `;
 

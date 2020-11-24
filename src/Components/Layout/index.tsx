@@ -10,21 +10,26 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 		children,
 }): JSX.Element => {
 
-	let isLocalDark: boolean = false
-	if(typeof window !== "undefined"){
-		const localDark = window.localStorage.getItem("isDark") === "true"
-		const schemaIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-		if(localDark) isLocalDark = true
-		else if(!schemaIsDark) window.localStorage.setItem("isDark", "false")
-		else if(schemaIsDark && !window.localStorage.getItem("isDark")){
-			isLocalDark = true
-			window.localStorage.setItem("isDark", "true")
-		}
-	}
-
-	const [isDark, setIsDark] = React.useState(isLocalDark)
+	const [isDark, setIsDark] = React.useState(false)
 	const [isOpen, setIsOpen] = React.useState(true)
 	const [theme, setTheme] = React.useState(!isDark ? light : dark)
+
+	React.useEffect(() => {
+		if(typeof window !== "undefined"){
+			const localDark = window.localStorage.getItem("isDark") === "true"
+			const schemaIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+			if(localDark){
+				setIsDark(true)
+				setTheme(dark)
+			}
+			else if(!schemaIsDark) window.localStorage.setItem("isDark", "false")
+			else if(schemaIsDark && !window.localStorage.getItem("isDark")){
+				setIsDark(true)
+				setTheme(dark)
+				window.localStorage.setItem("isDark", "true")
+			}
+		}
+	}, [])
 
 	const toggleTheme = () => {
 		if(!isDark) {

@@ -1,6 +1,7 @@
+import {WithTranslation} from 'next-i18next'
 
 export declare module IMenu {
-    export interface IProps { 
+    export interface IProps extends WithTranslation { 
 
     }
 
