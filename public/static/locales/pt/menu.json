@@ -1,5 +1,5 @@
 {
-  "the-research": "A Pesquisa",
+  "research": "A Pesquisa",
   "introduction": "Introdução",
   "content": "Conteúdo da Pesquisa",
   "about-bebop": "Sobre o Bebop",
@@ -11,7 +11,7 @@
   "takeoff-land": "Decolando e Aterrissando",
   "controlling": "Controlando o Drone",
   "reading": "Lendo dados do Bebop",
-  "gps-settings": "Sobre o GPS do Bebop",
+  "bebop-gps": "Sobre o GPS do Bebop",
   "mission": "Enviando à uma missão",
   "precautions": "Problemas e Precauções",
   "try-node": "Tente com NodeJS",

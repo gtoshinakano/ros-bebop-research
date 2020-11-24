@@ -1,5 +1,5 @@
 {
-  "the-research": "研究について",
+  "research": "研究について",
   "introduction": "Introdu",
   "content": "研究の内容",
   "about-bebop": "Bebopについて",
@@ -11,7 +11,7 @@
   "takeoff-land": "離着陸",
   "controlling": "ドローン制御",
   "reading": "Bebopデータ読み取り",
-  "gps-settings": "BebopのGPS",
+  "bebop-gps": "BebopのGPS",
   "mission": "Sending to a Mission",
   "precautions": "Issues and Precautions",
   "try-node": "Try with NodeJS",

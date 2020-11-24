@@ -1,5 +1,5 @@
 {
-  "the-research": "The Research",
+  "research": "The Research",
   "introduction": "Introduction",
   "content": "Research Content",
   "about-bebop": "About Bebop",
@@ -11,7 +11,7 @@
   "takeoff-land": "Taking Off and Landing",
   "controlling": "Controlling the Drone",
   "reading": "Reading from Bebop",
-  "gps-settings": "Bebop's GPS",
+  "bebop-gps": "Bebop's GPS",
   "mission": "Sending to a Mission",
   "precautions": "Issues and Precautions",
   "try-node": "Try with NodeJS",

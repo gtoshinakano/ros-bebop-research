@@ -17,7 +17,7 @@ const Comp: React.FunctionComponent<
 
 		return (
 				<Container>
-					<Item header={1}>{t("the-research")}</Item>
+					<Item header={1}>{t("research")}</Item>
 					<Item action>{t("introduction")}</Item>
 					<Item header={1}>{t("content")}</Item>
 					<Item action>{t("about-bebop")}</Item>
@@ -26,7 +26,19 @@ const Comp: React.FunctionComponent<
 					<Item header={1}>{t("guide")}</Item>
 					<Item action>{t("requirements")}</Item>
 					<Item action>{t("getting-started")}</Item>	
+					<Item action>{t("takeoff-land")}</Item>
+					<Item action>{t("controlling")}</Item>	
+					<Item action>{t("reading")}</Item>
+					<Item action>{t("bebop-gps")}</Item>
+					<Item action>{t("mission")}</Item>
+					<Item action>{t("precautions")}</Item>	
+					<Item action>{t("getting-started")}</Item>	
+					<Item header={1}>{t("try-node")}</Item>	
+					<Item action>{t("node-bebop")}</Item>
+					<Item action>{t("packing-up")}</Item>
+					<Item action>{t("about")}</Item>
 
+								
 
 				</Container>
 		);

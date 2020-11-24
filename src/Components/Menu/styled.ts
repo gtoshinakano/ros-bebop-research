@@ -17,7 +17,7 @@ export const Item = styled(ListGroup.Item)<ItemProps>`
 		border: 0;
 		font-weight: ${props => props.header ? 700 : 200};
 		font-size: ${props => props.header ? "1.1em" : "1em"};
-		padding: 4px 20px;
+		padding: 3px 20px 6px;
 
 `;
 

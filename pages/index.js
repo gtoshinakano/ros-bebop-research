@@ -73,7 +73,7 @@ function Home({t}) {
 }
 
 Home.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer'],
+  namespacesRequired: ['common'],
 })
 
 export default withTranslation('common')(Home)
