@@ -11,16 +11,17 @@ const light: DefaultTheme = {
         white: '#ffffff'
       },
       primary: {
-        main: '#1675e0',
+        main: '#188CBA',
         contrastText: '#ffffff',
-        hover: '#1675e0',
+        hover: '#188CBA',
       },
       secondary: {
         main: '#709fb0',
         contrastText: '#ffffff'
       },
       sideMenu: {
-        backgroundColor: '#f4f5f7'
+        backgroundColor: '#f4f5f7',
+        languageBar: '#2c2c32'
       }
     }
 };
@@ -34,16 +35,17 @@ const dark: DefaultTheme = {
         white: '#222831'
       },
       primary: {
-        main: '#aaa',
+        main: '#999',
         contrastText: '#fff',
-        hover: '#999',
+        hover: '#888',
       },
       secondary: {
         main: '#ffffff',
         contrastText: '#008cba'
       },
       sideMenu: {
-        backgroundColor: '#272A2E'
+        backgroundColor: '#272A2E',
+        languageBar: '#25252b'
       }
     }
 };

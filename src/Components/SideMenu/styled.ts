@@ -40,5 +40,5 @@ export const DefaultChangerContainer = styled.div`
   padding:2px 4px;
   font-family: Noto Sans JP;
   font-weight: 200;
-  background-color: palevioletred;
+  background-color: ${props => props.theme.palette.sideMenu.languageBar};
 `

@@ -30,6 +30,7 @@ export const Item = styled(ListGroup.Item)<ItemProps>`
 	${props => props.active && css`
 		a{
 			color: ${props => props.theme.palette.primary.contrastText};
+			font-weight: 600;
 		}
 	`}
 `;
