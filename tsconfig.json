@@ -30,7 +30,8 @@
       "@Services": ["src/Services"],
       "@Services/*": ["src/Services/*"],
       "@Static/*": ["public/static/*"],
-      "@Test/*": ["test/*"]
+      "@Test/*": ["test/*"],
+      "@Contents/*": ["src/Contents/*"]
     }
   },
   "include": [

@@ -1,12 +1,29 @@
+import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { i18n, Link, withTranslation } from '../i18n'
+import { I18nContext } from 'next-i18next'
+import axios from 'axios'
+import {useQuery} from 'react-query'
 
-function Home({t}) {
+function Home(props) {
+
+  const { i18n: { language } } = React.useContext(I18nContext)
+
+  const { isLoading, error, data } = useQuery(['home', language], () => {
+    return axios.get('http://localhost:3000/api/home',{
+      params: {
+        language: language
+      }
+    }).then((res) => res.data)
+  }, {staleTime: Infinity})
+
+  const t = props.t
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>{data && data.seo.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -16,7 +33,7 @@ function Home({t}) {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          {data && data.seo.description}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -28,10 +45,9 @@ function Home({t}) {
         </button>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={styles.card}>
+            {data && data.markdownBody}
+          </div>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h3>Learn &rarr;</h3>
@@ -57,23 +73,14 @@ function Home({t}) {
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
 
-Home.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+Home.getInitialProps = async () => {
+  return ({
+    namespacesRequired: ['common'],
+  })
+}
 
 export default withTranslation('common')(Home)

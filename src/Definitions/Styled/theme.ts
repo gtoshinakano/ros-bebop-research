@@ -7,7 +7,7 @@ const light: DefaultTheme = {
     backgroundColor: "#fafafa",
     palette: {
       common: {
-        color: '#575757',
+        color: '#292929',
         white: '#ffffff'
       },
       primary: {

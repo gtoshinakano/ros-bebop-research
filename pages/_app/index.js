@@ -17,7 +17,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      
+      <ReactQueryDevtools />
     </ReactQueryCacheProvider>
   )
 }
