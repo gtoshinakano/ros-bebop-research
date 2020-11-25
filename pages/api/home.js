@@ -1,10 +1,11 @@
 import matter from 'gray-matter'
 
 export default async (req, res) => {
-  if(!req.query.language){
+  if(!req.query.language || !["en", "pt", "jp"].includes(req.query.language)){
     res.statusCode = 500
     res.send("Error: Something went wrong")
-  } else{
+  } else {
+
     const common = await import('@Contents/home/common.md')
     const meta = matter(common.default)
     const content = await import('@Contents/home/'+req.query.language+'.md')
