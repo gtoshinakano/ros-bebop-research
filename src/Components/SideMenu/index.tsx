@@ -56,34 +56,35 @@ const Comp: React.FunctionComponent<
           size="sm"
           variant="secondary"
         >
-          {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
         </Button>
-        <Globe style={{margin: "4px 7px 3px 10px"}} size={18} title={t("common:change-language")} />
+        <Globe style={{margin: "4px 7px 3px 5px"}} size={18} title={t("common:change-language")} />
         <small style={{flexGrow:1}}>
           {" "} 
           {t("common:language")}
-        </small>{" "}
+          {" "}
+        </small>
         <ButtonGroup size="sm">
           <Button 
             onClick={() => i18n.changeLanguage("pt")} 
             disabled={language==="pt"} 
             variant="secondary"
           >
-            <Flag flag="br" width={23} />
+            <Flag flag="br" width={34} />
           </Button>
           <Button 
             onClick={() => i18n.changeLanguage("jp")} 
             disabled={language==="jp"} 
             variant="secondary"
           >
-            <Flag flag="jp" width={23} />
+            <Flag flag="jp" width={34} />
           </Button>
           <Button 
             onClick={() => i18n.changeLanguage("en")} 
             disabled={language==="en"} 
             variant="secondary"
           >
-            <Flag flag="en" width={23} />
+            <Flag flag="en" width={34} />
           </Button>
         </ButtonGroup>
       </DefaultChangerContainer>
