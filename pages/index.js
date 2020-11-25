@@ -11,7 +11,7 @@ function Home(props) {
   const { i18n: { language } } = React.useContext(I18nContext)
 
   const { isLoading, error, data } = useQuery(['home', language], () => {
-    return axios.get('http://localhost:3000/api/home',{
+    return axios.get('/api/home',{
       params: {
         language: language
       }
