@@ -13,7 +13,8 @@ const Flag:FunctionComponent<IProps> = (props) => {
 
   const style = {
     width: props.width || 20,
-    float: "left"
+    float: "left",
+    margin: "8px 3px",
   } as React.CSSProperties
 
   switch (props.flag) {

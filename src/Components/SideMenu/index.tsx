@@ -70,21 +70,21 @@ const Comp: React.FunctionComponent<
             disabled={language==="pt"} 
             variant="secondary"
           >
-            <Flag flag="br" width={34} />
+            <Flag flag="br" width={22} />
           </Button>
           <Button 
             onClick={() => i18n.changeLanguage("jp")} 
             disabled={language==="jp"} 
             variant="secondary"
           >
-            <Flag flag="jp" width={34} />
+            <Flag flag="jp" width={22} />
           </Button>
           <Button 
             onClick={() => i18n.changeLanguage("en")} 
             disabled={language==="en"} 
             variant="secondary"
           >
-            <Flag flag="en" width={34} />
+            <Flag flag="en" width={22} />
           </Button>
         </ButtonGroup>
       </DefaultChangerContainer>
