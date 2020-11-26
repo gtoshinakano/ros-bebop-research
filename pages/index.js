@@ -1,10 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { i18n, Link, withTranslation } from '../i18n'
 import { I18nContext } from 'next-i18next'
 import axios from 'axios'
 import {useQuery} from 'react-query'
+import {Placeholder} from "@Commons"
+import {GlobalContainer} from "@Commons"
+import ReactMarkdown from "react-markdown"
 
 function Home(props) {
 
@@ -21,7 +23,14 @@ function Home(props) {
   const t = props.t
 
   return (
-    <div className={styles.container}>
+    <GlobalContainer>
+      <Placeholder
+        loading={isLoading}
+      >
+        {data && <ReactMarkdown>{data.markdownBody}</ReactMarkdown>}
+      </Placeholder>
+    </GlobalContainer>
+    /*<div className={styles.container}>
       <Head>
         <title>{data && data.seo.title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -47,8 +56,9 @@ function Home(props) {
         <div className={styles.grid}>
           <div className={styles.card}>
             {data && data.markdownBody}
+            
           </div>
-
+          <Placeholder />
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
@@ -73,7 +83,7 @@ function Home(props) {
           </a>
         </div>
       </main>
-    </div>
+    </div>*/
   )
 }
 

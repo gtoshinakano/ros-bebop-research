@@ -11,7 +11,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 }): JSX.Element => {
 
 	const [isDark, setIsDark] = React.useState(false)
-	const [isOpen, setIsOpen] = React.useState(true)
+	const [isOpen, setIsOpen] = React.useState(false)
 	const [theme, setTheme] = React.useState(!isDark ? light : dark)
 
 	React.useEffect(() => {
