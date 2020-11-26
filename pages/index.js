@@ -6,6 +6,7 @@ import axios from 'axios'
 import {useQuery} from 'react-query'
 import {Placeholder} from "@Commons"
 import {GlobalContainer} from "@Commons"
+import {HomeHero} from "@Components"
 import ReactMarkdown from "react-markdown"
 
 function Home(props) {
@@ -32,7 +33,7 @@ function Home(props) {
         <Placeholder
           loading={isLoading}
         >
-          {data && <img src={data.seo.hero_image} />}
+          {data && <HomeHero bg={data.seo.hero_image} />}
           </Placeholder>
       </section>
       <GlobalContainer>
