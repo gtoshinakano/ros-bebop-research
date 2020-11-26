@@ -23,19 +23,27 @@ function Home(props) {
   const t = props.t
 
   return (
-    <GlobalContainer>
-      <Placeholder
-        loading={isLoading}
-      >
-        {data && <ReactMarkdown>{data.markdownBody}</ReactMarkdown>}
-      </Placeholder>
-    </GlobalContainer>
-    /*<div className={styles.container}>
+    <>
       <Head>
         <title>{data && data.seo.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <section>
+        <Placeholder
+          loading={isLoading}
+        >
+          {data && <img src={data.seo.hero_image} />}
+          </Placeholder>
+      </section>
+      <GlobalContainer>
+        <Placeholder
+          loading={isLoading}
+        >
+          {data && <ReactMarkdown>{data.markdownBody}</ReactMarkdown>}
+        </Placeholder>
+      </GlobalContainer>
+    </>
+    /*<div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
           {t('Hello')}
