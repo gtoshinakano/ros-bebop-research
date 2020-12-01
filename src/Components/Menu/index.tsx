@@ -20,7 +20,7 @@ const Comp: React.FunctionComponent<
 				<Container>
 					<Item header={1}>{t("research")}</Item>
 					<Item action active disabled>
-						<Link href="">{t("introduction")}</Link>
+						<Link href="/">{t("home")}</Link>
 					</Item>
 					<Item header={1}>{t("content")}</Item>
 					<Item action>
