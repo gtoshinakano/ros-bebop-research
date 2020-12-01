@@ -3,12 +3,10 @@ import {breakpoint} from '@Definitions/Styled'
 
 const GlobalContainer = styled.div`
   ${breakpoint.xs} {
-    margin:15px auto;
-    max-width:370px;
+    margin:15px 10px;
   }
   ${breakpoint.sm} {
-    margin:15px auto;
-    max-width:370px;
+    margin:15px 10px;
   }
   ${breakpoint.md} {
     margin:15px auto;

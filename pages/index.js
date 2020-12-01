@@ -7,7 +7,7 @@ import {useQuery} from 'react-query'
 import {Placeholder} from "@Commons"
 import {GlobalContainer} from "@Commons"
 import {HomeHero} from "@Components"
-import ReactMarkdown from "react-markdown"
+import {HighlightMarkdown} from "@Commons"
 
 function Home(props) {
 
@@ -40,7 +40,7 @@ function Home(props) {
         <Placeholder
           loading={isLoading}
         >
-          {data && <ReactMarkdown>{data.markdownBody}</ReactMarkdown>}
+          {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
         </Placeholder>
       </GlobalContainer>
     </>

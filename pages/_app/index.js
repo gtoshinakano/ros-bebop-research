@@ -7,6 +7,7 @@ import { QueryCache, ReactQueryCacheProvider } from "react-query"
 import '@Static/css/bootstrap.min.css';
 import '@Static/css/main.css'
 import '@Static/css/custom.css' //Custom Bootstrap Overrides
+import '@Static/css/prism.css'
 
 
 const queryCache = new QueryCache()

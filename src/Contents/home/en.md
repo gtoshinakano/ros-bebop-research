@@ -8,3 +8,12 @@ subheadline: Page's SubHeadline
 cta: Call to Action
 ---
 Content goes here
+
+```javascript
+//code goes here
+
+var hello = "World";
+var world = "!";
+
+console.log(hello + world)
+```
