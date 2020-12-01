@@ -1,6 +1,7 @@
 import {useRef, useEffect} from "react"
 import gsap from "gsap"
 import styled from "styled-components"
+import cover from "@Static/images/home-cover.png"
 
 const HomeHero = (props) => {
 
@@ -24,11 +25,11 @@ const HomeHero = (props) => {
 }
 
 const HeroContainer = styled.div`
-  background-image: url(${props => props.bg});
+  background-image: url(${cover});
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 450px;
+  height: 80vh;
 `
 
 export {HomeHero}
