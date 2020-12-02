@@ -18,9 +18,11 @@ const HighlightMarkdown = ({ children }) => {
         </pre>)
       },
     image: ({src, alt, title}) => {
+      const mdProps = JSON.parse(title)
+      console.log(mdProps)
       return (
-        <ImgContainer>
-          <img src={src} alt={alt} title={title} style={imgStyles}/>
+        <ImgContainer styles={mdProps}>
+          <img src={src} alt={alt} style={imgStyles}/>
         </ImgContainer>
       )
     }
@@ -35,8 +37,9 @@ const HighlightMarkdown = ({ children }) => {
 }
 
 const ImgContainer = styled.div`
-  float: right;
-  max-width: 45%;
+  float: ${props => props.styles.float || "right"};
+  margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : "0 10px 5px 0"};
+  max-width: 43%;
 `
 
 const imgStyles = {

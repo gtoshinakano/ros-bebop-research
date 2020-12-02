@@ -14,13 +14,18 @@ Aprenda a como instalar o ROS (Robot Operating System) no Ubuntu, ler dados e co
 ---
 ## Motivação para estudo e para compartilhar este conhecimento
 
-![Image of Da Vinci](static/images/da-vinci.jpg)
+![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"float":"right"}')
 
 Leonardo da Vinci era um talentoso artista pintor de sua época. Mas poucos sabem que, somente a partir de seus 30 anos, passou a dedicar-se aos estudos da matematica e da engenharia. 
 
-Desde entao suas obras passaram a ter uma amplitude inimaginavel de area, genero e finalidade, tornando-o reconhecido mundialmente por contribuições e avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
+Desde entao suas obras passaram a ter uma amplitude inimaginavel de area, genero e finalidade, tornando-o reconhecido mundialmente também por contribuições e avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
 
-Eu não sou gênio e muito menos um artista talentoso como Leonardo da Vinci. Sou um programador. 
+![Image of Da Vinci](static/images/da-vinci.jpg '{"float":"left"}')
+
+Eu não sou gênio e muito menos um artista talentoso como Leonardo da Vinci.
+
+__Sou um programador__. 
+
 
 Minha inspiração em Da Vinci e em outras personalidades bem sucedidas em suas áreas como Thomas Edison, Steve Jobs e Bill Gates me fizeram seguir o caminho do aprendizado constante e do aperfeiçoamento infinito do meu ser.
 
