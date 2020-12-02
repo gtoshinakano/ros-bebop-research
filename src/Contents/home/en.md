@@ -16,6 +16,9 @@ var hello = "World";
 var world = "!";
 
 console.log(hello + world)
+if(hello){
+  world++
+}
 ```
 
 ---

@@ -22,3 +22,8 @@ p{
   margin: 2.2em 0 -0.5em;
   letter-spacing: -0.026em;
 }
+
+.test{
+  float: right;
+  width: 50%;
+}
