@@ -34,7 +34,8 @@ export const ImgContainer = styled.div`
   float: ${props => props.styles.float || "left"};
   margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : "0 10px 5px 0"};
   max-width: ${props => props.styles.maxWidth || "43%" };
-
+  ${breakpoint.xs} { max-width: 100%; }
+  ${breakpoint.sm} { max-width: 100%; }
 `
 
 export const Hr = styled.hr`
@@ -43,9 +44,7 @@ export const Hr = styled.hr`
 `
 
 export const CustomLink = ({children, href}) => {
-  console.log(children, href)
-  if(href.startsWith("http") )
-    return <a href={href} target="_blank">{children}</a>
-  else 
-    return <Link href={href}><a>{children}</a></Link>
+  return href.startsWith("http") 
+  ? <a href={href} target="_blank">{children}</a> 
+  : <Link href={href}><a>{children}</a></Link>
 }
