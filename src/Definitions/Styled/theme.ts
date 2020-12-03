@@ -27,7 +27,7 @@ const light: DefaultTheme = {
         blockquote:{
           backgroundColor: "#f1f2f4",
           color: "#333",
-          borderLeft: "1em #ccc solid"
+          borderLeft: "0.8em #ccc solid"
         }
       }
     }
@@ -58,7 +58,7 @@ const dark: DefaultTheme = {
         blockquote:{
           backgroundColor: "#202329",
           color: "#9aa6bc",
-          borderLeft: "1em #383a3f solid"
+          borderLeft: "0.8em #383a3f solid"
         }
       }
     }
