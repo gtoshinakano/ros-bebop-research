@@ -36,7 +36,7 @@ No inicio de 2020, em plena pandemia do novo corona vírus, infelizmente meu pa�
 
 Graças a isso, por um bom tempo fomos o segundo país com o maior número de infecções e os números não paravam de aumentar, dia após dia.
 
-![Drone alerting people](static/images/drone-cov-alert.gif '{"maxWidth" :"33%", "float": "right", "url": "https://imgflip.com/gif/4oqbao"}')
+![Drone alerting people](static/images/drone-cov-alert.gif '{"maxWidth":"43%","float":"right","url":"https://imgflip.com/gif/4oqbao"}')
 
 Lembro que vi em um noticiário na TV, um vídeo filmado por um drone utilizado para alertar as pessoas a ficarem dentro de suas casas.
 

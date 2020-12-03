@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Link from "next/link"
 import React from "react"
+import {breakpoint} from "@Definitions/Styled"
 
 export const Blockquote = styled.blockquote`
   background-color: ${props => props.theme.palette.markdown.blockquote.backgroundColor};
@@ -33,6 +34,7 @@ export const ImgContainer = styled.div`
   float: ${props => props.styles.float || "left"};
   margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : "0 10px 5px 0"};
   max-width: ${props => props.styles.maxWidth || "43%" };
+
 `
 
 export const Hr = styled.hr`

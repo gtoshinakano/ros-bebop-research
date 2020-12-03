@@ -17,7 +17,7 @@ const renderers = {
     const mdProps = JSON.parse(title) || {}
     return (
       <ImgContainer styles={mdProps}>
-        <img src={src} alt={alt} style={imgStyles}/>
+        <img src={src} alt={alt} style={imgStyles} />
       </ImgContainer>
     )
   },
