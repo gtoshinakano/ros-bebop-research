@@ -37,7 +37,7 @@ No inicio de 2020, em plena pandemia do novo corona vírus, infelizmente meu pa�
 
 Graças a isso, por um bom tempo fomos o segundo país com o maior número de infecções e os números não paravam de aumentar, dia após dia.
 
-![Drone alerting people](static/images/drone-cov-alert.gif '{"maxWidth" :"100%", "float": "right"}')
+![Drone alerting people](static/images/drone-cov-alert.gif '{"maxWidth" :"100%", "float": "right", "url": "https://imgflip.com/gif/4oqbao"}')
 
 Lembro que vi na televisão, em um noticiário, um vídeo filmado por um drone que estava sendo utilizado para alertar as pessoas para ficarem dentro de suas casas.
 
@@ -64,4 +64,24 @@ Não use este material como única fonte de conhecimento para a área, pois cert
 Esta documentação se encontra no Github em https://github.com/gtoshinakano/ros-bebop-research, envie um pull request caso tenha algo a acrescentar!
 
 "Se você encontrar algum conteúdo errado ou muito difícil de entender, entre em contato comigo pelo email gtoshinakano@gmail.com com suas sugestões. Ficarei feliz em saber sua opinião!"
+
+---
+### O que você encontrará neste material:
+
+> ##### Seguindo este material, você será capaz de:
+> - Conhecer um pouco sobre Linux(Ubuntu) e ROS
+> - Entender suas características principais e o seu funcionamento como um todo
+> - Conhecer o drone BEBOP 1
+> - Aprender como instalar o ROS e suas dependências para controlar o Bebop Drone (testado apenas com Bebop 1)
+> - Aprender comandos básicos para entender o ROS
+> - Aprender como conectar o seu drone ao ROS, começar a ler dados e enviar comandos
+> - Ler o GPS do Bebop e conhecer os requisitos para obter sucesso
+> - Aprender Como Criar missões para o Drone e iniciar Plano de Vôo
+> - Ter ciência dos problemas e limitações e dicas para melhor experimento
+> - Realizar o Experimento com Javascript (NodeJS)
+> - Aprender como criar um web app para controlar e ler os dados do drone
+> - Ver Links e materiais que utilizei para esta pesquisa
+
+
+
 

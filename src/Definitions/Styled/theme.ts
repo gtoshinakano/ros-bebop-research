@@ -22,6 +22,13 @@ const light: DefaultTheme = {
       sideMenu: {
         backgroundColor: '#f4f5f7',
         languageBar: '#2c2c32'
+      },
+      markdown: {
+        blockquote:{
+          backgroundColor: "#f1f2f4",
+          color: "#333",
+          borderLeft: "1em #ccc solid"
+        }
       }
     }
 };
@@ -46,6 +53,13 @@ const dark: DefaultTheme = {
       sideMenu: {
         backgroundColor: '#272A2E',
         languageBar: '#25252b'
+      },
+      markdown: {
+        blockquote:{
+          backgroundColor: "#202329",
+          color: "#9aa6bc",
+          borderLeft: "1em #383a3f solid"
+        }
       }
     }
 };

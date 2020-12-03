@@ -24,7 +24,8 @@ const HighlightMarkdown = ({ children }) => {
           <img src={src} alt={alt} style={imgStyles}/>
         </ImgContainer>
       )
-    }
+    },
+    blockquote: Blockquote
   }
   return (
     <ReactMarkdown
@@ -44,5 +45,29 @@ const ImgContainer = styled.div`
 const imgStyles = {
   width:"100%"
 }
+
+const Blockquote = styled.blockquote`
+  background-color: ${props => props.theme.palette.markdown.blockquote.backgroundColor};
+  color: ${props => props.theme.palette.markdown.blockquote.color};
+  border-left: ${props => props.theme.palette.markdown.blockquote.borderLeft};
+  padding: 1.8em 1em 1.8em 2.5em;
+  margin: 2.1em 0 0.8em;
+  line-height: 2em;
+  font-family: Noto Sans JP;
+  letter-spacing: -0.026em;
+  p {
+    margin:0.5em 0 0;
+  }
+  h5{
+    color:${props => props.theme.palette.common.color};
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  ul{padding-left: 1.6em;}
+  li{
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+  }
+`
 
 export {HighlightMarkdown}
