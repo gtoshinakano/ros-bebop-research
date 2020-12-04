@@ -14,7 +14,7 @@ Aprenda, passo-a-passo, como controlar o seu drone Bebop pelo PC e entenda exata
 ---
 ## Por que compartilho isto com você?
 
-![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"float":"right","maxWidth" :"40%"}')
+![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"float":"right","maxWidth" :"40%","hidden":"mobile"}')
 
 Leonardo da Vinci era um talentoso artista de sua época. 
 
@@ -83,15 +83,7 @@ Esta documentação se encontra no Github em https://github.com/gtoshinakano/ros
 
 ---
 
-## Sobre o Autor
-
-Olá! Meu nome é Gabriel Toshinori Nakano, Brasileiro, 32 anos, programador Web Full Stack.
-
-Desde que me formei na faculdade de Tecnologia em Análise e Desenvolvimento de Sistemas trabalho desenvolvendo soluções Web utilizando tecnologias como JAVA, PHP, SQL, HTML, CSS, Javascript e Typescript.
-
-Meu foco atual é trabalhar com Javascript/Typescript pois é a linguagem da qual nos possibilita desenvolver uma inifinidade de soluções. 
-
-Inclusive esta documentação foi criada a partir do zero com a utilização do framework [NextJS](https://nextjs.org/)!
+## Sobre a proposta de estudo
 
 No final de 2019 me surgiu a oportunidade de estudar em Hokkaido, no Japão, e o tema que escolhi para estudar foi o desenvolvimento para IOT - Internet Of Things / Internet das Coisas. 
 
@@ -125,5 +117,15 @@ Portanto gostaria de dizer que o conteúdo que apresento nesta documentação é
 
 Sem mais delongas, navegue pelo menu para começar a aprender a como controlar um drone Bebop a partir de seu computador!
 
+---
 
+## Sobre o Autor
+
+Olá! Meu nome é Gabriel Toshinori Nakano, Brasileiro, 32 anos, programador Web Full Stack.
+
+Desde que me formei na faculdade de Tecnologia em Análise e Desenvolvimento de Sistemas trabalho desenvolvendo soluções Web utilizando tecnologias como JAVA, PHP, SQL, HTML, CSS, Javascript e Typescript.
+
+Meu foco atual é trabalhar com Javascript/Typescript pois é a linguagem da qual nos possibilita desenvolver uma inifinidade de soluções. 
+
+Inclusive esta documentação foi criada a partir do zero com a utilização do framework [NextJS](https://nextjs.org/)!
 

@@ -34,8 +34,14 @@ export const ImgContainer = styled.div`
   float: ${props => props.styles.float || "left"};
   margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : "0 10px 5px 0"};
   max-width: ${props => props.styles.maxWidth || "43%" };
-  ${breakpoint.xs} { max-width: 100%; }
-  ${breakpoint.sm} { max-width: 100%; }
+  ${breakpoint.xs} { 
+    max-width: 100%; 
+    display: ${props => props.styles.hidden === "mobile" && "none" };
+  }
+  ${breakpoint.sm} { 
+    max-width: 100%; 
+    display: ${props => props.styles.hidden === "mobile" && "none" };
+  }
 `
 
 export const Hr = styled.hr`
