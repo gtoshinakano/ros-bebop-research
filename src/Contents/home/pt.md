@@ -89,24 +89,39 @@ Olá! Meu nome é Gabriel Toshinori Nakano, Brasileiro, 32 anos, programador Web
 
 Desde que me formei na faculdade de Tecnologia em Análise e Desenvolvimento de Sistemas trabalho desenvolvendo soluções Web utilizando tecnologias como JAVA, PHP, SQL, HTML, CSS, Javascript e Typescript.
 
-Meu foco atual é seguir me aprofundando no conhecimento sobre Javascript/Typescript pois é a linguagem da qual nos possibilita desenvolver uma inifinidade de soluções. Inclusive esta documentação foi criada a partir do zero com a utilização do framework [NextJS](https://nextjs.org/)!
+Meu foco atual é trabalhar com Javascript/Typescript pois é a linguagem da qual nos possibilita desenvolver uma inifinidade de soluções. 
 
-Mas no final de 2019 me surgiu a oportunidade de estudar em Hokkaido, no Japão, e o tema que escolhi para estudar foi o desenvolvimento para IOT (Internet Of Things - Internet das Coisas). 
+Inclusive esta documentação foi criada a partir do zero com a utilização do framework [NextJS](https://nextjs.org/)!
 
-IOT é um simples conceito que consiste em conectar objetos úteis da vida cotidiana na internet, para que estes objetos se tornem ainda mais úteis e inteligentes. Como, por exemplo, uma cafeteira que pode ser controlada remotamente pela internet para preparar o café com um simples toque no celular.
-Eu já havia viajado ao Japão algumas vezes antes e sempre me encantava a forma pela qual o Japão utilizava a tecnologia em sua vida cotidiana. Os robôs estão por toda parte.
+No final de 2019 me surgiu a oportunidade de estudar em Hokkaido, no Japão, e o tema que escolhi para estudar foi o desenvolvimento para IOT - Internet Of Things / Internet das Coisas. 
+
+IOT é um simples conceito que consiste em conectar objetos úteis da vida cotidiana na internet, para fazer com que estes objetos se tornem ainda mais úteis e inteligentes. 
+
+Como, por exemplo, uma cafeteira que pode ser controlada remotamente pela internet para preparar o café com um simples toque no celular, aprender com os hábitos do usuário e escolher o melhor horário para preparar um café quentinho.
+
+E por aí vai...
+
+Eu já havia viajado ao Japão algumas vezes antes e sempre me encantava a forma pela qual o Japão utilizava a tecnologia em sua vida cotidiana. 
+
+Os robôs estão por toda parte.
 
 Mas não estou falando dos robôs que você vê nos animes derrotando inimigos e salvando a Terra...
 
-Falo de robôs como sensores, máquinas e enormes estruturas mecânicas. Eles estão por toda parte no Japão. Se compararmos ao Brasil, estes robôs são utilizados com menor frequência e a tecnologia geralmente é importada de outros países, o que torna o estudo sobre a fabricação e desenvolvimento muito escasso por lá.
+Falo de robôs como sensores, máquinas e/ou enormes estruturas mecânicas inteligentes. Eles estão por toda parte no Japão. 
 
-Minha motivação como programador era aprender como era possível conectar objetos ao computador e, a partir disso, ler dados e realizar comandos para poder desenvolver para IOT.
+No Brasil, estes robôs são utilizados com menor frequência e a tecnologia geralmente é importada de outros países, o que torna o mercado de robótica menos fomentado do que em outros países.
 
-E foi isso o que eu aprendi. O professor responsável pela minha pesquisa, Kikuchi Yoshihito, me apresentou o conceito perfeito para começar a aprender sobre conexão com robôs por meio da conexão e controle de drones.
+Minha curiosidade como programador era aprender como era possível conectar objetos ao computador e, a partir disso, ler dados e realizar comandos para poder desenvolver para IOT.
 
-O objetivo sugerido pelo professor para a minha pesquisa era de criar um web service para controlar um drone para fazer entregas de delivery com sucesso. Para isso, tive que passar por várias etapas de estudos e desafios, até me tornar capaz de programar para controlar o drone e alcançar o objetivo proposto.
+Foi isso o que eu aprendi e compartilho aqui com você. 
 
-Portanto gostaria de dizer que o conteúdo que apresento nesta documentação é direcionado apenas para realizar o objetivo proposto pela minha pesquisa e vou procurar ser o mais detalhado possível para que você possa replicar este experimento com sucesso.
+O professor responsável pela minha pesquisa, Kikuchi Yoshihito, me apresentou o conceito perfeito para começar a aprender sobre conexão com robôs por meio da conexão e controle de drones.
+
+O objetivo para a pesquisa sugerido pelo professor era de criar um web service para controlar um drone para fazer entregas de delivery. 
+
+Para isso, tive que passar por várias etapas de aprendizados e desafios, até me tornar capaz de programar para controlar o drone e alcançar esse objetivo.
+
+Portanto gostaria de dizer que o conteúdo que apresento nesta documentação é direcionado apenas para realizar este objetivo e vou procurar ser o mais detalhado possível para que você possa replicar este experimento com sucesso.
 
 Sem mais delongas, navegue pelo menu para começar a aprender a como controlar um drone Bebop a partir de seu computador!
 
