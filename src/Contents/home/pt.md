@@ -18,9 +18,9 @@ Aprenda, passo-a-passo, como controlar o seu drone Bebop pelo PC e entenda exata
 
 Leonardo da Vinci era um talentoso artista de sua época. 
 
-Poucos sabem que ele passou a dedicar-se aos estudos da matemática e da engenharia somente após os 30 anos. 
+Poucos sabem que, somente após os 30 anos, passou a dedicar-se aos estudos da matemática e da engenharia. 
 
-Desde então suas obras passaram a ter uma amplitude inimaginável de área, gênero e finalidade, tornando-o reconhecido mundialmente também por contribuições e avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
+Desde então suas obras passaram a ter uma amplitude inimaginável de área, gênero e finalidade, o que o tornou reconhecido mundialmente por sua contribuição em avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
 
 ![Image of Da Vinci](static/images/da-vinci.jpg '{"float":"left","maxWidth" :"40%"}')
 
@@ -40,25 +40,33 @@ Graças a isso, por um bom tempo fomos o segundo país com o maior número de in
 
 Lembro que vi em um noticiário na TV, um vídeo filmado por um drone utilizado para alertar as pessoas a ficarem dentro de suas casas.
 
-E foi aí que percebi que este era o melhor momento para estudar sobre drones!
+E foi aí que percebi que este poderia ser o melhor momento para estudar sobre drones!
 
-Mas o mundo estava instável e inseguro demais para correr em direção a um sonho...
+Mas o mundo estava inseguro e instável demais para correr em direção a um sonho...
 
-O meu intercâmbio para o Japão, que já estava confirmado desde janeiro, teve de ser adiado por tempo indeterminado porque os aeroportos se fecharam.
+Os governos confusos queriam movimentar a economia, os aeroportos foram fechados, muitas pessoas não conseguiam voltar para seus países.
+
+E o intercâmbio que normalmente, começaria em Abril, no início do ano letivo Japonês, teve de ser adiado por tempo indeterminado.
 
 E esse foi o pior período de incertezas para mim.
 
-Porém, por sorte, eu me enquadrava em certas condições que me possibilitava entrar no Japão, então quando os aeroportos japoneses voltaram a funcionar, fui um dos primeiros a poder ingressar.
+Havia deixado o meu emprego, comprado roupas de inverno, presentes brasileiros, e agora eu já não sabia mais quando iria, ou se eu conseguiria mesmo ir.
 
-Minha pesquisa deu início com 2 meses de atraso, entretanto, os 10 meses que se seguiram foram suficientes para poder escrever este material e compartilhá-lo com você.
+Por sorte, eu me enquadrava em certas condições que me possibilitavam entrar no Japão com certa facilidade, então quando os aeroportos japoneses voltaram a funcionar, fui um dos primeiros a poder ingressar.
 
-Essa experiência na Hokkai Gakuen University, em Sapporo - Hokkaido, me tornou um programador mais completo e abriu caminho para novas possibilidades aqui ou em qualquer lugar do mundo.
+Entrei no Japão, fiz a quarentena de 14 dias e, finalmente, cheguei em Hokkaido, o local onde ocorreria a minha pesquisa.
+
+A pesquisa deu início com 2 meses de atraso, entretanto, os 10 meses que se seguiram foram suficientes para poder escrever este material e compartilhá-lo com você.
+
+A experiência na Hokkai Gakuen University Engineering Campus, em Sapporo - Hokkaido, me tornou um programador mais completo e abriu caminho para novas possibilidades aqui ou em qualquer lugar do mundo.
 
 Portanto, sinto que devo contribuir compartilhando este conhecimento com você, porque eu acredito que quanto mais conhecimento temos, maior o nosso dever em compartilhá-lo para tornar o mundo melhor e mais instruído.
 
-Espero que este material lhe seja útil para aprender um pouco sobre robótica, drones e programação e que um pedaço da minha história te inspire a se tornar um melhor programador. 
+Espero que este material lhe seja útil para aprender um pouco sobre robótica, drones e programação e que este pedaço da minha história te inspire a se tornar um melhor programador, engenheiro ou qualquer outra profissão que faça sentido.
 
-Não use este material como única fonte de conhecimento para a área, pois certamente não será o suficiente. 
+Dei o meu melhor para fazer com que qualquer pessoa pudesse entender esta documentação pois eu senti a falta de materiais mais fáceis de entender durante a minha pesquisa.
+
+Mas não use este material como única fonte de conhecimento para a área pois, certamente, não será o suficiente. 
 
 Esta documentação se encontra no Github em https://github.com/gtoshinakano/ros-bebop-research, envie um pull request caso tenha algo a acrescentar!
 
@@ -128,4 +136,20 @@ Desde que me formei na faculdade de Tecnologia em Análise e Desenvolvimento de 
 Meu foco atual é trabalhar com Javascript/Typescript pois é a linguagem da qual nos possibilita desenvolver uma inifinidade de soluções. 
 
 Inclusive esta documentação foi criada a partir do zero com a utilização do framework [NextJS](https://nextjs.org/)!
+
+Eu me considero um artista e minha arte são meus códigos e suas utilidades.
+
+Mas eu gosto também de assuntos como Psicologia, Filosofia, Marketing e Negócios.
+
+Sou apaixonado por conhecimento e gosto sempre de contribuir com o próximo de alguma maneira.
+
+E espero contribuir para você te apresentando este material!
+
+Um forte abraço!
+
+---
+
+## Agradecimentos pessoais
+
+Failia, Tantousha, Companheiros, Associação Hokkaido.
 
