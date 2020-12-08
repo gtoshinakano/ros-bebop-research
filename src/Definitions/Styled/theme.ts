@@ -8,7 +8,9 @@ const light: DefaultTheme = {
     palette: {
       common: {
         color: '#292929',
-        white: '#ffffff'
+        white: '#ffffff',
+        contrastText: '#fff',
+        contrastBg: '#333'
       },
       primary: {
         main: '#188CBA',
@@ -39,7 +41,9 @@ const dark: DefaultTheme = {
     palette: {
       common: {
         color: '#ffffff',
-        white: '#222831'
+        white: '#222831',
+        contrastText: '#fff',
+        contrastBg: '#333'
       },
       primary: {
         main: '#999',

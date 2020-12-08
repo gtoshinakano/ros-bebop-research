@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Bebop Drone - The subject that I used in my experiments
 description: Ate 160 caracteres
 keywords: Keys separated with commas
 hero_alt: Hero alternative text

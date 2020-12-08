@@ -2,5 +2,5 @@
 date: 2020-11-08
 last-update: 2020-12-08
 author: Gabriel Toshinori Nakano
-hero_image: https://www.hokkai-t-u.ac.jp/common/img/access_yamahana01.jpg
+hero_image: https://techcrunch.com/wp-content/uploads/2015/03/parrot-bebop-camera.jpg
 ---

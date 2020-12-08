@@ -6,7 +6,7 @@ import axios from 'axios'
 import {useQuery} from 'react-query'
 import {Placeholder} from "@Commons"
 import {GlobalContainer} from "@Commons"
-import {HomeHero} from "@Components"
+import {DefaultHero} from "@Components"
 import {HighlightMarkdown} from "@Commons"
 
 function AboutBebop(props) {
@@ -33,7 +33,10 @@ function AboutBebop(props) {
         <Placeholder
           loading={isLoading}
         >
-          {data && <HomeHero bg={data.seo.hero_image} />}
+          {data && <DefaultHero 
+            bg={data.seo.hero_image} 
+            header={data.seo.title}
+          />}
           </Placeholder>
       </section>
       <GlobalContainer>
