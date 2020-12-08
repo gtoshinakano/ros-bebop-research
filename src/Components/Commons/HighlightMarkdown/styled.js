@@ -32,7 +32,7 @@ export const Blockquote = styled.blockquote`
 
 export const ImgContainer = styled.div`
   float: ${props => props.styles.float || "left"};
-  margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : props.styles.float==="left" ? "0 10px 5px 0" : 0};
+  margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : "0 10px 5px 0"};
   max-width: ${props => props.styles.maxWidth || "43%" };
   ${breakpoint.xs} { 
     max-width: 100%; 
