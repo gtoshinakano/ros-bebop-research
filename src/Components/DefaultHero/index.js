@@ -28,18 +28,17 @@ const Hero = (props) => {
           </small>
           <AvatarButton 
             variant="outline-secondary"
-            onClick={() => router.push("/about")}
+            onClick={() => router.push("/about-me")}
           >
             <FileUser size="21" />
-            <small><span>Profile</span></small>
+            <small><span>{t("profile")}</span></small>
           </AvatarButton>
           <AvatarButton 
             as="a" 
-            variant="link"
             href="mailto:gtoshinakano@gmail.com"
           >
             <Email size="19" />
-            <small>let's talk!</small>
+            <small>{t("lets-talk")}</small>
           </AvatarButton>
         </Avatar>
       </Container>   
@@ -80,10 +79,12 @@ const Container = styled.div`
 const Avatar = styled.div`
   margin-top:32px;
   display:flex;
+  flex-wrap: wrap;
   img{
     border-radius:50%;
     max-width:32px;
     max-height:32px;
+    margin-bottom:10px;
   }
   small{
     margin:0 4px 0 8px;
@@ -97,11 +98,12 @@ const Avatar = styled.div`
 
 const AvatarButton = styled(Button)`
   padding:1px 2px 0 4px;
-  margin:0 0 0 6px;
+  margin:0 0 0 8px;
   display:flex;
   align-items:center;
   border-radius:0.21em; 
   max-height:30px;
+  text-shadow: 0 0 0.5em ${props => props.theme.palette.common.contrastBg};
   ${breakpoint.xs} {
     margin:0;
   }
