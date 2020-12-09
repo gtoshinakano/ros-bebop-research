@@ -30,12 +30,11 @@ const HighlightMarkdown = ({ children }) => {
 
   React.useEffect(() => {
     Prism.highlightAll();
-  }, []);
+  });
 
   return (
     <ReactMarkdown
       renderers={renderers}
-
     >
       {children}
     </ReactMarkdown>
