@@ -9,5 +9,5 @@ cta: Call to Action
 ---
 
 
-![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"float":"right","maxWidth" :"40%","hidden":"mobile"}')
+![Image of Da Vinci](/static/images/da-vinci-fly.jpg '{"float":"right","maxWidth" :"40%","hidden":"mobile"}')
 

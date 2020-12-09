@@ -10,7 +10,7 @@ const langs = ["en", "pt", "jp"]
 
 export default async (req, res) => {
   const route = req.query.slug.join("/")
-  console.log(route)
+
   if(!req.query.language || !_.includes(langs, req.query.language)){
     res.statusCode = 404
     res.send("Error: Something went wrong")
