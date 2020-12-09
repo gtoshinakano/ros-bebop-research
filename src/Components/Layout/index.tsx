@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { LayoutProps } from "./Layout";
-import { SideMenu, SideMenuOpener } from "@Components"
+import { SideMenu, SideMenuOpener, TopNav } from "@Components"
 import {Dimmer, ThemedGlobal} from "./styled"
 import { ThemeProvider } from 'styled-components'
 import {light, dark} from '@Definitions/Styled'
@@ -50,6 +50,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 			<SideMenu isOpen={isOpen} toggleTheme={toggleTheme} isDark={isDark} />
 			<SideMenuOpener isOpen={isOpen} onOpen={setIsOpen} />
 			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))} />
+			<TopNav />
 			{children}
 		</ThemeProvider>
 	)

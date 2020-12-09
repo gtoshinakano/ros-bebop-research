@@ -13,7 +13,7 @@ const light: DefaultTheme = {
         contrastBg: '#333'
       },
       primary: {
-        main: '#188CBA',
+        main: "#999",//'#188CBA',
         contrastText: '#ffffff',
         hover: '#188CBA',
       },
