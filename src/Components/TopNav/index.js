@@ -3,7 +3,9 @@ import styled from "styled-components"
 import {breakpoint} from '@Definitions/Styled'
 import { withTranslation } from "../../../i18n"
 import { I18nContext } from 'next-i18next'
+import moment from 'moment'
 import {Button, Dropdown} from "react-bootstrap"
+import {Flag} from '@Commons'
 import {Github} from "@styled-icons/fa-brands/Github"
 import {useRouter} from "next/router"
 
@@ -11,16 +13,23 @@ import {useRouter} from "next/router"
 const NavigationBar = (props) => {
 
   const { i18n: { language } } = React.useContext(I18nContext)
-  const {t, date} = props
+  const {t, i18n} = props
   const router = useRouter()
+
+  const changeLanguage = (eventKey) => {
+    i18n.changeLanguage(eventKey)
+    moment.locale(eventKey)
+  }
 
   return(
     <Container>
       <HalfNav>
         <Avatar>
           <img src="https://images.assetsdelivery.com/compings_v2/keltmd/keltmd1803/keltmd180300364.jpg" />
-          My Exchange Research
-          <span style={{marginLeft: 5}}> in Hokkaido 2020</span>
+          <b>
+            My Exchange Research
+            <span> in Hokkaido 2020</span>
+          </b>
         </Avatar>
       </HalfNav>
       <HalfNav justify="flex-end">
@@ -30,16 +39,19 @@ const NavigationBar = (props) => {
           <Github size="22" style={{marginRight: 7}} />
           GitHub
         </GithubButton>
-        <Dropdown>
-          <Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
-            {t("change-language")} : {language.toUpperCase()}
-          </Dropdown.Toggle>
+        <Dropdown drop="down">
+          <DropToggle 
+            variant="outline-warning"
+            eventKey={language}
+          >
+            <Flag flag={language} width={25}/>
+          </DropToggle>
 
-          <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-          </Dropdown.Menu>
+          <DropMenu align="right">
+            <Item disabled={language === "pt"} onSelect={changeLanguage} eventKey="pt"><Flag flag={"pt"} width={25}/> {t("lang-pt")}</Item>
+            <Item disabled={language === "jp"} onSelect={changeLanguage} eventKey="jp"><Flag flag={"jp"} width={25}/> {t("lang-jp")}</Item>
+            <Item disabled={language === "en"} onSelect={changeLanguage} eventKey="en"><Flag flag={"en"} width={25}/> {t("lang-en")}</Item>
+          </DropMenu>
         </Dropdown>
       </HalfNav>
     </Container>   
@@ -48,13 +60,12 @@ const NavigationBar = (props) => {
 
 const Container = styled.nav`
   width:100%;
-  margin: 0 0 3vh;
   font-family: Muli;
   display:flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
-  padding: 28px 64px;
-  background-color: rgb(0,0,0,0.8);
+  padding: 21px 64px;
+  background-color: #10141A;
   ${breakpoint.xs} {
     padding: 0 10px;
   }
@@ -64,7 +75,7 @@ const Container = styled.nav`
 `
 
 const HalfNav = styled.div`
-  width:40%;
+  width:48%;
   margin: 10px 0;
   height:100%;
   color: ${props => props.theme.palette.common.contrastText}; 
@@ -80,7 +91,7 @@ const HalfNav = styled.div`
 `
 
 const Avatar = styled.div`
-  display:flex;
+  display: inline-flex;
   align-items: center;
   img{
     border-radius:50%;
@@ -100,6 +111,21 @@ const GithubButton = styled(Button)`
   align-items: center;
   justify-content: space-between;
   border-radius:0.21em; 
+`
+
+const DropToggle = styled(Dropdown.Toggle)`
+  padding:4px 10px;
+
+`
+
+const DropMenu = styled(Dropdown.Menu)`
+  padding: 0;
+  background-color: #272D36;
+  
+`
+
+const Item = styled(Dropdown.Item)`
+  color: white;
 `
 
 

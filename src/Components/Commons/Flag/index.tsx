@@ -13,17 +13,18 @@ const Flag:FunctionComponent<IProps> = (props) => {
 
   const style = {
     width: props.width || 20,
-    float: "left",
     margin: "8px 3px",
   } as React.CSSProperties
 
   switch (props.flag) {
+    case "pt":
     case "br":
       return <img src={Bra} style={style} />
-    case "en":
-      return <img src={Eng} style={style} />
     case "jp":
       return <img src={Jap} style={style} />
+    default :
+    case "en":
+        return <img src={Eng} style={style} />
   }
 }
 

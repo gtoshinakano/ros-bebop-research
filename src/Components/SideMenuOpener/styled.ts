@@ -9,7 +9,7 @@ type Container = {
 
 export const Container = styled.div<Container>`
     position: fixed;
-    right: 20px;
+    right: 18px;
     width: 30px;
     height: 30px;
     display: flex;
@@ -21,9 +21,9 @@ export const Container = styled.div<Container>`
     transform: ${props => props.isOpen ? "rotate(-45deg)" : ""};
     ${breakpoint.xs} { bottom: 15px; top: auto}
     ${breakpoint.sm} { bottom: 15px; top: auto}
-    ${breakpoint.md} { top: 15px; bottom: auto}
-    ${breakpoint.lg} { top: 15px; bottom: auto}
-    ${breakpoint.xl} { top: 15px; bottom: auto}
+    ${breakpoint.md} { top: 37px; bottom: auto}
+    ${breakpoint.lg} { top: 37px; bottom: auto}
+    ${breakpoint.xl} { top: 37px; bottom: auto}
 `;
 
 type Bar = {

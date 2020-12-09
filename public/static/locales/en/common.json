@@ -8,5 +8,8 @@
   "language": "Language",
   "change-language": "Change Language",
   "profile": "Profile",
-  "lets-talk": "let's talk!"
+  "lets-talk": "let's talk!",
+  "lang-en": "English",
+  "lang-pt": "Portuguese",
+  "lang-jp": "Japanese"
 }

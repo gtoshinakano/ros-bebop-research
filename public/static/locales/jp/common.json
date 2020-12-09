@@ -6,5 +6,8 @@
   "language": "言語",
   "change-language": "言語変更",
   "profile": "プロフィール",
-  "lets-talk": "話しましょう！"
+  "lets-talk": "話しましょう！",
+  "lang-en": "英語",
+  "lang-pt": "ポルトガル語",
+  "lang-jp": "日本語"
 }
