@@ -3,12 +3,16 @@ import gsap from "gsap"
 import styled from "styled-components"
 import {breakpoint} from '@Definitions/Styled'
 import { withTranslation } from "../../../i18n"
+import {Button} from "react-bootstrap"
+import {FileUser} from "@styled-icons/remix-line/FileUser"
+import {Email} from "@styled-icons/entypo/Email"
 import moment from "moment"
-import Link from 'next/link'
+import {useRouter} from "next/router"
 
 const Hero = (props) => {
 
   const {t, date} = props
+  const router = useRouter()
 
   return(
     <HeroContainer
@@ -22,7 +26,21 @@ const Hero = (props) => {
             <b>{t("author")}</b>
             <br /> <span>{moment(date).format("MMMM D, YYYY")}</span>
           </small>
-          
+          <AvatarButton 
+            variant="outline-secondary"
+            onClick={() => router.push("/about")}
+          >
+            <FileUser size="21" />
+            <small><span>Profile</span></small>
+          </AvatarButton>
+          <AvatarButton 
+            as="a" 
+            variant="link"
+            href="mailto:gtoshinakano@gmail.com"
+          >
+            <Email size="19" />
+            <small>let's talk!</small>
+          </AvatarButton>
         </Avatar>
       </Container>   
     </HeroContainer>
@@ -37,6 +55,7 @@ const HeroContainer = styled.div`
   min-height: 190px;
   padding:35px 0;
   display:flex;
+  align-items:center;
   font-family: Noto Sans JP; 
   text-shadow: 0 0 0.5em ${props => props.theme.palette.common.contrastBg};
   color: ${props => props.theme.palette.common.contrastText};
@@ -61,19 +80,34 @@ const Container = styled.div`
 const Avatar = styled.div`
   margin-top:32px;
   display:flex;
-  height:32px;
   img{
     border-radius:50%;
     max-width:32px;
+    max-height:32px;
   }
   small{
-    margin:0 0 0 10px;
+    margin:0 4px 0 8px;
     line-height: 1.3em;
   }
   span{
     font-weight:100;
     text-transform: capitalize;
   } 
+`
+
+const AvatarButton = styled(Button)`
+  padding:1px 2px 0 4px;
+  margin:0 0 0 6px;
+  display:flex;
+  align-items:center;
+  border-radius:0.21em; 
+  max-height:30px;
+  ${breakpoint.xs} {
+    margin:0;
+  }
+  ${breakpoint.sm} {
+    margin:0;
+  }
 `
 
 const Extended = withTranslation('common')(Hero)
