@@ -4,6 +4,7 @@ import React from "react";
 //import {useQuery} from 'react-query'
 import { I18nContext } from 'next-i18next'
 import { withTranslation } from "../../../i18n"
+import moment from "moment"
 //import {withTranslation} from "../"
 // #endregion Global Imports
 
@@ -28,17 +29,12 @@ const Comp: React.FunctionComponent<
   ISideMenu.IProps
 > = ({t, i18n, isOpen, toggleTheme, isDark}) => {
 
-  /*const { isLoading, error, data } = useQuery('menuItems', () => {
-    return firebase
-    .firestore()
-    .collection("menu")
-    .get()
-    .then((snap) => {
-      return snap.data()
-    })
-  }, {staleTime: Infinity}) */
-  //changed node_modules/react-query/types/core/types.d.ts to | "Infinity"
   const { i18n: { language } } = React.useContext(I18nContext)
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang)
+    moment.locale(lang)
+  }
 
   return (
     <Container isOpen={isOpen}>
@@ -66,21 +62,21 @@ const Comp: React.FunctionComponent<
         </small>
         <ButtonGroup size="sm">
           <Button 
-            onClick={() => i18n.changeLanguage("pt")} 
+            onClick={() => changeLanguage("pt")} 
             disabled={language==="pt"} 
             variant="secondary"
           >
             <Flag flag="br" width={22} />
           </Button>
           <Button 
-            onClick={() => i18n.changeLanguage("jp")} 
+            onClick={() => changeLanguage("jp")} 
             disabled={language==="jp"} 
             variant="secondary"
           >
             <Flag flag="jp" width={22} />
           </Button>
           <Button 
-            onClick={() => i18n.changeLanguage("en")} 
+            onClick={() => changeLanguage("en")} 
             disabled={language==="en"} 
             variant="secondary"
           >

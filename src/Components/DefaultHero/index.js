@@ -70,7 +70,10 @@ const Avatar = styled.div`
     margin:0 0 0 10px;
     line-height: 1.3em;
   }
-  span{font-weight:100;} 
+  span{
+    font-weight:100;
+    text-transform: capitalize;
+  } 
 `
 
 const Extended = withTranslation('common')(Hero)
