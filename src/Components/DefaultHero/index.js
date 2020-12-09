@@ -3,11 +3,12 @@ import gsap from "gsap"
 import styled from "styled-components"
 import {breakpoint} from '@Definitions/Styled'
 import { withTranslation } from "../../../i18n"
+import moment from "moment"
 import Link from 'next/link'
 
 const Hero = (props) => {
 
-  const {t} = props
+  const {t, date} = props
 
   return(
     <HeroContainer
@@ -19,7 +20,7 @@ const Hero = (props) => {
           <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/18951501_10203096811459409_400331603628819510_n.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=Jw9qpGIiSDkAX83LVoT&_nc_ht=scontent-lax3-2.xx&oh=70bc074e1fcd5c6e6bff3b8185858e36&oe=5FF77F16" alt />
           <small>
             <b>{t("author")}</b>
-            <br /> <span>Dezembro</span>
+            <br /> <span>{moment(date).format("MMMM D, YYYY")}</span>
           </small>
           
         </Avatar>

@@ -36,6 +36,7 @@ function AboutBebop(props) {
           {data && <DefaultHero 
             bg={data.seo.hero_image} 
             header={data.seo.title}
+            date={data.seo.last_update}
           />}
           </Placeholder>
       </section>
