@@ -28,8 +28,8 @@ const Comp: React.FunctionComponent<
 				<Link href="/">{t("home")}</Link>
 			</Item>
 			<Item header={1}>{t("content")}</Item>
-			<Item action active={path==="/about-bebop"} disabled={path==="/about-bebop"}>
-				<Link href="/about-bebop">{t("about-bebop")}</Link>
+			<Item action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
+				<Link href="/posts/about-bebop">{t("about-bebop")}</Link>
 			</Item>
 			<Item action active={path===""} disabled={path===""}>
 				<Link href="">{t("about-ros")}</Link>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { withTranslation } from '../i18n'
+import { withTranslation } from '../../i18n'
 import { I18nContext } from 'next-i18next'
 import axios from 'axios'
 import {useQuery} from 'react-query'
@@ -14,7 +14,7 @@ function AboutBebop(props) {
   const { i18n: { language } } = React.useContext(I18nContext)
 
   const { isLoading, error, data } = useQuery(['about-bebop', language], () => {
-    return axios.get('/api/about-bebop',{
+    return axios.get('/api/posts/about-bebop',{
       params: {
         language: language
       }
