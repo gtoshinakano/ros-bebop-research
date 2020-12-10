@@ -15,52 +15,51 @@ import { IMenu } from "./Menu";
 
 const Comp: React.FunctionComponent<
 		IMenu.IProps
-> = ({t, i18n}) => {
+> = ({t, i18n, onSelected}) => {
 
 	const router = useRouter()
 	const path = router.pathname
 
-
 	return (
 		<Container>
 			<Item header={1}>{t("research")}</Item>
-			<Item active={path==="/"} disabled={path==="/"}>
+			<Item onClick={onSelected} action active={path==="/"} disabled={path==="/"}>
 				<Link href="/">{t("home")}</Link>
 			</Item>
 			<Item header={1}>{t("content")}</Item>
-			<Item action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
+			<Item onClick={onSelected} action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
 				<Link href="/posts/about-bebop">{t("about-bebop")}</Link>
 			</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("about-ros")}</Link>
 			</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("ros-bebop")}</Link>
 			</Item>
 			<Item header={1}>{t("guide")}</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("installation")}</Link>
 				</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("controlling")}</Link>
 				</Item>	
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("reading")}</Link>
 			</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("bebop-gps")}</Link>
 			</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("precautions")}</Link>
 			</Item>		
 			<Item header={1}>{t("try-node")}</Item>	
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected}  action active={path===""} disabled={path===""}>
 				<Link href="">{t("node-bebop")}</Link>
 			</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("web-service")}</Link>
 			</Item>
-			<Item action active={path===""} disabled={path===""}>
+			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
 				<Link href="">{t("about")}</Link>
 			</Item>
 		</Container>

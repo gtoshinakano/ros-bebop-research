@@ -47,7 +47,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
 	return (
 		<ThemeProvider theme={theme}>
 			<ThemedGlobal />
-			<SideMenu isOpen={isOpen} toggleTheme={toggleTheme} isDark={isDark} />
+			<SideMenu isOpen={isOpen} onSelect={() => (setIsOpen(false))} toggleTheme={toggleTheme} isDark={isDark} />
 			<SideMenuOpener isOpen={isOpen} onOpen={setIsOpen} />
 			<Dimmer isOpen={isOpen} onClick={() => (setIsOpen(false))} />
 			<TopNav />

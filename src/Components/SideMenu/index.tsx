@@ -27,13 +27,14 @@ import { ISideMenu } from "./SideMenu";
 
 const Comp: React.FunctionComponent<
   ISideMenu.IProps
-> = ({t, i18n, isOpen, toggleTheme, isDark}) => {
+> = ({t, i18n, isOpen, toggleTheme, isDark, onSelect}) => {
 
   const { i18n: { language } } = React.useContext(I18nContext)
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang)
     moment.locale(lang)
+    onSelect()
   }
 
   return (
@@ -43,7 +44,7 @@ const Comp: React.FunctionComponent<
         <small className="logo-text">By: {t("common:author")}</small>
       </Header>
       <MenuContainer>
-        <Menu />
+        <Menu onSelected={onSelect} />
       </MenuContainer>
       <DefaultChangerContainer>
         <Button

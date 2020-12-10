@@ -5,7 +5,8 @@ export declare namespace ISideMenu {
     export interface IProps extends WithTranslation { 
         isOpen: boolean | false,
         toggleTheme: function,
-        isDark: boolean
+        isDark: boolean,
+        onSelect: function
     }
 
     export interface InitialProps {
