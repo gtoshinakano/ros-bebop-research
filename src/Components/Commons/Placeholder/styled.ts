@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components'
+import {breakpoint} from '@Definitions/Styled'
 
 const Container = styled.div`
   width: 100%;
@@ -26,6 +27,12 @@ const Rect = styled.div`
   position: relative;
   background-size: 800px;
   margin-bottom: 2em;
+  ${breakpoint.xs} {
+    width: ${props => props.heroImage ? "100%" : props.width || (Math.random() * (375 - 100 + 1) + 100) + "px"};
+  }
+  ${breakpoint.sm} {
+    width: ${props => props.heroImage ? "100%" : props.width || (Math.random() * (375 - 100 + 1) + 100) + "px"};
+  }
 `
 
 export {Container, Rect}
