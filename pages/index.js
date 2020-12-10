@@ -32,9 +32,12 @@ function Home(props) {
       <section>
         <Placeholder
           loading={isLoading}
+          heroImage
+          paragraphs={10}
+          header
         >
           {data && <HomeHero bg={data.seo.hero_image} />}
-          </Placeholder>
+        </Placeholder>
       </section>
       <GlobalContainer>
         <Placeholder

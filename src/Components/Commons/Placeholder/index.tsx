@@ -1,5 +1,7 @@
 import React from 'react'
 import {Container, Rect} from './styled'
+import {GlobalContainer} from "@Commons"
+import _ from 'lodash'
 
 
 const Placeholder = ({
@@ -10,11 +12,14 @@ const Placeholder = ({
   loading
 }) => {
 
-
   if(loading)
     return (
       <Container>
-        <Rect height={20} />
+        <Rect height={heroImage ? "190px" : "1em"} heroImage={heroImage} />
+        <GlobalContainer>
+          {header && <Rect width="100%" height="2em" />}
+          {paragraphs > 0 && _.times(paragraphs, () => <Rect />)}
+        </GlobalContainer>
       </Container>
     )
   else

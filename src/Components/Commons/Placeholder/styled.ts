@@ -21,9 +21,11 @@ const Rect = styled.div`
   animation-name: ${animate};
   animation-timing-function: linear;
   background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
-  height: ${props => props.height + "px"};
+  height: ${props => props.height || "1em"};
+  width: ${props => props.heroImage ? "100%" : props.width || (Math.random() * (680 - 375 + 1) + 375) + "px"};
   position: relative;
   background-size: 800px;
+  margin-bottom: 2em;
 `
 
 export {Container, Rect}

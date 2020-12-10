@@ -32,20 +32,19 @@ function AboutBebop(props) {
       <section>
         <Placeholder
           loading={isLoading}
+          paragraphs={10}
+          heroImage
+          header
         >
           {data && <DefaultHero 
             bg={data.seo.hero_image} 
             header={data.seo.title}
             date={data.seo.last_update}
           />}
-          </Placeholder>
+        </Placeholder>
       </section>
       <GlobalContainer>
-        <Placeholder
-          loading={isLoading}
-        >
-          {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
-        </Placeholder>
+        {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
       </GlobalContainer>
     </>
   )

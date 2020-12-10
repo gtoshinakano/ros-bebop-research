@@ -36,8 +36,9 @@ const NavigationBar = (props) => {
         <GithubButton
           variant="outline-primary"
         >
-          <Github size="22" style={{marginRight: 7}} />
-          GitHub
+          <a href="https://github.com/gtoshinakano/ros-bebop-research"
+          target="_blank"><Github size="22" style={{marginRight: 7}} />
+          GitHub</a>
         </GithubButton>
         <Dropdown drop="down">
           <DropToggle 
@@ -130,7 +131,10 @@ const Item = styled(Dropdown.Item)`
 
 const Anchor = styled.a`
   color: inherit;
-  :hover{color:inherit;}
+  :hover{
+    color:inherit;
+    text-decoration: none;
+  }
 `
 
 
