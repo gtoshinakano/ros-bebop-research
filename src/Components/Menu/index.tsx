@@ -5,7 +5,6 @@ import React from "react";
 // #region Local Imports
 import { Container, Item } from "./styled";
 import { withTranslation } from "../../../i18n"
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 // #endregion Local Imports
 
@@ -20,47 +19,52 @@ const Comp: React.FunctionComponent<
 	const router = useRouter()
 	const path = router.pathname
 
+	const goTo = ({target}) => {
+		router.push(target.value)
+		onSelected()
+	}
+
 	return (
 		<Container>
 			<Item header={1}>{t("research")}</Item>
-			<Item onClick={onSelected} action active={path==="/"} disabled={path==="/"}>
-				<Link href="/">{t("home")}</Link>
+			<Item value="/" onClick={goTo} action active={path==="/"} disabled={path==="/"}>
+				{t("home")}
 			</Item>
 			<Item header={1}>{t("content")}</Item>
-			<Item onClick={onSelected} action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
-				<Link href="/posts/about-bebop">{t("about-bebop")}</Link>
+			<Item value="/posts/about-bebop" onClick={goTo} action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
+				{t("about-bebop")}
 			</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("about-ros")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("about-ros")}
 			</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("ros-bebop")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("ros-bebop")}
 			</Item>
 			<Item header={1}>{t("guide")}</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("installation")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("installation")}
 				</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("controlling")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("controlling")}
 				</Item>	
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("reading")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("reading")}
 			</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("bebop-gps")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("bebop-gps")}
 			</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("precautions")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("precautions")}
 			</Item>		
 			<Item header={1}>{t("try-node")}</Item>	
-			<Item onClick={onSelected}  action active={path===""} disabled={path===""}>
-				<Link href="">{t("node-bebop")}</Link>
+			<Item value="/posts/" onClick={goTo}  action active={path===""} disabled={path===""}>
+				{t("node-bebop")}
 			</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("web-service")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("web-service")}
 			</Item>
-			<Item onClick={onSelected} action active={path===""} disabled={path===""}>
-				<Link href="">{t("about")}</Link>
+			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+				{t("about")}
 			</Item>
 		</Container>
 	);

@@ -17,7 +17,7 @@ const Placeholder = ({
       <Container>
         <Rect height={heroImage ? "190px" : "1em"} heroImage={heroImage} />
         <GlobalContainer>
-          {header && <Rect width="100%" height="2em" />}
+          {header && <Rect width="100%" height="2.5em" />}
           {paragraphs > 0 && _.times(paragraphs, () => <Rect />)}
         </GlobalContainer>
       </Container>
