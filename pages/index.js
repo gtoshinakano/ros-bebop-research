@@ -35,6 +35,7 @@ function Home(props) {
           heroImage
           paragraphs={10}
           header
+          heroHeight="70vh"
         >
           {data && <HomeHero bg={data.seo.hero_image} />}
         </Placeholder>

@@ -29,7 +29,7 @@ const HeroContainer = styled.div`
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 80vh;
+  height: 70vh;
 `
 
 export {HomeHero}
