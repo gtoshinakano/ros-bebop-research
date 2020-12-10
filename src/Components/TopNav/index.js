@@ -8,6 +8,7 @@ import {Button, Dropdown} from "react-bootstrap"
 import {Flag} from '@Commons'
 import {Github} from "@styled-icons/fa-brands/Github"
 import {useRouter} from "next/router"
+import Link from "next/link"
 
 
 const NavigationBar = (props) => {
@@ -26,10 +27,9 @@ const NavigationBar = (props) => {
       <HalfNav>
         <Avatar>
           <img src="https://images.assetsdelivery.com/compings_v2/keltmd/keltmd1803/keltmd180300364.jpg" />
-          <b>
-            My Exchange Research
-            <span> in Hokkaido 2020</span>
-          </b>
+          <Link href='/'>
+            <Anchor href="#">My Exchange Research <span> in Hokkaido 2020</span></Anchor>
+          </Link>
         </Avatar>
       </HalfNav>
       <HalfNav justify="flex-end">
@@ -126,6 +126,11 @@ const DropMenu = styled(Dropdown.Menu)`
 
 const Item = styled(Dropdown.Item)`
   color: white;
+`
+
+const Anchor = styled.a`
+  color: inherit;
+  :hover{color:inherit;}
 `
 
 
