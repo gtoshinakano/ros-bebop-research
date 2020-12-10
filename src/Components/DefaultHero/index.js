@@ -51,7 +51,7 @@ const HeroContainer = styled.div`
   background-position: center;
   background-size: cover;
   width: 100%;
-  min-height: 190px;
+  min-height: 234px;
   padding:35px 0;
   display:flex;
   align-items:center;

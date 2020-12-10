@@ -16,7 +16,7 @@ const Placeholder = ({
   if(loading)
     return (
       <Container>
-        <Rect height={heroHeight ? heroHeight : heroImage ? "190px" : "1em"} heroImage={heroImage} />
+        <Rect height={heroHeight ? heroHeight : heroImage ? "234px" : "1em"} heroImage={heroImage} />
         <GlobalContainer>
           {header && <Rect width="100%" height="2.5em" />}
           {paragraphs > 0 && _.times(paragraphs, () => <Rect />)}
