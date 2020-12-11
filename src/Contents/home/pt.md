@@ -7,9 +7,9 @@ headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
 ---
-# Envie seu drone Bebop em uma missão pelo PC utilizando o ROS
+# Envie seu Bebop em uma missão pelo PC utilizando o ROS!
 
-Aprenda, passo-a-passo, como controlar o seu drone Bebop pelo PC e entenda exatamente como funciona o ROS - Robot Operating System!
+Aprenda exatamente como funciona o ROS - Robot Operating System - e também, passo-a-passo, a como controlar o seu drone Bebop pelo PC!
 
 ---
 ## Por que compartilho isto com você?
@@ -117,7 +117,7 @@ Foi isso o que eu aprendi e compartilho aqui com você.
 
 O professor responsável pela minha pesquisa, Kikuchi Yoshihito, me apresentou o conceito perfeito para começar a aprender sobre conexão com robôs por meio da conexão e controle de drones.
 
-O objetivo para a pesquisa sugerido pelo professor era de criar um web service para controlar um drone para fazer entregas de delivery. 
+O objetivo para a pesquisa sugerido pelo professor era de criar um web service para controlar um drone com o objetivo de fazer entregas de delivery. 
 
 Para isso, tive que passar por várias etapas de aprendizados e desafios, até me tornar capaz de programar para controlar o drone e alcançar esse objetivo.
 
