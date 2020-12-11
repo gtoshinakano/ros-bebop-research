@@ -14,10 +14,11 @@ const renderers = {
       </pre>)
     },
   image: ({src, alt, title}) => {
-    const mdProps = JSON.parse(title) || {}
+    const initial = {style: {float: "left"}}
+    const mdProps = title ? {...initial, ...JSON.parse(title) } : initial
     return (
       <ImgContainer styles={mdProps.style}>
-        <img src={src} alt={alt} width="100%" />
+        <img src={src} alt={alt} width="100%" title={mdProps.title} />
     {mdProps.description && <small>{mdProps.description}</small>}
       </ImgContainer>
     )

@@ -124,15 +124,15 @@ Mas nunca tinha pensado que essas idéias seriam tão dificultadas por causa de 
 
 É claro que drones mais modernos e mais caros possuem baterias com maiores capacidades para fazer maiores distâncias e aguentar maiores pesos.
 
-No entanto, as baterias do Bebop e de outros drones da mesma categoria, não aguentam muito mais que 11 minutos de tempo de vôo. ;(
+No entanto, as baterias do Bebop e de outros drones da mesma categoria, não aguentam muito mais que 11 minutos de tempo de vôo.
 
 Isso impossibilita a sua utilização para o ideal deste projeto, mas é o suficiente para realizarmos o nosso experimento e aprendermos com ele.
 
-Quando eu tirei o Bebop da caixa, não consegui carregar as baterias. Após colocar na tomada, o LED vermelho do carregador só piscava continuamente.
+Quando eu tirei o Bebop da caixa, não consegui carregar as baterias. De 8 a 10 segundos após colocar o carregador na tomada, seu LED vermelho apenas piscava continuamente.
 
 Solicitei outro carregador ao professor mas, mesmo assim, no novo carregador acontecia o mesmo.
 
-Pesquisei por um bom tempo na internet e a resposta veio em um simples vídeo do [Youtube](https://www.youtube.com/watch?v=dfUOAMwQCKM).
+Pesquisei por um bom tempo na internet e a resposta veio em um vídeo do [Youtube](https://www.youtube.com/watch?v=dfUOAMwQCKM).
 
 Entendi que, com o tempo sem utilização, as baterias descarregam gradativamente e chegam a um nível de carga onde o carregador não as reconhece quando conectadas a ele.
 
@@ -146,7 +146,7 @@ Fizemos de forma parecida com o vídeo e funcionou!
 
 Depois de algumas tentativas fazendo exatamente como no vídeo, o LED vermelho parou de piscar, indicando que o carregador reconheceu a bateria e a estava carregando.
 
-Portanto se você está com problemas com a bateria de seu Bebop, este procedimento pode ser uma solução. 
+Portanto se você está com problemas em carregar a bateria de seu Bebop, este procedimento pode ser uma solução. 
 
 Mas tenha o máximo de cuidado com os riscos de choque elétrico e de incêndio que isto pode causar.
 
@@ -156,3 +156,20 @@ Com as baterias carregadas, pude dar continuidade ao projeto.
 
 ## Rede Wi-Fi
 
+O Bebop se conecta com o seu controlador por meio de Wi-Fi. 
+
+Isto significa que ele possui uma placa de rede wireless que cria um "roteador" interno da qual permite a conexão com qualquer outro dispositivo que se conecta com Wi-Fi. 
+
+![Parrot Connect](https://www.ntt-tx.co.jp/column/yasui_blog/img/20151202_drone_blog_04-02.png '{"style":{"float":"right"}}')
+
+Como smartphones, tablets, notebooks e etc...
+
+
+
+---
+
+#### **Por favor, me corrija se eu estiver errado.**
+
+É provável que eu tenha cometido algum engano ou que eu não tenha usado a melhor forma para explicar os conceitos expostos aqui nesta página, portanto, peço para que entre em contato comigo para que você possa me ajudar a explicar melhor.
+
+Meu email para contato é [gtoshinakano@gmail.com](mailto:gtoshinakano@gmail.com). Ficarei feliz em saber a sua opinião!

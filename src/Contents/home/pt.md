@@ -22,7 +22,7 @@ Poucos sabem que, somente após os 30 anos, passou a dedicar-se aos estudos da m
 
 Desde então suas obras passaram a ter uma amplitude inimaginável de área, gênero e finalidade, o que o tornou reconhecido mundialmente por sua contribuição em avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
 
-![Image of Da Vinci](static/images/da-vinci.jpg '{"style":{"float":"left","maxWidth" :"40%"}}')
+![Image of Da Vinci](static/images/da-vinci.jpg '{"title":"Oit Teste"}')
 
 Eu não sou gênio e muito menos um artista talentoso como Leonardo da Vinci.
 
