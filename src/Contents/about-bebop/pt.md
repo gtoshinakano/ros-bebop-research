@@ -16,9 +16,11 @@ Eu queria estudar sobre programação para IOT, conheci um professor de engenhar
 > ##### O objetivo proposto
 > *"Criar um web service para controlar um drone com o objetivo de fazer entregas de delivery."*
 
-Para isso, ele e a Universidade me disponibilizaram um drone Bebop 1 da marca francesa Parrot, um notebook i5 novinho e livros sobre Ubuntu e ROS (Robot Operating System).
+Para isso, ele e a Universidade me disponibilizaram um drone Bebop 1 da marca francesa Parrot, um notebook i5 novinho, livros sobre Ubuntu e ROS (Robot Operating System).
 
-Sou muito grato por todo este material disponibilizado para o meu período de pesquisa. Dificilmente conseguiria algo igual em condições parecidas no Brasil...
+Além de uma sala só para mim, com lousa, impressora, mesa de escritório e armários.
+
+Sou muito grato por toda a estrutura disponibilizada para o meu período de pesquisa. Dificilmente conseguiria algo igual em condições parecidas no Brasil...
 
 Mas deixando as comparações entre países de lado, apresentarei aqui algumas características técnicas sobre este drone, falando especificamente sobre aspectos relacionados ao objetivo deste projeto.
 
@@ -108,7 +110,7 @@ O [último firmware pode ser baixado aqui](https://support.parrot.com/global/sup
 
 É importante ressaltar que, para que o seu drone funcione corretamente, **é necessário que a última versão do firmware esteja instalada** nele.
 
-Agora outros dois aspectos importantes para você ter ciência sobre o Bebop.
+Agora outros três aspectos importantes para você ter mais conhecimentos sobre o Bebop.
 
 ---
 
@@ -126,7 +128,7 @@ No entanto, as baterias do Bebop e de outros drones da mesma categoria, não agu
 
 Isso impossibilita a sua utilização para o ideal deste projeto, mas é o suficiente para realizarmos o nosso experimento e aprendermos com ele.
 
-Quando eu tirei o Bebop da caixa, não consegui carregar as baterias. O led vermelho do carregador só piscava continuamente.
+Quando eu tirei o Bebop da caixa, não consegui carregar as baterias. Após colocar na tomada, o LED vermelho do carregador só piscava continuamente.
 
 Solicitei outro carregador ao professor mas, mesmo assim, no novo carregador acontecia o mesmo.
 
@@ -138,5 +140,19 @@ Aparentemente é um gatilho de segurança presente nesses carregadores para dete
 
 A solução, como demonstrada no vídeo, é enviar uma carga elétrica de outra fonte elétrica para a bateria por alguns segundos e, rapidamente, colocá-la no carregador de fábrica.
 
-Com algumas tentativas, quando o LED piscante em vermelho do carregador se tornar vermelho e constante, a bateria estará sendo carregada.
+Relatei ao meu professor sobre o problema e ele trouxe uma fonte de alimentação reguladora e um multímetro para a minha sala de pesquisa.
+
+Fizemos de forma parecida com o vídeo e funcionou!
+
+Depois de algumas tentativas fazendo exatamente como no vídeo, o LED vermelho parou de piscar, indicando que o carregador reconheceu a bateria e a estava carregando.
+
+Portanto se você está com problemas com a bateria de seu Bebop, este procedimento pode ser uma solução. 
+
+Mas tenha o máximo de cuidado com os riscos de choque elétrico e de incêndio que isto pode causar.
+
+Com as baterias carregadas, pude dar continuidade ao projeto.
+
+---
+
+## Rede Wi-Fi
 
