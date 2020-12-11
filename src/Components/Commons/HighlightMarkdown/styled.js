@@ -32,7 +32,7 @@ export const Blockquote = styled.blockquote`
 
 export const ImgContainer = styled.div`
   float: ${props => props.styles.float || "left"};
-  margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : "0 10px 5px 0"};
+  margin: ${props => props.styles.float==="right" ? "0 0 5px 10px" : props.styles.float==="left" ? "0 10px 5px 0" : "0 0 15px"};
   max-width: ${props => props.styles.maxWidth || "43%" };
   ${breakpoint.xs} { 
     max-width: 100%; 
@@ -43,6 +43,14 @@ export const ImgContainer = styled.div`
     max-width: 100%; 
     display: ${props => props.styles.hidden === "mobile" && "none" };
     margin: 0;
+  }
+  small{
+    font-size: 0.6em;
+    font-family: Noto Sans JP;
+    display:block;
+    line-height: 1.5em;
+    margin-top: 2px;
+    color: ${props => props.theme.palette.common.darkerText};
   }
 `
 

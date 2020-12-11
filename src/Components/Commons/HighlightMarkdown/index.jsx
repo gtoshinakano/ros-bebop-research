@@ -16,8 +16,9 @@ const renderers = {
   image: ({src, alt, title}) => {
     const mdProps = JSON.parse(title) || {}
     return (
-      <ImgContainer styles={mdProps}>
-        <img src={src} alt={alt} style={imgStyles} />
+      <ImgContainer styles={mdProps.style}>
+        <img src={src} alt={alt} width="100%" />
+    {mdProps.description && <small>{mdProps.description}</small>}
       </ImgContainer>
     )
   },
@@ -39,10 +40,6 @@ const HighlightMarkdown = ({ children }) => {
       {children}
     </ReactMarkdown>
   )
-}
-
-const imgStyles = {
-  width:"100%"
 }
 
 

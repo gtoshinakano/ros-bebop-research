@@ -30,7 +30,7 @@ Mas se você quiser aprender a se conectar com um drone pelo PC e controlá-lo, 
 
 ## Parrot Bebop (Lançado em 2014)
 
-![Parrot Bebop 1](https://cnet3.cbsistatic.com/img/sW0v4j97iS0_6AEJVFM3IdDBsJw=/940x0/2017/05/08/7b9f31e3-9a71-4435-9771-a66b4d1fa5a8/parrot-bebop-1-and-skycontroller.jpg '{"maxWidth" :"100%"}')
+![Parrot Bebop 1](https://cnet3.cbsistatic.com/img/sW0v4j97iS0_6AEJVFM3IdDBsJw=/940x0/2017/05/08/7b9f31e3-9a71-4435-9771-a66b4d1fa5a8/parrot-bebop-1-and-skycontroller.jpg '{"style":{"maxWidth" :"100%"},"description":"Parrot Sky Controller e o drone Bebop"}')
 
 
 
@@ -139,10 +139,4 @@ Aparentemente é um gatilho de segurança presente nesses carregadores para dete
 A solução, como demonstrada no vídeo, é enviar uma carga elétrica de outra fonte elétrica para a bateria por alguns segundos e, rapidamente, colocá-la no carregador de fábrica.
 
 Com algumas tentativas, quando o LED piscante em vermelho do carregador se tornar vermelho e constante, a bateria estará sendo carregada.
-
-
-
-
-
-![Image of Da Vinci](/static/images/da-vinci-fly.jpg '{"float":"right","maxWidth" :"40%","hidden":"mobile"}')
 

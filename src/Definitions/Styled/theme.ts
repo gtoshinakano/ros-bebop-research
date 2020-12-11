@@ -10,7 +10,8 @@ const light: DefaultTheme = {
         color: '#292929',
         white: '#ffffff',
         contrastText: '#fff',
-        contrastBg: '#333'
+        contrastBg: '#333',
+        darkerText: '#999'
       },
       primary: {
         main: '#188CBA',
@@ -43,7 +44,8 @@ const dark: DefaultTheme = {
         color: '#ffffff',
         white: '#222831',
         contrastText: '#fff',
-        contrastBg: '#333'
+        contrastBg: '#333',
+        darkerText: '#999'
       },
       primary: {
         main: '#999',

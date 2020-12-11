@@ -14,7 +14,7 @@ Aprenda exatamente como funciona o ROS - Robot Operating System - e também, pas
 ---
 ## Por que compartilho isto com você?
 
-![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"float":"right","maxWidth" :"40%","hidden":"mobile"}')
+![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"style":{"float":"right","maxWidth" :"40%"},"hidden":"mobile","description": "Rascunho do \\"Helicóptero\\" de Leonardo Da Vinci"}')
 
 Leonardo da Vinci era um talentoso artista de sua época. 
 
@@ -22,7 +22,7 @@ Poucos sabem que, somente após os 30 anos, passou a dedicar-se aos estudos da m
 
 Desde então suas obras passaram a ter uma amplitude inimaginável de área, gênero e finalidade, o que o tornou reconhecido mundialmente por sua contribuição em avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
 
-![Image of Da Vinci](static/images/da-vinci.jpg '{"float":"left","maxWidth" :"40%"}')
+![Image of Da Vinci](static/images/da-vinci.jpg '{"style":{"float":"left","maxWidth" :"40%"}}')
 
 Eu não sou gênio e muito menos um artista talentoso como Leonardo da Vinci.
 
@@ -38,7 +38,7 @@ Graças a isso, por um bom tempo fomos o segundo país com o maior número de in
 
 Lembro que vi em um noticiário na TV, um vídeo filmado por um drone utilizado para alertar as pessoas a ficarem dentro de suas casas.
 
-![Drone alerting people](https://j.gifs.com/2xLOY1.gif '{"maxWidth":"43%","float":"right","url":"https://imgflip.com/gif/4oqbao"}')
+![Drone alerting people](https://j.gifs.com/2xLOY1.gif '{"style":{"maxWidth":"43%","float":"right"},"url":"https://imgflip.com/gif/4oqbao"}')
 
 E foi aí que percebi que este poderia ser o melhor momento para estudar sobre drones!
 
