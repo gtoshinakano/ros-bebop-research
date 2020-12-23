@@ -166,7 +166,7 @@ Portanto se você está com problemas em carregar a bateria de seu Bebop, este p
 
 Mas tenha o máximo de cuidado com os riscos de choque elétrico e de incêndio que isto pode causar.
 
-Com as baterias carregadas, pude dar continuidade ao projeto.
+Com as baterias carregadas, podemos dar continuidade ao projeto.
 
 ---
 
@@ -174,7 +174,7 @@ Com as baterias carregadas, pude dar continuidade ao projeto.
 
 O Bebop se conecta com o seu controlador por meio de sua rede Wi-Fi. 
 
-Isto significa que ele possui uma placa de rede wireless que cria um "roteador" da qual permite a conexão com qualquer outro dispositivo que se conecta por Wi-Fi. 
+Isto significa que ele possui uma placa de rede wireless que "cria um roteador" da qual permite a conexão com qualquer outro dispositivo que se conecta por Wi-Fi. 
 
 ![Parrot Connect](https://www.ntt-tx.co.jp/column/yasui_blog/img/20151202_drone_blog_04-02.png '{"style":{"float":"right"}}')
 
@@ -184,22 +184,35 @@ Quando você liga o seu Bebop, as ventoínhas de resfriamento iniciam e os motor
 
 O sistema de resfriamento se paraliza uma vez e, quando as ventoínhas voltam a funcionar, o Wi-Fi do drone estará pronto para novas receber conexões.
 
-Por padrão, o drone cria uma nova rede de Wi-Fi pública com o nome **BebopDrone-E000000** (Numeração única)
+Por padrão, o nome da rede de Wi-Fi pública do drone é **BebopDrone-E000000** (uma numeração única)
 
 Você pode configurar uma senha de segurança WPA para seu drone para que outras pessoas não consigam se conectar a ele.
 
-O endereço de IP local padrão do drone é **192.168.42.1** e utilizando [`telnet`](https://pt.wikipedia.org/wiki/Telnet) neste endereço você pode fazer alterações no sistema de arquivos e extrair mídias de vídeo e fotos.
+O endereço de IP local padrão do drone é **192.168.42.1** e utilizando [`telnet`](https://pt.wikipedia.org/wiki/Telnet) neste endereço você pode explorar o sistema de arquivos internos e extrair mídias de vídeo e fotos.
 
-Utilizar o `telnet` não é a forma mais fácil de extrair arquivos de vídeo/imagem do drone. Se você só quiser extrair os vídeos de seu Bebop, você pode utilizar o próprio aplicativo Free Flight de seu smartphone.
+Utilizar o `telnet` não é a forma mais fácil de extrair arquivos de vídeo e imagem do drone. Se você só quiser extrair os vídeos de seu Bebop, você pode utilizar o próprio aplicativo Free Flight de seu smartphone.
 
-Outra forma de fazer isso é se conectar por FTP na porta XX e XX.
+Outra forma de fazer isso é se conectar por FTP nas portas padrões de ftp e é através deste protocolo que enviaremos o arquivo de missões MAVLINK mais para frente.
 
+Por enquanto é isso o que tenho a dizer sobre a rede do Bebop.
 
+---
 
+## GPS e Magnetômetro
 
+O drone Bebop possui outros dois componentes que ajudam o ARDrone3 a se localizar. O módulo de GPS interno e o magnetômetro.
 
+O primeiro é uma placa receptora de sinais de GPS da qual calcula a sua localização real com base nos dados obtidos pelos satélistes encontrados.
 
+O segundo é um sensor da qual orienta o ARDrone3 sobre o ângulo e a direção real de onde o Bebop se encontra no momento.
 
+O GPS não é tão útil para vôos *indoor* mas, para o nosso experimento, ele será fundamental.
+
+Isso porque as missões MAVLINK - com base em pontos de GPS - só são possíveis de ser realizadas no Bebop quando o seu estado de GPS estiver como "fixado".
+
+O GPSFixState do Bebop é
+
+**É essencial que você calibre o magnetômetro antes de levantar vôo pela primeira vez** 
 
 ---
 
@@ -214,6 +227,10 @@ Como requisitos práticos para continuidade no projeto, você precisará de:
 Contei os desafios que encontrei nesta jornada e os motivos deste drone não ser o ideal para um projeto de delivery real, porém é um ótimo objeto para estudos.
 
 
+
+#### **Referências**
+
+https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf
 
 
 
