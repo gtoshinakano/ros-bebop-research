@@ -37,12 +37,12 @@ export const ImgContainer = styled.div`
   ${breakpoint.xs} { 
     max-width: 100%; 
     display: ${props => props.styles.hidden === "mobile" && "none" };
-    margin: 0;
+    margin: 0 0 15px;
   }
   ${breakpoint.sm} { 
     max-width: 100%; 
     display: ${props => props.styles.hidden === "mobile" && "none" };
-    margin: 0;
+    margin: 0 0 15px;
   }
   small{
     font-size: 0.6em;
