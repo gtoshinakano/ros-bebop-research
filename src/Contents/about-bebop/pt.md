@@ -182,11 +182,11 @@ Dispositivos como, por exemplo, smartphones, tablets, notebooks e etc...
 
 Quando você liga o seu Bebop, as ventoínhas de resfriamento iniciam e os motores das hélices se ativam após 5 segundos.
 
-O sistema de resfriamento se paraliza uma vez e, quando as ventoínhas voltam a funcionar, o Wi-Fi do drone estará pronto para novas receber conexões.
+O sistema de resfriamento se paraliza uma vez e, quando as ventoínhas voltam a funcionar, o Wi-Fi do drone estará pronto para receber conexões.
 
-Por padrão, o nome da rede de Wi-Fi pública do drone é **BebopDrone-E000000** (uma numeração única)
+Por padrão, o nome da rede de Wi-Fi aberta criada pelo drone é **BebopDrone-E000000** (uma numeração única).
 
-Você pode configurar uma senha de segurança WPA para seu drone para que outras pessoas não consigam se conectar a ele.
+Recomendo configurar uma senha de segurança WPA para seu drone para que outras pessoas não consigam se conectar a ele.
 
 O endereço de IP local padrão do drone é **192.168.42.1** e utilizando [`telnet`](https://pt.wikipedia.org/wiki/Telnet) neste endereço você pode explorar o sistema de arquivos internos e extrair mídias de vídeo e fotos.
 
@@ -194,7 +194,9 @@ Utilizar o `telnet` não é a forma mais fácil de extrair arquivos de vídeo e 
 
 Outra forma de fazer isso é se conectar por FTP nas portas padrões de ftp e é através deste protocolo que enviaremos o arquivo de missões MAVLINK mais para frente.
 
-Por enquanto é isso o que tenho a dizer sobre a rede do Bebop.
+Por se tratar de uma conexão por rede de WiFi e possuir um sistema de arquivos relativamente simples, o Bebop se torna alvo fácil para hackers. 
+
+Por isso não é um drone muito seguro para transportar mercadorias.
 
 ---
 
@@ -208,36 +210,79 @@ O segundo é um sensor da qual orienta o ARDrone3 sobre o ângulo e a direção 
 
 O GPS não é tão útil para vôos *indoor* mas, para o nosso experimento, ele será fundamental.
 
-Isso porque as missões MAVLINK - com base em pontos de GPS - só são possíveis de ser realizadas no Bebop quando o seu estado de GPS estiver como "fixado".
+Isso porque as missões MAVLINK - definidas com base em pontos de GPS - só são possíveis de ser realizadas no Bebop quando o seu estado de GPS estiver como "fixado".
 
-O GPSFixState do Bebop é
+O FixState no GPS do Bebop é um dos parâmetros necessários para que o Bebop possa realizar uma missão e é obtido quando o módulo de GPS encontra no mínimo 4 satélites disponíveis.
 
-**É essencial que você calibre o magnetômetro antes de levantar vôo pela primeira vez** 
+Quando o FixState for 1 ou *true*, o Bebop estará disponível para Missões, caso contrário(0 ou *false*), não.
+
+A precisão do GPS depende de vários fatores como bloqueio de sinal, condições atmosférica e a qualidade do receptor. Os dados são mais apurados também quando o receptor estiver em movimento.
+
+Portanto a melhor forma de atingir o GPS FixState é realizar vôos em locais com poucos prédios e montanhas e em dias com poucas núvens.
+
+No caso do Bebop, a precisão que eu obtive foi de uma diferença de 1 a 4 metros e com o drone em movimento e de 4 a 6 metros de diferença em relação ao GPS do celular com o drone em repouso.
+
+Nada mal para um drone pequeno da qual seus componentes devem ser menores para garantir uma boa experiência do seu usuário.
+
+O outro componente crucial para o sucesso do experimento é o magnetômetro da qual precisa estar devidamente calibrado antes de levantar vôo.
+
+O magnetômetro utiliza-se de campos magnéticos para detectar o seu real posicionamento e o ARDrone3 o interpreta em conjunto com a placa de GPS para determinar a disponibilidade para missões (GPSFixState).
+
+![Calibrate Google Maps on Android](https://www.howtogeek.com/wp-content/uploads/2020/01/Google-Maps-Compass-Calibration.png '{"style":{"float" :"right", "maxWidth": "170px", "hidden":"mobile"}}')
+
+Você se lembra de ter que calibrar a bússola do seu smartphone, no aplicativo do Google Maps para Android, para determinar precisamente para onde estava apontado o seu celular no mapa?
+
+E então você tinha que fazer uma série de movimentos em forma de 8 com o smartphone para obter a sua real orientação pelo aplicativo.
+
+No Bebop o processo segue o mesmo princípio, porém, existe um jeito correto de se fazer.
+
+No início, eu fazia as rotações do Bebop de forma lenta pois queria evitar fazer movimentos bruscos para não danificar o drone. 
+
+Mas isso não fazia com que o FixState do GPS ficasse *true*.
+
+![Drone Calibration](/static/images/calibrate-drone.gif '{"style":{"maxWidth": "300px", "float": "left"}, "description": "Calibração do Magnetômetro do Bebop pelo aplicativo FreeFight Pro para IOS"}')
+
+Pesquisando na internet, um [outro vídeo](https://youtu.be/V5-YMYb0MsI) me deu uma luz.
+
+Como escrito na descrição do vídeo, a *"velocidade com que você faz a rotação parece fazer a diferença"* no processo de calibração.
+
+Após aumentar a rapidez ao girar o drone com as mãos, deixei de ter problemas com o FixState do GPS.
+
+Portanto essa pode ser uma solução caso você não esteja conseguindo atingir o FixState.
 
 ---
 
 ## Conclusão
 
-Este guia o ajudou a lidar com o Bebop para reproduzir o projeto de criação de serviço de delivery por drones.
+Procurei escrever este guia para que qualquer pessoa leiga em tecnologia pudesse conhecer alguns aspectos técnicos do Bebop Drone necessários para a reprodução deste projeto.
 
-Como requisitos práticos para continuidade no projeto, você precisará de:
-1. Firmware atualizado em seu Bebop
-2. Baterias funcionais
+Embora o Bebop não seja um veículo perfeito para reproduzir o projeto de criação de serviço de delivery, ele possui as características principais necessárias para esta finalidade.
 
-Contei os desafios que encontrei nesta jornada e os motivos deste drone não ser o ideal para um projeto de delivery real, porém é um ótimo objeto para estudos.
+Portanto é um ótimo drone para você realizar imagens aéreas, controlá-lo por GPS e se aprofundar no mundo dos drones.
 
+Resumindo as dicas que dei aqui em forma de lista:
 
+1. Atualize o Firmware do seu Bebop pelo aplicativo FreeFlight Pro
+2. Caso tenha problemas com o carregamento de suas baterias, veja [este vídeo](https://www.youtube.com/watch?v=dfUOAMwQCKM)
+3. Coloque uma senha WPA na rede de WiFi do seu drone para evitar que outros se conectem e tentem atrapalhá-lo.
+4. Faça a calibração correta do magnetômetro realizando a rotação do drone com mais rapidez.
 
-#### **Referências**
+Espero que este material lhe seja útil para solucionar problemas em seu Bebop e que você consiga realizar este experimento.
+
+Um forte abraço.
+
+Gabriel Toshinori Nakano
+
+---
+
+#### **Algumas Referências**
 
 https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf
-
-
 
 ---
 
 #### **Por favor, me corrija se eu estiver errado.**
 
-É provável que eu tenha cometido algum engano ou que eu não tenha usado a melhor forma para explicar os conceitos expostos aqui nesta página, portanto, peço para que entre em contato comigo para que você possa me ajudar a explicar melhor.
+É provável que eu tenha cometido enganos ou que eu não tenha encontrado a melhor forma para explicar os conceitos expostos aqui nesta página, portanto, peço para que entre em contato comigo para que você possa me ajudar a explicar melhor.
 
 Meu email para contato é [gtoshinakano@gmail.com](mailto:gtoshinakano@gmail.com). Ficarei feliz em saber a sua opinião!
