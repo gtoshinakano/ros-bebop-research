@@ -263,9 +263,9 @@ Portanto é um ótimo drone para você realizar imagens aéreas, controlá-lo po
 Resumindo as dicas que dei aqui em forma de lista:
 
 1. Atualize o Firmware do seu Bebop pelo aplicativo FreeFlight Pro
-2. Caso tenha problemas com o carregamento de suas baterias, veja [este vídeo](https://www.youtube.com/watch?v=dfUOAMwQCKM)
+2. Caso tenha problemas com o carregamento de suas baterias, tente fazer o que o autor [deste vídeo](https://www.youtube.com/watch?v=dfUOAMwQCKM) faz
 3. Coloque uma senha WPA na rede de WiFi do seu drone para evitar que outros se conectem e tentem atrapalhá-lo.
-4. Faça a calibração correta do magnetômetro realizando a rotação do drone com mais rapidez.
+4. Faça a calibração correta do magnetômetro realizando a rotação do drone com maior rapidez.
 
 Espero que este material lhe seja útil para solucionar problemas em seu Bebop e que você consiga realizar este experimento.
 

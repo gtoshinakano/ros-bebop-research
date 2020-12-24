@@ -22,6 +22,16 @@ p+h3{
   margin-top: 2.6em;
 }
 
+p+ul, p+ol{
+  margin: 1.8em 0 -1em;
+}
+
+p+ul li, p+ol li {
+  margin: 0.5em 0;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
 p{
   line-height: 1.5em;
   font-size: 1.3em;
