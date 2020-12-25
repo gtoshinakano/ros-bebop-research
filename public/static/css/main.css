@@ -22,13 +22,24 @@ p+h3{
   margin-top: 2.6em;
 }
 
-p+ul, p+ol{
+p+ul, p+ol, h4+ul{
   margin: 1.8em 0 -1em;
+  padding-left:1.3em;
+}
+
+h4+ul li>ul{
+ padding-left: 1.1em;
 }
 
 p+ul li, p+ol li {
   margin: 0.5em 0;
   font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+h4+ul li, h4+ul li strong{
+  margin: 1em 0 0.5em;
+  font-size: 1.1em;
   line-height: 1.5em;
 }
 

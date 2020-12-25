@@ -275,9 +275,31 @@ Gabriel Toshinori Nakano
 
 ---
 
-#### **Algumas Referências**
+#### **Referências para esta Postagem**
 
-https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf
+- **Materiais Oficiais da Parrot**
+  - [Parrot Oficial](https://www.parrot.com/us)
+  - [Documentação ARSDK3](https://developer.parrot.com/docs/SDK3/)
+  - [Fórum Desenvolvedores Parrot](https://forum.developer.parrot.com/search?q=%23drone-sdk%3Abebop)
+  - [Último Firmware](https://support.parrot.com/global/support/products/parrot-bebop)
+- **Hackeando o Bebop (*use por responsabilidade própria*)**
+  - [Guia Completo](https://fargesportfolio.com/wp-content/uploads/2018/01/BeebopHackingGuide1_7_2.pdf)
+  - [Conectividade do Bebop](https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf)
+- **Aplicativos**
+  - [Free Flight Pro](https://www.parrot.com/en/apps-and-services)
+- **Aprofundamento teórico**
+  - [GPS Básico](https://learn.sparkfun.com/tutorials/gps-basics/all)
+  - [A Evolução das Baterias](https://batteryuniversity.com/learn/article/bu_002_introduction?__cf_chl_jschl_tk__=325d822606f3484bc6647f799e9103fe61bcff2a-1608871331-0-Ac_smOk31ZI5uA8HJ-LfKY4PlJxaIF6nSAZWQWhuVR9b7XbRZgFcr0FMa0VZUtL2m2zOn-_HL3Hv-T48QGINdFf7IwQmen_MdmPPsRsEMkhc2uzlgrAdbu9AHoZZLnOs45FRPwI4xoFXBsaQOdT0HJQwqzMnimEZbx_hHKBhqzgGXQxUcg5y8qJ9TiP_gX2K5WzfCqeCvA0rsd2cjIf40WvmFtMANvVQMEh3isbl3JcjjWD7QGAFShscDomuLi65l9UcapnHwsgMgW8hwZ7RTantci6C_uhNTOYBGLiXFTYuwH9lXQ0GNctQBaPMaJvaK6LqArDdiIOImBEizXJ3to1cRMei1AGndcMT6CiV1qEO)
+  - [Telnet](https://www.ionos.com/digitalguide/server/tools/telnet-the-system-wide-remote-protocol/)
+- **Vídeos Citados (*faça por responsabilidade própria*)**
+  - [Resolvendo o problema de carregamento da bateria](https://www.youtube.com/watch?v=dfUOAMwQCKM)
+  - [Calibração Correta](https://youtu.be/V5-YMYb0MsI)
+
+
+
+
+
+
 
 ---
 
