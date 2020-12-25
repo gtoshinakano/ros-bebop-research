@@ -34,7 +34,7 @@ const Comp: React.FunctionComponent<
 			<Item value="/posts/about-bebop" onClick={goTo} action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
 				{t("about-bebop")}
 			</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/about-ros" onClick={goTo} action active={path==="/posts/about-ros"} disabled={path==="/posts/about-ros"}>
 				{t("about-ros")}
 			</Item>
 			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
