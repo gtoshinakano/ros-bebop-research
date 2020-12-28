@@ -11,5 +11,7 @@
   "lets-talk": "let's talk!",
   "lang-en": "English",
   "lang-pt": "Portuguese",
-  "lang-jp": "Japanese"
+  "lang-jp": "Japanese",
+  "error-server": "An error ocurred on the server",
+  "error-client": "An error ocurred on the client"
 }

@@ -43,7 +43,6 @@ const NavigationBar = (props) => {
         <Dropdown drop="down">
           <DropToggle 
             variant="outline-warning"
-            eventKey={language}
           >
             <Flag flag={language} width={25}/>
           </DropToggle>

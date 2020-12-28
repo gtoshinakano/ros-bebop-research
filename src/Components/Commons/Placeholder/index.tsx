@@ -19,7 +19,7 @@ const Placeholder = ({
         <Rect height={heroHeight ? heroHeight : heroImage ? "234px" : "1em"} heroImage={heroImage} />
         <GlobalContainer>
           {header && <Rect width="100%" height="2.5em" />}
-          {paragraphs > 0 && _.times(paragraphs, () => <Rect />)}
+          {paragraphs > 0 && _.times(paragraphs, (i) => <Rect key={i} />)}
         </GlobalContainer>
       </Container>
     )

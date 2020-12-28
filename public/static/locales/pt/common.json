@@ -9,5 +9,7 @@
   "lets-talk": "vamos conversar!",
   "lang-en": "Inglês",
   "lang-pt": "Português",
-  "lang-jp": "Japonês"
+  "lang-jp": "Japonês",
+  "error-server": "Um erro ocorreu no server",
+  "error-client": "Um erro ocorreu no client"
 }

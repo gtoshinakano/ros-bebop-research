@@ -9,5 +9,7 @@
   "lets-talk": "話しましょう！",
   "lang-en": "英語",
   "lang-pt": "ポルトガル語",
-  "lang-jp": "日本語"
+  "lang-jp": "日本語",
+  "error-server": "サーバーエラーエラー",
+  "error-client": "クライアントエラー"
 }

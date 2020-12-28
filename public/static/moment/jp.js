@@ -4,7 +4,7 @@
 
 import moment from 'moment';
 
-export default moment.defineLocale('jp', {
+export default moment.updateLocale('jp', {
     eras: [
         {
             since: '2019-05-01',
