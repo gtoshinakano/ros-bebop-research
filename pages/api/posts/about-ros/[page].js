@@ -10,8 +10,8 @@ export default async (req, res) => {
     res.statusCode = 404
     res.send("Error: Something went wrong")
   } else {//TODO Logic to handle dynamic page import 
-    let common = await import(`@Contents/about-ros/beginner-commands/common.md`)
-    let content = await import(`@Contents/about-ros/beginner-commands/${req.query.language}.md`)
+    let common = await import(`@Contents/about-ros/${req.query.page}/common.md`)
+    let content = await import(`@Contents/about-ros/${req.query.page}/${req.query.language}.md`)
     const meta = matter(common.default)
     const parsedContent = matter(content.default)
     const seo = {...meta.data, ...parsedContent.data}
