@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { withTranslation } from '../../../i18n'
 import { I18nContext } from 'next-i18next'
 import axios from 'axios'
@@ -9,12 +10,17 @@ import {GlobalContainer} from "@Commons"
 import {DefaultHero} from "@Components"
 import {HighlightMarkdown} from "@Commons"
 
-function AboutRos(props) {
+function Page(props) {
 
   const { i18n: { language } } = React.useContext(I18nContext)
 
-  const { isLoading, error, data } = useQuery(['about-ros', language], () => {
-    return axios.get('/api/posts/about-ros',{
+  const router = useRouter()
+  const { slug } = router.query
+  const route = slug ? slug[0] : ""
+  const apiRoute = route ? `/api/posts/about-ros/${route}` : "/api/posts/about-ros"
+
+  const { isLoading, error, data } = useQuery(['about-ros', language, route], () => {
+    return axios.get(apiRoute,{
       params: {
         language: language
       }
@@ -50,10 +56,10 @@ function AboutRos(props) {
   )
 }
 
-AboutRos.getInitialProps = async () => {
+Page.getInitialProps = async () => {
   return ({
     namespacesRequired: ['common'],
   })
 }
 
-export default withTranslation('common')(AboutRos)
+export default withTranslation('common')(Page)
