@@ -10,7 +10,7 @@ summary:
   - link: about-ros
     title: Introdução ao Robot Operating System
   - link: about-ros/beginner-commands
-    title: Instalação e primeiros comandos do ROS
+    title: Instalação e primeiros comandos no ROS
   - link: about-ros/turtle-bot
     title: Entendendo ROS com o Turtle Simulator
   - link: about-ros/with-python

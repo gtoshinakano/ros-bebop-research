@@ -40,9 +40,15 @@ const Summary = ({t, links}) => {
           )})}
         </ul>
       </Fixed>
+      <h4>O que você verá nesta sessão:</h4>
       <Container className="trigger">
-        <h6><strong>{t("summary")}</strong></h6>
+        {links && links.map((item, index) => {return(
+            <li key={item.title}>
+              <Link href={item.link}><a>0{index+1} - {item.title}</a></Link>
+            </li>
+          )})}
       </Container>
+      <hr />
     </div>
   )
 }
@@ -50,10 +56,14 @@ const Summary = ({t, links}) => {
 const Container = styled.div`
   border: 1px solid ${props => props.theme.palette.summary.border};
   border-radius: 5px;
-  padding: 15px;
+  padding: 15px 10px;
   margin: 15px 0;
   background-color: ${props => props.theme.palette.summary.backgroundColor};
   color: ${props => props.theme.palette.summary.color};
+  li{
+    list-style-type: none;
+    margin: 5px 5px 6px;
+  }
 ` 
 
 const Fixed = styled.div`

@@ -34,9 +34,9 @@ const light: DefaultTheme = {
         }
       },
       summary: {
-        backgroundColor: "#afafaf",
+        backgroundColor: "#f4f1f2",
         color: "#757575",
-        border: "#999"
+        border: "#c4c1c2"
       }
     }
 };
@@ -73,9 +73,9 @@ const dark: DefaultTheme = {
         }
       },
       summary: {
-        backgroundColor: "#afafaf",
-        color: "#000",
-        border: "#ddd"
+        backgroundColor: "#202329",
+        color: "#b5b5b5",
+        border: "#343132"
       }
     }
 };
