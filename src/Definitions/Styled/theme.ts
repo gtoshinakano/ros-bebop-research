@@ -32,6 +32,11 @@ const light: DefaultTheme = {
           color: "#333",
           borderLeft: "0.8em #ccc solid"
         }
+      },
+      summary: {
+        backgroundColor: "#afafaf",
+        color: "#757575",
+        border: "#999"
       }
     }
 };
@@ -66,6 +71,11 @@ const dark: DefaultTheme = {
           color: "#9aa6bc",
           borderLeft: "0.8em #383a3f solid"
         }
+      },
+      summary: {
+        backgroundColor: "#afafaf",
+        color: "#000",
+        border: "#ddd"
       }
     }
 };

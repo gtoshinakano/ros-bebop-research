@@ -6,6 +6,10 @@ hero_alt: Hero alternative text
 headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
+summary:
+  about-ros: Introdução ao Robot Operating System
+  about-ros/beginner-commands: Comandos básicos do Terminal
+  about-ros/with-python: Programando para ROS com Python
 ---
 ## drone utilizado para este projeto e saiba como evitar os problemas que me custaram dias
 

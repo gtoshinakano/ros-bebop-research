@@ -6,6 +6,15 @@ hero_alt: Hero alternative text
 headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
+summary:
+  - link: about-ros
+    title: Introdução ao Robot Operating System
+  - link: about-ros/beginner-commands
+    title: Instalação e primeiros comandos do ROS
+  - link: about-ros/turtle-bot
+    title: Entendendo ROS com o Turtle Simulator
+  - link: about-ros/with-python
+    title: Programando para ROS com Python
 ---
 ## drone utilizado para este projeto e saiba como evitar os problemas que me custaram dias
 

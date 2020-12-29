@@ -5,10 +5,8 @@ import { withTranslation } from '../../../i18n'
 import { I18nContext } from 'next-i18next'
 import axios from 'axios'
 import {useQuery} from 'react-query'
-import {Placeholder} from "@Commons"
-import {GlobalContainer} from "@Commons"
+import {Placeholder, GlobalContainer, Summary, HighlightMarkdown} from "@Commons"
 import {DefaultHero} from "@Components"
-import {HighlightMarkdown} from "@Commons"
 
 function Page(props) {
 
@@ -26,7 +24,7 @@ function Page(props) {
       }
     }).then((res) => res.data)
   })//, {staleTime: Infinity})
-
+  console.log(data)
   const t = props.t
 
   return (
@@ -50,6 +48,7 @@ function Page(props) {
         </Placeholder>
       </section>
       <GlobalContainer>
+        {data && <Summary links={data.seo.summary} />}
         {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
       </GlobalContainer>
     </>

@@ -5,7 +5,6 @@ const langs = ["en", "pt", "jp"]
 
 export default async (req, res) => {
   const {slug, language} = req.query // beginner-commands with-python
-  console.log(req.query)
 
   if(!language || !_.includes(langs, language)){
     res.statusCode = 404

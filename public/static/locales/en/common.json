@@ -12,6 +12,7 @@
   "lang-en": "English",
   "lang-pt": "Portuguese",
   "lang-jp": "Japanese",
+  "summary": "Summary",
   "error-server": "An error ocurred on the server",
   "error-client": "An error ocurred on the client"
 }
