@@ -25,7 +25,7 @@ function Page(props) {
         language: language
       }
     }).then((res) => res.data)
-  }, {staleTime: Infinity})
+  })//, {staleTime: Infinity})
 
   const t = props.t
 

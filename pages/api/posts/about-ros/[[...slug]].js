@@ -4,14 +4,15 @@ import _ from 'lodash'
 const langs = ["en", "pt", "jp"]
 
 export default async (req, res) => {
-  const page = req.query.page // beginner-commands with-python
+  const {slug, language} = req.query // beginner-commands with-python
+  console.log(req.query)
 
-  if(!req.query.language || !_.includes(langs, req.query.language)){
+  if(!language || !_.includes(langs, language)){
     res.statusCode = 404
     res.send("Error: Something went wrong")
-  } else {//TODO Logic to handle dynamic page import 
-    let common = await import(`@Contents/about-ros/${req.query.page}/common.md`)
-    let content = await import(`@Contents/about-ros/${req.query.page}/${req.query.language}.md`)
+  } else {
+    let common = slug ? await import(`@Contents/about-ros/${slug[0]}/common.md`) : await import(`@Contents/about-ros/common.md`)
+    let content = slug ? await import(`@Contents/about-ros/${slug[0]}/${language}.md`) : await import(`@Contents/about-ros/${language}.md`)
     const meta = matter(common.default)
     const parsedContent = matter(content.default)
     const seo = {...meta.data, ...parsedContent.data}
