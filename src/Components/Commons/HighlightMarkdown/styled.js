@@ -28,6 +28,10 @@ export const Blockquote = styled.blockquote`
     font-size: 1.1em;
     margin-bottom: 0.6em;
   }
+  a{
+    font-size:0.7em;
+    color: inherit;
+  }
 `
 
 export const ImgContainer = styled.div`
