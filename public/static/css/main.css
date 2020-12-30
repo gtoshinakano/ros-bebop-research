@@ -60,3 +60,13 @@ strong{
   float: right;
   width: 50%;
 }
+
+.no-cursor{
+  cursor: default;
+  color: inherit;
+}
+
+.no-cursor:hover{
+  color: inherit;
+  text-decoration: none;
+}

@@ -5,6 +5,7 @@ import styled from "styled-components"
 import {withTranslation} from "../../../../i18n"
 import {breakpoint} from "@Definitions/Styled"
 import Link from "next/link"
+import {useRouter} from "next/router"
 
 const Summary = ({t, links}) => {
   gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +29,9 @@ const Summary = ({t, links}) => {
     );
   }, [])
 
+  const {asPath} = useRouter()
+
+
   return(
     <div ref={sticky}>
       <Fixed className="animate">
@@ -35,7 +39,9 @@ const Summary = ({t, links}) => {
         <ul>
           {links && links.map((item, index) => {return(
             <li key={item.title}>
-              <Link href={`/posts/${item.link}`}><a>0{index+1} - {item.title}</a></Link>
+              <Link href={`/posts/${item.link}`}>
+                <a title={item.title} className={asPath === `/posts/${item.link}` && "no-cursor"}>0{index+1} - {item.title}</a>
+              </Link>
             </li>
           )})}
         </ul>
@@ -44,7 +50,9 @@ const Summary = ({t, links}) => {
       <Container className="trigger">
         {links && links.map((item, index) => {return(
             <li key={item.title}>
-              <Link href={`/posts/${item.link}`}><a>0{index+1} - {item.title}</a></Link>
+              <Link href={`/posts/${item.link}`}>
+                <a title={item.title} className={asPath === `/posts/${item.link}` && "no-cursor"}>0{index+1} - {item.title}</a>
+              </Link>
             </li>
           )})}
       </Container>
