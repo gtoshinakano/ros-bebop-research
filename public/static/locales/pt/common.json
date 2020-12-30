@@ -11,6 +11,7 @@
   "lang-pt": "Português",
   "lang-jp": "Japonês",
   "summary": "Sumário",
+  "summary-header": "Leia as partes deste tutorial",
   "error-server": "Um erro ocorreu no server",
   "error-client": "Um erro ocorreu no client"
 }

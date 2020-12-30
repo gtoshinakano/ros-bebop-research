@@ -8,7 +8,7 @@ subheadline: Page's SubHeadline
 cta: Call to Action
 summary:
   - link: about-ros
-    title: Introdução ao Robot Operating System
+    title: O que é ROS? Como funciona o Robot Operating System
   - link: about-ros/beginner-commands
     title: Instalação e primeiros comandos no ROS
   - link: about-ros/turtle-bot

@@ -24,7 +24,7 @@ function Page(props) {
       }
     }).then((res) => res.data)
   })//, {staleTime: Infinity})
-  console.log(data)
+
   const t = props.t
 
   return (

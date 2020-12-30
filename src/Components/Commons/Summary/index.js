@@ -35,16 +35,16 @@ const Summary = ({t, links}) => {
         <ul>
           {links && links.map((item, index) => {return(
             <li key={item.title}>
-              <Link href={item.link}><a>0{index+1} - {item.title}</a></Link>
+              <Link href={`/posts/${item.link}`}><a>0{index+1} - {item.title}</a></Link>
             </li>
           )})}
         </ul>
       </Fixed>
-      <h4>O que você verá nesta sessão:</h4>
+      <h4>{t("summary-header")}</h4>
       <Container className="trigger">
         {links && links.map((item, index) => {return(
             <li key={item.title}>
-              <Link href={item.link}><a>0{index+1} - {item.title}</a></Link>
+              <Link href={`/posts/${item.link}`}><a>0{index+1} - {item.title}</a></Link>
             </li>
           )})}
       </Container>
