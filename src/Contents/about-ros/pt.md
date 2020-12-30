@@ -16,7 +16,7 @@ summary:
   - link: about-ros/with-python
     title: Programando para ROS com Python
 ---
-## Entendendo os Robôs - Pense em um robô como um ser vivo
+## Entendendo os Robôs - Pense em um robô como sendo uma pessoa
 
 Para entender como funciona o Robot Operating System vamos supor que um robô seja um ser humano.
 
@@ -40,13 +40,15 @@ Já sistemas operacionais de robôs precisam ter previamente programados os comp
 
 ![Gundam](https://31.media.tumblr.com/b60eb3179227a561106516e53555a168/tumblr_nov7x572rH1u3lccdo1_500.gif '{"style": {"maxWidth":"50%", "float":"left"},"description":"Sim, seria muito louco se eles existissem."}')
 
-Por isso AINDA não temos robôs (funcionais) como Gundams ou EVAs dos animes japoneses.
+Por isso AINDA não temos robôs funcionais como Gundams ou EVAs dos animes japoneses.
 
-Seriam necessárias centenas de pessoas para programar o funcionamento de cada parte mecânica do robô, um sistema que sincronizaria tudo de forma milimétrica para manter o equilíbrio e milhares de horas de testes e simulações para tudo isso ser possível. Além de milhões de dólares para o projeto... 
+Seriam necessárias centenas de pessoas para programar o funcionamento de cada parte mecânica do robô, um sistema que sincronizaria tudo de forma milimétrica para manter o equilíbrio durante os movimentos e milhares de horas de testes e simulações. 
 
-Obviamente, robôs não necessariamente possuem o formato de seres humanos. Pequenos sensores de torneiras ou grandes máquinas industriais também são considerados robôs.
+Além de milhões de dólares para o projeto... 
 
-Porém, o seu funcionamento pode ser entendido fazendo um relacionamento análogo ao funcionamento de um cérebro humano e essa será a forma como irei explicar mais adiante.
+Obviamente, quase todos os robôs não se parecem com seres humanos. Podemos considerar pequenos sensores de torneiras ou grandes máquinas industriais como robôs.
+
+Porém, o funcionamento pode ser entendido fazendo uma analogia ao funcionamento de um cérebro humano e essa será a forma como irei explicar mais adiante.
 
 ---
 
@@ -81,6 +83,32 @@ Já vou adiantando aqui que ROS não é a única forma de se desenvolver e traba
 E adianto também que não é tão fácil aprender ROS, pois eu tive uma grande dificuldade no começo.
 
 Mas eu prometo que vou fazer o meu melhor para fazer com que você entenda o ROS, mesmo que você não tenha um conhecimento básico sobre o assunto. Continue lendo para entender.
+
+---
+
+## Afinal, o que faz o ROS?
+
+![Panda eating bamboo](https://media3.giphy.com/media/jenIWU63oKK0o/giphy.gif)
+
+Ursos panda só se alimentam de bambus. Na verdade 1% de sua alimentação pode ser através de outras fontes de alimento como ovos e insetos.
+
+No entanto, bambus são a dieta principal deste urso. Ele pode chegar a comer incríveis 40kg de bambu por dia. Seu habitat natural deve ser um grande bambuzal para que possa sobreviver.
+
+Este ecossistema deve possuir o solo, a umidade, a temperatura ideais para que haja bambu em abundância para que os pandas se alimentem. Se você soltar um panda no deserto, ele não sobrevive.
+
+Então podemos dizer que **pandas não funcionam e não se desenvolvem** em ambientes desertos.
+
+Este papo sobre pandas e ecossistema foi a melhor maneira que eu encontrei para ilustrar a essência do ROS de forma simples.
+
+Para se criar um robô complexamente integrado, onde suas partes robóticas podem comunicar entre si e ter diversos centros de controle integrados, é necessário ter um ambiente que permite fazer isso.
+
+O Robot Operating System é um sistema operacional propriamente dito que roda em Linux e cria um ecossistema capaz comandar partes robóticas, realizar abstrações de componentes, simulações e leituras de sensores.
+
+Dando exemplos mais práticos, em um PC com ROS você pode conectar um controle de Playstation 4 e utilizá-lo para controlar um drone. Você pode também programar diferentes comportamentos de partes mecânicas de um robô, como por exemplo as ventoinhas de resfriamento, de acordo com os dados vindos de seu termômetro digital interno.
+
+É o ambiente completo para quem deseja programar e comandar robôs de todos os portes. E as possibilidades são ilimitadas!
+
+Portanto, podemos dizer que **robôs podem funcionar e ser desenvolvidos** em ambientes ROS, pois ele foi criado para esta finalidade.
 
 ---
 
