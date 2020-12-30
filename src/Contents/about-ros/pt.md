@@ -16,14 +16,45 @@ summary:
   - link: about-ros/with-python
     title: Programando para ROS com Python
 ---
-## drone utilizado para este projeto e saiba como evitar os problemas que me custaram dias
+## Entendendo os Robôs - Pense em um robô como um ser vivo
 
-Deixa eu te lembrar do objetivo proposto por minha pesquisa contando rapidamente como a bolsa de estudos aconteceu.
+Para entender como funciona o Robot Operating System vamos supor que um robô seja um ser humano.
 
-Eu queria estudar sobre programação para IOT, conheci um professor de engenharia de produção que ministrava um laboratório de experiências com Drones, VRs e impressoras 3D e ele me propôs um estudo sobre drones.
+Ele possui partes como mãos, braços, pernas e o cérebro é quem controla tudo de forma perfeita e sincronizada.
 
-> ##### E o professor me propôs..
-> *"Criar um web service para controlar um drone com o objetivo de fazer entregas de delivery."*
+O cérebro humano é um órgão que funciona de forma instintiva, porém, o cérebro de um robô funciona de forma programática e calculada.
+
+Para uma simples tarefa, como por exemplo levantar um objeto, o cérebro humano envia instintivamente a quantidade de energia necessária para os braços e as mãos, com o intuito de erguer o objeto de forma suave e sem movimentos bruscos.
+
+O cérebro de um robô precisa ser programado para realizar o mesmo efeito ao erguer um objeto.
+
+![I must be a robot then](https://media4.giphy.com/media/S0hxMGYFhEMzm/200.gif '{"style":{"maxWidth":"40%","float":"right"},"description":"Sim, somos praticamente robôs super avançados e com um sistema de controle - quase - perfeito"}')
+
+Ele precisa conhecer o peso do objeto, calcular a quantidade de energia necessária para levantá-lo com seus braços mecânicos, para assim então, enviar os comandos corretos e erguer de forma suave e sem realizar movimentos bruscos.
+
+O cérebro humano é tão magnífico que, para todo tipo de tarefa mecânica, utiliza inconscientemente de infinitas variáveis em seus cálculos.
+
+Você não pensa conscientemente no ângulo correto para inclinar a sua coluna para se equilibrar ao levantar uma caixa de 10kg, por exemplo. É tudo instintivamente calculado pelo seu cérebro.
+
+Já sistemas operacionais de robôs precisam ter previamente programados os comportamentos diante das tarefas a serem executadas, levando em consideração dados de sensores, limitações mecânicas, especificações de fábrica dos componentes e muitas outras variáveis relacionadas.
+
+![Gundam](https://31.media.tumblr.com/b60eb3179227a561106516e53555a168/tumblr_nov7x572rH1u3lccdo1_500.gif '{"style": {"maxWidth":"50%", "float":"left"},"description":"Sim, seria muito louco se eles existissem."}')
+
+Por isso AINDA não temos robôs (funcionais) como Gundams ou EVAs dos animes japoneses.
+
+Seriam necessárias centenas de pessoas para programar o funcionamento de cada parte mecânica do robô, um sistema que sincronizaria tudo de forma milimétrica para manter o equilíbrio e milhares de horas de testes e simulações para tudo isso ser possível. Além de milhões de dólares gastos para o projeto... 
+
+Obviamente, robôs não necessariamente possuem o formato de seres humanos. Pequenos sensores de torneiras ou grandes máquinas industriais também são considerados robôs.
+
+Porém, o seu funcionamento pode ser entendido fazendo um relacionamento análogo ao funcionamento de um cérebro humano e essa será a forma como irei explicar mais adiante.
+
+---
+
+## O problema no aprendizado da robótica
+
+Dois alunos doutorandos da Universidade de Stanford trabalhavam no laboratório de robótica quando perceberam que havia uma certa dificuldade no aprendizado de outros estudantes.
+
+> *"Enquanto trabalhavam em robôs para realizar tarefas de manipulação em ambientes humanos, os dois alunos notaram que muitos de seus colegas tinham seu progresso atrasado pela natureza diversa da robótica: um desenvolvedor de software poderia não ter o conhecimento de hardware necessário, alguém que trabalha no estado-da-arte em planejamemento de rotas poderia não ter conhecimentos em visão computacional, por exemplo."*
 
 Para isso, ele e a Universidade me disponibilizaram um drone Bebop 1 da marca francesa Parrot, um notebook i5 novinho, livros sobre Ubuntu e ROS (Robot Operating System).
 
