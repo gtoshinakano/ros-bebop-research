@@ -26,7 +26,7 @@ function Page(props) {
   })//, {staleTime: Infinity})
 
   const t = props.t
-
+  console.log(data)
   return (
     <>
       <Head>
@@ -51,6 +51,7 @@ function Page(props) {
         {data && <Summary links={data.seo.summary} hasSticky={true} />}
         {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
         {data && <Summary links={data.seo.summary} />}
+        {data && <HighlightMarkdown>{data.markdownFooter}</HighlightMarkdown>}
       </GlobalContainer>
     </>
   )

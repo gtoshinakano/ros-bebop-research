@@ -12,13 +12,16 @@ export default async (req, res) => {
   } else {
     let common = slug ? await import(`@Contents/about-ros/${slug[0]}/common.md`) : await import(`@Contents/about-ros/common.md`)
     let content = slug ? await import(`@Contents/about-ros/${slug[0]}/${language}.md`) : await import(`@Contents/about-ros/${language}.md`)
+    let footer = await import(`@Contents/default-footer/${language}.md`)
     const meta = matter(common.default)
     const parsedContent = matter(content.default)
+    const parsedFooter = matter(footer.default)
     const seo = {...meta.data, ...parsedContent.data}
     res.statusCode = 200
     res.json({ 
       seo: seo,
       markdownBody: parsedContent.content,
+      markdownFooter: parsedFooter.content
     })
   }
 }
