@@ -106,11 +106,15 @@ O Robot Operating System é um sistema operacional propriamente dito que roda em
 
 Dando exemplos mais práticos, em um PC com ROS você pode conectar um controle de Playstation 4 e utilizá-lo para controlar um drone. Você pode também programar diferentes comportamentos de partes mecânicas de um robô, como por exemplo as ventoinhas de resfriamento, de acordo com os dados vindos de seu termômetro digital interno.
 
-É o ambiente completo para quem deseja programar e comandar robôs de todos os portes. E as possibilidades são ilimitadas!
+Então, podemos dizer que **robôs podem funcionar e ser desenvolvidos** em ambientes ROS, pois ele foi criado para esta finalidade.
 
-Portanto, podemos dizer que **robôs podem funcionar e ser desenvolvidos** em ambientes ROS, pois ele foi criado para esta finalidade.
+Portanto, é o ambiente completo para quem deseja programar e comandar robôs de todos os portes e as possibilidades são ilimitadas graças à vasta quantidade de ferramentas desenvolvidas pela comunidade de seus usuários.
 
 ---
+
+## Como funciona o ROS?
+
+Como falei anteriormente, o Robot Operating System funciona apenas em sistemas operacionais Linux. Infelizmente, as versões para outros sistemas operacionais não são completos ou não funcionam como deveriam, por isso recomendo que utilizem o ROS no Ubuntu.
 
 
 

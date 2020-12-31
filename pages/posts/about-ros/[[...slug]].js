@@ -48,8 +48,9 @@ function Page(props) {
         </Placeholder>
       </section>
       <GlobalContainer>
-        {data && <Summary links={data.seo.summary} />}
+        {data && <Summary links={data.seo.summary} hasSticky={true} />}
         {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
+        {data && <Summary links={data.seo.summary} />}
       </GlobalContainer>
     </>
   )

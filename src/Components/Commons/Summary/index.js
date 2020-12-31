@@ -7,9 +7,33 @@ import {breakpoint} from "@Definitions/Styled"
 import Link from "next/link"
 import {useRouter} from "next/router"
 
-const Summary = ({t, links}) => {
+const Summary = ({t, links, hasSticky}) => {
+  let sticky = hasSticky ? useRef(null) : null
+
+  const {asPath} = useRouter()
+
+
+  return(
+    <div ref={sticky}>
+      {hasSticky && <Sticky links={links} sticky={sticky} asPath={asPath} t={t} />}
+      <h4>{t("summary-header")}</h4>
+      <Container className="trigger">
+        {links && links.map((item, index) => {return(
+            <li key={item.title}>
+              <Link href={`/posts/${item.link}`}>
+                <a title={item.title} className={asPath === `/posts/${item.link}` && "no-cursor"}>0{index+1} - {item.title}</a>
+              </Link>
+            </li>
+          )})}
+      </Container>
+      <hr />
+    </div>
+  )
+}
+
+const Sticky = ({sticky, links, t,  asPath}) => {
   gsap.registerPlugin(ScrollTrigger);
-  let sticky = useRef(null)
+
   useEffect(() => {
     const element = sticky.current;
     gsap.fromTo(
@@ -28,13 +52,8 @@ const Summary = ({t, links}) => {
       }
     );
   }, [])
-
-  const {asPath} = useRouter()
-
-
   return(
-    <div ref={sticky}>
-      <Fixed className="animate">
+    <Fixed className="animate">
         <h6><strong>{t("summary")}</strong></h6>
         <ul>
           {links && links.map((item, index) => {return(
@@ -46,18 +65,6 @@ const Summary = ({t, links}) => {
           )})}
         </ul>
       </Fixed>
-      <h4>{t("summary-header")}</h4>
-      <Container className="trigger">
-        {links && links.map((item, index) => {return(
-            <li key={item.title}>
-              <Link href={`/posts/${item.link}`}>
-                <a title={item.title} className={asPath === `/posts/${item.link}` && "no-cursor"}>0{index+1} - {item.title}</a>
-              </Link>
-            </li>
-          )})}
-      </Container>
-      <hr />
-    </div>
   )
 }
 
