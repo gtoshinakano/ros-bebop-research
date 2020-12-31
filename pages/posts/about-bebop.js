@@ -45,6 +45,7 @@ function AboutBebop(props) {
       </section>
       <GlobalContainer>
         {data && <HighlightMarkdown>{data.markdownBody}</HighlightMarkdown>}
+        {data && <HighlightMarkdown>{data.markdownFooter}</HighlightMarkdown>}
       </GlobalContainer>
     </>
   )

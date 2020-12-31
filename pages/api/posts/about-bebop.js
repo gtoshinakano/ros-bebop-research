@@ -11,13 +11,16 @@ export default async (req, res) => {
   } else {
     let common = await import(`@Contents/about-bebop/common.md`)
     let content = await import(`@Contents/about-bebop/${req.query.language}.md`)
+    let footer = await import(`@Contents/default-footer/${req.query.language}.md`)
     const meta = matter(common.default)
     const parsedContent = matter(content.default)
+    const parsedFooter = matter(footer.default)
     const seo = {...meta.data, ...parsedContent.data}
     res.statusCode = 200
     res.json({ 
       seo: seo,
       markdownBody: parsedContent.content,
+      markdownFooter: parsedFooter.content
     })
   }
 }
