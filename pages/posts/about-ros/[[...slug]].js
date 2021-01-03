@@ -26,7 +26,7 @@ function Page(props) {
   })//, {staleTime: Infinity})
 
   const t = props.t
-  console.log(data)
+
   return (
     <>
       <Head>

@@ -94,7 +94,7 @@ Ursos panda só se alimentam de bambus. Na verdade 1% de sua alimentação pode 
 
 No entanto, bambus são a dieta principal deste urso. Ele pode chegar a comer incríveis 40kg de bambu por dia. Seu habitat natural deve ser um grande bambuzal para que possa sobreviver.
 
-Este ecossistema deve possuir o solo, a umidade, a temperatura ideais para que haja bambu em abundância para que os pandas se alimentem. Se você soltar um panda no deserto, ele não sobrevive.
+Tal ecossistema deve possuir o solo, a umidade, a temperatura ideais para que haja bambu em abundância para que os pandas se alimentem. Se você soltar um panda no deserto, ele não sobrevive.
 
 Então podemos dizer que **pandas não funcionam e não se desenvolvem** em ambientes desertos.
 
@@ -106,7 +106,7 @@ O Robot Operating System é um sistema operacional propriamente dito que roda em
 
 Dando exemplos mais práticos, em um PC com ROS você pode conectar um controle de Playstation 4 e utilizá-lo para controlar um drone. Você pode também programar diferentes comportamentos de partes mecânicas de um robô, como por exemplo as ventoinhas de resfriamento, de acordo com os dados vindos de seu termômetro digital interno.
 
-Então, podemos dizer que **robôs podem funcionar e ser desenvolvidos** em ambientes ROS, pois ele foi criado para esta finalidade.
+Então, podemos dizer que **robôs podem funcionar e ser desenvolvidos** em ambientes ROS, pois ele foi criado para esta finalidade. É como se fosse uma família de pandas num vasto bambuzal.
 
 Portanto, é o ambiente completo para quem deseja programar e comandar robôs de todos os portes e as possibilidades são ilimitadas graças à vasta quantidade de ferramentas desenvolvidas pela comunidade de seus usuários.
 
@@ -114,7 +114,11 @@ Portanto, é o ambiente completo para quem deseja programar e comandar robôs de
 
 ## Como funciona o ROS?
 
-Como falei anteriormente, o Robot Operating System funciona apenas em sistemas operacionais Linux. Infelizmente, as versões para outros sistemas operacionais não são completos ou não funcionam como deveriam, por isso recomendo que utilizem o ROS no Ubuntu.
+Como falei anteriormente, o Robot Operating System funciona apenas em sistemas operacionais Linux. Infelizmente, as versões para outros sistemas operacionais não são completos ou não funcionam como deveriam, por isso recomendo que utilizem o ROS no Ubuntu, pois todas as explicações aqui serão com base nesta premissa.
+
+Eu explico passo-a-passo o processo de instalação na [segunda parte deste tutorial](beginner-commands). Nesta parte iremos focar somente no entendimento do conceito do ROS e de seu funcionamento.
+
+
 
 
 
