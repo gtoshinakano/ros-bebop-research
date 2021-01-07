@@ -52,19 +52,21 @@ const Sticky = ({sticky, links, t,  asPath}) => {
       }
     );
   }, [])
+
   return(
     <Fixed className="animate">
-        <h6><strong>{t("summary")}</strong></h6>
-        <ul>
-          {links && links.map((item, index) => {return(
-            <li key={item.title}>
-              <Link href={`/posts/${item.link}`}>
-                <a title={item.title} className={asPath === `/posts/${item.link}` && "no-cursor"}>0{index+1} - {item.title}</a>
-              </Link>
-            </li>
-          )})}
-        </ul>
-      </Fixed>
+      <h6><strong>{t("summary")}</strong></h6>
+      <img src="https://gifprint.s3.amazonaws.com/p/gif/83894/cf1542b0255f013784fd2ea0b0aa34b1.gif" width="10" />
+      <ul>
+        {links && links.map((item, index) => {return(
+          <li key={item.title}>
+            <Link href={`/posts/${item.link}`}>
+              <a title={item.title} className={asPath === `/posts/${item.link}` && "no-cursor"}>0{index+1} - {item.title}</a>
+            </Link>
+          </li>
+        )})}
+      </ul>
+    </Fixed>
   )
 }
 

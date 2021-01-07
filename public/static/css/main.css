@@ -22,6 +22,10 @@ p+h3{
   margin-top: 2.6em;
 }
 
+p~pre{
+  margin-top: 2.2em!important
+}
+
 p+ul, p+ol, h4+ul{
   margin: 1.8em 0 -1em;
   padding-left:1.3em;
@@ -48,7 +52,7 @@ p{
   font-size: 1.3em;
   font-weight: 200;
   padding: 0;
-  margin: 2.2em 0 -0.5em;
+  margin: 1.5em 0 0.5em;
   letter-spacing: -0.026em;
 }
 
