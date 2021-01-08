@@ -28,7 +28,7 @@ Para uma simples tarefa, como por exemplo levantar um objeto, o cérebro humano 
 
 O cérebro de um robô precisa ser programado para realizar o mesmo efeito ao erguer um objeto.
 
-![I must be a robot then](https://media4.giphy.com/media/S0hxMGYFhEMzm/200.gif '{"style":{"maxWidth":"50%","float":"right"},"description":"Sim, somos praticamente robôs super avançados e com um sistema de controle - quase - perfeito"}')
+![I must be a robot then](https://media4.giphy.com/media/S0hxMGYFhEMzm/200.gif '{"style":{"maxWidth":"50%","float":"right"},"description":"Somos praticamente robôs super avançados e com um sistema de controle - quase - perfeito"}')
 
 Ele precisa conhecer o peso do objeto, calcular a quantidade de energia necessária para levantá-lo com seus braços mecânicos, para assim então, enviar os comandos corretos e erguer de forma suave e sem realizar movimentos bruscos.
 
@@ -202,7 +202,78 @@ Como pode notar, este método de nomes facilita a identificação dos recursos e
 
 Você pode saber com [mais detalhes sobre names aqui](http://wiki.ros.org/Names).
 
+Agora que você já tem o contexto do *Master, dos Nodes e da identidade de recursos através de namespaces*, o próximo conceito é o mais importante para entender parte do processo de funcionamento do ROS.
 
+### Topic - O assunto de interesse
+
+Vamos recapitular o processo de funcionamento do ROS com o que vimos até aqui. 
+
+1. O ***Master*** inicia
+2. Cria-se um ecossistema para registro de recursos através de *Namespaces*.
+3. Os ***Nodes*** de recursos registram-se ao ***Master***
+
+O próximo item da lista ocorre junto com a inicialização dos nodes e é o que permite o controle dos robôs no ambiente do ROS. Os nodes registram os **tópicos de interesse** no master quando iniciados. 
+
+Antes de me aprofundar, deixe-me contextualizar este mecanismo com um exemplo que talvez você já vivenciou. 
+
+Você já entrou em algum blog ou site do assunto de seu interesse e encontrou um campo de texto onde o autor pede para que você coloque o seu endereço de email para que ele possa enviar conteúdos exclusivos?
+
+E então, caso você coloque o seu email e se inscreva na *mailing list*, você recebe periodicamente emails da pessoa com informações sobre o assunto e, futuramente, uma oferta para você aproveitar uma oportunidade única...
+
+O ROS controla robôs de forma parecida com esta ferramenta de Marketing Digital. Os *nodes* registram no master os tópicos da qual ele publica(*publish*) e possui interesse para se inscrever(*subscribe*). 
+
+Cada tópico é fortemente tipificado através do conceito de *messages*, que são os tipos de mensagens da qual o tópico pode ser publicado. Uma vez registrados com os seus tipos de mensagem, qualquer *node* pode se inscrever ou publicar no mesmo tópico.
+
+Ao se inscrever em um tópico, o *node* aguarda por uma publicação de mensagem neste tópico para performar uma ação. Em outras palavras, quando o *node* responsável pela publicação deste tópico publica uma mensagem, o *node* inscrito neste tópico recebe a mensagem e executa uma ação baseada ou não no conteúdo da mensagem.
+
+Deixe-me dar um exemplo prático disto. Imagine um ambiente ROS conectado a um [controle de Nintendo Wii (package wiimote)](https://wiki.ros.org/wiimote) e um robô dançarino com driver para ROS.
+
+**Vamos supor** que os *nodes* foram iniciados e que os tópicos foram registrados com os seguintes *namespaces*:
+
+```javascript
+/* Nodes Iniciados */
+  /wiimote_node
+  /dancer_node
+
+/* Tópicos registrados pelo wiimote (fictício) */
+  (pub) /wiimote/classic
+  (pub) /wiimote/nunchuk
+
+/* Tópicos registrados pelo dancer (fictício+) */
+  (pub) /dancer/shake/rightarm
+  (pub) /dancer/shake/leftarm
+```
+
+Todas as ações realizadas no *Wii Remote*(classic) ou no *Nunchuck*(nunchuk) são publicadas nos seus respectivos tópicos com seus parâmetros como conteúdo da mensagem.
+
+Por exemplo, se alguém chacoalhar o *Nunchuck*, uma mensagem do tipo ```joy``` com o valor de ```shake right angle -10``` (tipo e valores fictícios) é publicada no tópico ```/wiimote/nunchuk```. É como se o controle dissesse ao *master*: "Ei, eu estou chacoalhando o *nunchuck* com ângulo direito no valor de -10 !"
+
+No caso do nosso *dancer*, o robô aguarda a publicação de seus tópicos registrados para poder mover seus braços. 
+
+O nosso objetivo neste exemplo é criar um *node* controlador para conectar as funções do controle de Wii com as funções de controle do dancer. O novo *node* deve fazer com que, quando o Wii Remote e o Nunchuk chacoalharem, comandarem os braços do robô dançarino para chacoalharem na mesma direção.
+
+O novo *node* poderá registrar o seguinte:
+
+```javascript
+/* Node Iniciado */
+  /wii_dancer_controller
+
+/* Tópicos registrados pelo wii_dancer_controller (fictício) */
+  (sub) /wiimote/classic
+  (sub) /wiimote/nunchuk
+  (pub) /dancer/shake/rightarm
+  (pub) /dancer/shake/leftarm
+```
+
+Note que nenhum novo tópico será registrado no *master*. A diferença é que o novo node tem interesse nas publicações do *wiimote*, portanto ele se inscreve (subscribe) em seus tópicos.
+
+Todas as vezes em que o *wiimote* publica novas mensagens em seus tópicos o *wii_dancer_controller* as recebe, pois está inscrito. Seu papel agora é publicar as mensagens corretas nos tópicos de *dancer* todas as vezes em que os tópicos do *wiimote* forem publicados.
+
+![Wii Controller](https://thumbs.gfycat.com/FemaleDeepKarakul-max-1mb.gif '{"style": {"maxWidth":"280px", "float":"right"},"description": "Loop infinito shake wii remote, shake arms"}')
+
+Assim, caso o controle receba uma ação de ```shake right angle -10```, o novo *node* pode lapidar a mensagem recebida e enviar o comando correto para os braços de *dancer*.
+
+Se tudo correr bem em nosso ambiente ROS, conseguiremos o reproduzir um efeito semelhante ao *gif* ao lado.
 
 
 
@@ -238,9 +309,10 @@ Gabriel Toshinori Nakano
   - [ROS Nodes](http://wiki.ros.org/Nodes)
   - [ROS2 Nodes](https://index.ros.org/doc/ros2/Tutorials/Understanding-ROS2-Nodes/)
   - [ROS Nameservice](http://wiki.ros.org/Names)
-  - [Último Firmware](https://support.parrot.com/global/support/products/parrot-bebop)
+  - [Package Wii Remote Driver - wiimote](https://wiki.ros.org/wiimote)
 - **Outras Referências**
   - [Wikipedia](https://pt.wikipedia.org/wiki/Robot_Operating_System)
+
 
 
 - **Aprofundamento teórico**
