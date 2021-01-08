@@ -206,6 +206,8 @@ Agora que você já tem o contexto do *Master, dos Nodes e da identidade de recu
 
 ### Topic - O assunto de interesse
 
+![Topic](https://index.ros.org/doc/ros2/_images/Nodes-TopicandService.gif '{"style": {"maxWidth":"100%"},"description": "Loop infinito shake wii remote, shake arms"}')
+
 Vamos recapitular o processo de funcionamento do ROS com o que vimos até aqui. 
 
 1. O ***Master*** inicia
@@ -269,11 +271,29 @@ Note que nenhum novo tópico será registrado no *master*. A diferença é que o
 
 Todas as vezes em que o *wiimote* publica novas mensagens em seus tópicos o *wii_dancer_controller* as recebe, pois está inscrito. Seu papel agora é publicar as mensagens corretas nos tópicos de *dancer* todas as vezes em que os tópicos do *wiimote* forem publicados.
 
-![Wii Controller](https://thumbs.gfycat.com/FemaleDeepKarakul-max-1mb.gif '{"style": {"maxWidth":"280px", "float":"right"},"description": "Loop infinito shake wii remote, shake arms"}')
+![Wii Controller](https://thumbs.gfycat.com/FemaleDeepKarakul-max-1mb.gif '{"style": {"float":"right"},"description": "Loop infinito shake wii remote, shake arms"}')
 
 Assim, caso o controle receba uma ação de ```shake right angle -10```, o novo *node* pode lapidar a mensagem recebida e enviar o comando correto para os braços de *dancer*.
 
-Se tudo correr bem em nosso ambiente ROS, conseguiremos o reproduzir um efeito semelhante ao *gif* ao lado.
+Se tudo correr bem em nosso ambiente ROS, conseguiremos reproduzir o efeito semelhante ao *gif*.
+
+Vale destacar que este mecanismo de troca de mensagens é uma comunicação anônima e de apenas uma via. Um *node subscriber* recebe a mensagem de um outro *node publisher*, porém, o *publisher* não recebe uma resposta do *subscriber*, portanto, nem sabe qual node está recebendo suas mensagens. Para atingir este efeito, existem as *services*, da qual falarei mais adiante.
+
+### Messages - O conteúdo do assunto
+
+Se os *topics* são o assunto, as *messages* são o conteúdo dos tópicos quando publicados.
+
+No caso do nosso robô dançarino, os braços do robô se movimentam de acordo com o conteúdo da mensagem publicada pelo controle do Wii.
+
+No ROS, os tipos das mensagens são muito importantes. Raramente um controlador envia o tipo de mensagem 100% compatível a um atuador pois, na grande maioria das vezes, os fabricantes e as necessidades dos projetos são diferentes.
+
+Desta forma, é necessário que criemos *nodes* que adaptem as mensagens para alcançar a compatibilidade entre os recursos de nossa aplicação para robôs.
+
+Os *nodes* podem até tentar publicar mensagens com tipos diferentes das registradas, porém, a comunicação não ocorre com os nodes inscritos. A comunicação só ocorre quando a mensagem corresponder com o tipo do tópico registrado no master.
+
+Você pode conhecer melhor este conceito através [deste link](http://wiki.ros.org/Messages)
+
+### Services - a comunicação com requisição e resposta
 
 
 
@@ -281,20 +301,15 @@ Se tudo correr bem em nosso ambiente ROS, conseguiremos o reproduzir um efeito s
 
 ## Conclusão
 
-Procurei escrever este guia para que qualquer pessoa leiga em tecnologia pudesse conhecer alguns aspectos técnicos do Bebop Drone necessários para a reprodução deste projeto.
+Como um dicionário
 
-Embora o Bebop não seja um veículo perfeito para reproduzir o projeto de criação de serviço de delivery, ele possui as características principais necessárias para esta finalidade.
+O master é o cérebro, o bambuzal
 
-Portanto é um ótimo drone para você realizar imagens aéreas, controlá-lo por GPS e se aprofundar no mundo dos drones.
+Relembrar passos
 
-Resumindo as dicas que dei aqui em forma de lista:
+Feito para estudantes, pois me ajudaria no começo se tivesse
 
-1. Atualize o Firmware do seu Bebop pelo aplicativo FreeFlight Pro
-2. Caso tenha problemas com o carregamento de suas baterias, tente fazer o que o autor [deste vídeo](https://www.youtube.com/watch?v=dfUOAMwQCKM) faz
-3. Coloque uma senha WPA na rede de WiFi do seu drone para evitar que outros se conectem e tentem atrapalhá-lo.
-4. Faça a calibração correta do magnetômetro realizando a rotação do drone com maior rapidez.
 
-Espero que este material lhe seja útil para solucionar problemas em seu Bebop e que você consiga realizar este experimento.
 
 Um forte abraço.
 
@@ -309,6 +324,8 @@ Gabriel Toshinori Nakano
   - [ROS Nodes](http://wiki.ros.org/Nodes)
   - [ROS2 Nodes](https://index.ros.org/doc/ros2/Tutorials/Understanding-ROS2-Nodes/)
   - [ROS Nameservice](http://wiki.ros.org/Names)
+  - [ROS Topics](http://wiki.ros.org/Topics)
+  - [ROS Messages](http://wiki.ros.org/Messages)
   - [Package Wii Remote Driver - wiimote](https://wiki.ros.org/wiimote)
 - **Outras Referências**
   - [Wikipedia](https://pt.wikipedia.org/wiki/Robot_Operating_System)
