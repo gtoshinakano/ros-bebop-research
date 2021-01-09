@@ -311,30 +311,55 @@ Porém, a segunda interação necessita de uma resposta para que a câmera possa
 
 Desta forma funcionam as ```services``` no ROS. É como se fossem interações de mensagens entre um cliente e um servidor.
 
-Vale ressaltar que o *node* da câmera não solicitou uma resposta ao *node* do sensor óptico enviando algum parâmetro específico. Entretanto, através dos ```services``` é possível o envio de parâmetros de requisição para receber respostas personalizadas. 
+Vale ressaltar que o *node* da câmera não solicitou uma resposta ao *node* do sensor óptico enviando algum parâmetro específico. Entretanto, através dos ```services``` é possível fazer o envio de parâmetros de requisição para receber respostas personalizadas. 
 
-
+As mensagens de requisição e resposta são registradas no master como ```services``` e também são fortemente tipificadas como as ```messages```. No entanto, deve-se declarar tanto os tipos da mensagem de requisição quanto os tipos da mensagem de resposta para que os ```services``` funcionem corretamente.
 
 ---
 
 ## Packages - pacotes de Software
 
-Finalmente falarei sobre os *packages* que são pacotes de software 
+Finalmente, falarei sobre os *packages* que são pacotes de software feitos para serem utilizados no ROS. Segundo o ROS Wiki:
 
+> *Os ```packages``` podem conter nodes, uma biblioteca independente do ROS, um conjunto de dados, arquivos de configuração, parte de códigos de terceiros ou qualquer outra coisa que constitua logicamente um módulo útil.*
+
+No começo, quando eu não conhecia nada sobre o ROS e tentava seguir tutoriais para controlar o meu Drone, o tempo todo o termo ```package``` aparecia e eu não sabia como identificar o que era. Portanto, resolvi falar um pouco aqui, pois eu utilizarei este termo nos próximos tutoriais e talvez você passe pela mesma dificuldade que eu tive.
+
+Tudo o que desenvolveram e disponibilizaram na comunidade para o ROS são ```packages```. Inclusive, se você iniciar o desenvolvimento de alguma aplicação para o ROS, esta aplicação também será um package.
+
+Qualquer um pode começar a desenvolver um package e disponibilizar para a comunidade e é isso o que faz do ROS uma forte ferramenta para desenvolvimento de aplicações para robôs.
+
+Você pode controlar robôs no ROS por meio de comandos no Terminal, mas para tornar o controle mais robusto e escalável, você deve desenvolver um ```package```.
+
+Mas fique tranquilo, pois na continuação deste tutorial, você aprenderá como começar a desenvolver um package.
 
 ---
 
 ## Conclusão
 
-Como um dicionário
+Quando iniciei minha pesquisa e não sabia absolutamente nada sobre ROS, me deparei com todos esses termos em meio à infinitos materiais disponíveis na internet.
 
-O master é o cérebro, o bambuzal
+Meu intuito com esta postagem era apresentar o conceito de funcionamento do ROS a partir da explicação de cada um destes termos, pois eu acredito que se eu tivesse começado desta forma, teria tido menos dificuldades.
 
-Relembrar passos
+O Robot Operating System não é uma ferramenta fácil de se entender. Eu demorei um pouco para entender que ele não era uma ferramenta para desenvolver robôs, mas sim, para desenvolver aplicações para controlar robôs.
 
-Feito para estudantes, pois me ajudaria no começo se tivesse
+Para entendê-lo de forma mais simples foi preciso usar bastante a imaginação. Com bastante tempo por causa da pandemia e muita persistência, este conteúdo foi o resultado que obtive e transmito para você.
 
+Portanto, vamos relembrar o que foi dito aqui em forma de tópicos:
 
+- O ROS é um ambiente para controle de robôs.
+- O ```master``` é o *Deus* deste ambiente, que registra todos os nodes, tópicos, serviços e parâmetros.
+- Os ```nodes``` são os processos que performam computação e se conectam a recursos e atuadores.
+- Os ```topics``` são os assuntos das quais os *nodes* se interessam e podem publicar.
+- As ```messages``` são o conteúdo dos tópicos e possuem tipos definidos para que haja a comunicação entre *nodes*.
+- ```publish/subscribe``` é o método para a comunicação unidirecional entre os *nodes*.
+- Os ```services``` são utilizados para a comunicação bi-direcional entre os *nodes*.
+- ```nodes, topics, services e packages``` são registrados no ```master``` através de *Namespaces*.
+- Os ```packages``` são pacotes de software úteis para a aplicação para robôs no ROS.
+
+Na [próxima etapa deste tutorial](/posts/about-ros/beginner-commands) vamos por a mão na massa, instalar o ROS e começar a executar nossos primeiros comandos para conhecermos os ROS.
+
+Espero que este tutorial tenha servido de guia para você começar a explorar este mundo complexo que é a robótica e o ROS e que pelo menos alguma coisa aqui tenha feito sentido para você!
 
 Um forte abraço.
 
@@ -352,15 +377,12 @@ Gabriel Toshinori Nakano
   - [ROS Topics](http://wiki.ros.org/Topics)
   - [ROS Messages](http://wiki.ros.org/Messages)
   - [ROS Services](http://wiki.ros.org/Services)
+  - [ROS Packages](http://wiki.ros.org/Packages)
   - [Package Wii Remote Driver - wiimote](https://wiki.ros.org/wiimote)
 - **Outras Referências**
   - [Wikipedia](https://pt.wikipedia.org/wiki/Robot_Operating_System)
 - **Aprofundamento teórico**
   - [What is a ROS Service?](https://roboticsbackend.com/what-is-a-ros-service/)
   - [A Gentle Introduction to ROS - Services Chapter](https://cse.sc.edu/~jokane/agitr/agitr-small-service.pdf)
-  - [Telnet](https://www.ionos.com/digitalguide/server/tools/telnet-the-system-wide-remote-protocol/)
-- **Vídeos Citados (*faça por responsabilidade própria*)**
-  - [Resolvendo o problema de carregamento da bateria](https://www.youtube.com/watch?v=dfUOAMwQCKM)
-  - [Calibração Correta](https://youtu.be/V5-YMYb0MsI)
 
 ---
