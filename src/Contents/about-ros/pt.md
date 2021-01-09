@@ -293,8 +293,33 @@ Os *nodes* podem até tentar publicar mensagens com tipos diferentes das registr
 
 Você pode conhecer melhor este conceito através [deste link](http://wiki.ros.org/Messages)
 
-### Services - a comunicação com requisição e resposta
+### Services - a interação com requisição e resposta
 
+Você já conheceu o mecanismo ```publish/subscribe``` por tópicos e viu que é uma interação de uma via e de relação muitos-para-muitos entre *nodes*, ou seja, quaisquer *nodes* podem se inscrever a um tópico sem que o *node* publicador saiba quem são os *nodes* inscritos.
+
+Mas em aplicações reais existem casos em que os *node* precisam de uma relação de bi-direcional, onde os *nodes* requisitantes necessitam de uma informação específica de outro *node* para poder realizar alguma ação.
+
+![Bear Trophy Camera](https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2020/12/Trail-Cam-120220-Downeast-Lakes-Land-Trust-2.png?ssl=1 '{"style":{"float":"left","maxWidth":"50%"}}')
+
+Um exemplo prático disto seria a sua utilização em componentes de um robô câmera para filmar animais na floresta.
+
+Um sensor termal apontado na mesma direção da lente da câmera pode disparar o comando para a câmera iniciar as filmagens. Porém, como a câmera não conhece as condições de iluminação do instante em que o animal passar pelo caminho, um sensor de luz pode "avisá-la" sobre tais condições.
+
+A primeira interação pode acontecer na forma de publicação e inscrição. Quando o sensor termal detectar um animal em sua frente, seu *node* publica uma mensagem em um tópico da qual o *node* da câmera está inscrita.
+
+Porém, a segunda interação necessita de uma resposta para que a câmera possa decidir se realizará as imagens naquele momento no modo diurno ou noturno. Antes de iniciar as filmagens, o *node* da câmera requisita ao *node* do sensor de luz sobre as condições de iluminação daquele momento e, com a resposta retornada, inicia as filmagens no modo correto.
+
+Desta forma funcionam as ```services``` no ROS. É como se fossem interações de mensagens entre um cliente e um servidor.
+
+Vale ressaltar que o *node* da câmera não solicitou uma resposta ao *node* do sensor óptico enviando algum parâmetro específico. Entretanto, através dos ```services``` é possível o envio de parâmetros de requisição para receber respostas personalizadas. 
+
+
+
+---
+
+## Packages - pacotes de Software
+
+Finalmente falarei sobre os *packages* que são pacotes de software 
 
 
 ---
@@ -326,15 +351,13 @@ Gabriel Toshinori Nakano
   - [ROS Nameservice](http://wiki.ros.org/Names)
   - [ROS Topics](http://wiki.ros.org/Topics)
   - [ROS Messages](http://wiki.ros.org/Messages)
+  - [ROS Services](http://wiki.ros.org/Services)
   - [Package Wii Remote Driver - wiimote](https://wiki.ros.org/wiimote)
 - **Outras Referências**
   - [Wikipedia](https://pt.wikipedia.org/wiki/Robot_Operating_System)
-
-
-
 - **Aprofundamento teórico**
-  - [GPS Básico](https://learn.sparkfun.com/tutorials/gps-basics/all)
-  - [A Evolução das Baterias](https://batteryuniversity.com/learn/article/bu_002_introduction?__cf_chl_jschl_tk__=325d822606f3484bc6647f799e9103fe61bcff2a-1608871331-0-Ac_smOk31ZI5uA8HJ-LfKY4PlJxaIF6nSAZWQWhuVR9b7XbRZgFcr0FMa0VZUtL2m2zOn-_HL3Hv-T48QGINdFf7IwQmen_MdmPPsRsEMkhc2uzlgrAdbu9AHoZZLnOs45FRPwI4xoFXBsaQOdT0HJQwqzMnimEZbx_hHKBhqzgGXQxUcg5y8qJ9TiP_gX2K5WzfCqeCvA0rsd2cjIf40WvmFtMANvVQMEh3isbl3JcjjWD7QGAFShscDomuLi65l9UcapnHwsgMgW8hwZ7RTantci6C_uhNTOYBGLiXFTYuwH9lXQ0GNctQBaPMaJvaK6LqArDdiIOImBEizXJ3to1cRMei1AGndcMT6CiV1qEO)
+  - [What is a ROS Service?](https://roboticsbackend.com/what-is-a-ros-service/)
+  - [A Gentle Introduction to ROS - Services Chapter](https://cse.sc.edu/~jokane/agitr/agitr-small-service.pdf)
   - [Telnet](https://www.ionos.com/digitalguide/server/tools/telnet-the-system-wide-remote-protocol/)
 - **Vídeos Citados (*faça por responsabilidade própria*)**
   - [Resolvendo o problema de carregamento da bateria](https://www.youtube.com/watch?v=dfUOAMwQCKM)
