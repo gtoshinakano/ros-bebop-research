@@ -38,20 +38,47 @@ Existe uma certa relação de correspondência entre as distribuições do Ubunt
 
 A escolha da distribuição deve ir de acordo com as necessidades de seu projeto e com a compatibilidade dos recursos de seu projeto para Robôs. Vale ressaltar que os ```packages``` desenvolvidos pela comunidade e que, por ventura você precisará utilizar, também possuem suas versões compatíveis então sempre é bom dar uma boa pesquisada antes.
 
-Eu utilizarei o [Ubuntu 16.04 LTS](https://releases.ubuntu.com/16.04/) pois era uma das versões compatíveis com as necessidades de minha pesquisa. Você pode baixá-lo e instalá-lo em uma partição de seu computador ou em uma máquina virtual utilizando o [Oracle VM Virtual Box](https://www.virtualbox.org/).
+Eu utilizei o [Ubuntu 16.04 LTS](https://releases.ubuntu.com/16.04/) pois era uma das versões compatíveis com as necessidades de minha pesquisa. Você pode baixá-lo e instalá-lo em uma partição de seu computador ou em uma máquina virtual utilizando o [Oracle VM Virtual Box](https://www.virtualbox.org/).
 
 A Distribuição do ROS que instalei foi a [Kinetic Kame](http://wiki.ros.org/kinetic) e as explicações contidas aqui serão baseadas nesta versão. Você pode conhecer [todas as distribuições do ROS nesta página](http://wiki.ros.org/Distributions) e escolher a versão apropriada para as suas necessidades.
+
+Provavelmente você poderá fazer este tutorial com qualquer distribuição do ROS pois vamos utilizar apenas alguns recursos básicos. (Mas testei apenas com o Kinetic)
 
 ### 1. Instalando o ROS Kinetic Kame
 
 ![ROS Kinetic Kame](https://msadowski.github.io/images/kinetic_kame.png '{"style": {"maxWidth": "100%"}, "description": "Kame em japonês significa tartaruga. Ela é o mascote oficial das distribuições do ROS lançadas e uma alusão aos famosos Turtle Bots"}')
 
-
-Com o Ubuntu instalado em sua máquina, vamos por a mão na massa para instalar o ROS.
+Com o Ubuntu 16.04 LTS instalado em sua máquina, vamos por a mão na massa para instalar o ROS.
 
 Para trabalhar com o ROS você utilizará o ```terminal``` na maior parte do tempo, portanto, sugiro que comece a se acostumar com ele o quanto antes caso não tenha este costume. É interessante que você entenda o que são e o que fazem os comandos que está utilizando, ao invés de simplesmente copiá-los e colá-los no seu terminal. 
 
-Existem infinitos materiais na internet sobre o terminal do Ubuntu, mas adianto aqui os comandos básicos que você mais utilizará. São eles: ```cd, ls, sudo, apt, apt-get e source```. Saber o mínimo sobre esses comandos é fundamental para dar prosseguimento no ROS.
+Existem infinitos materiais na internet sobre o terminal do Ubuntu, mas adianto aqui os comandos básicos que você mais utilizará. São eles: ```cd, ls, sudo, apt-get e source```. Saber o mínimo sobre esses comandos é fundamental para dar prosseguimento no aprendizado do ROS.
+
+Você pode seguir as instruções da [página oficial](http://wiki.ros.org/kinetic/Installation/Ubuntu) para instalar o ROS Kinetic caso esteja com preguiça de ler meus comentários ou caso entenda o que está fazendo.
+
+Sem mais delongas, abra um novo terminal no seu Ubuntu (```Ctrl+Alt+T```) e execute o seguinte comando para configurar o seu PC para poder fazer o download de softwares oficiais do ROS:
+
+```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+```
+
+Como é um comando ```sudo```, o terminal pedirá para que você digite a sua senha de login configurada no momento de instalação do Ubuntu. (Após uma vez informada a senha, todos os comandos ```sudo``` feitos neste mesmo terminal nos próximos 15 minutos serão aceitos sem que precise digitar a senha novamente)
+
+Configure as chaves do novo repositório adicionado pelo comando anterior para que o ```apt``` confie na fonte dos softwares:
+
+```
+sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+```
+
+Utilize o comando ```apt-get update``` para atualizar a lista dos pacotes com as últimas versões disponíveis.
+
+```
+sudo apt-get update
+```
+
+
+
+
 
 
 
