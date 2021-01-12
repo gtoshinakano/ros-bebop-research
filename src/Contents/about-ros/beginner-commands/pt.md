@@ -1,60 +1,61 @@
 ---
-title: Comandos basicos
+title: Primeiros passos com ROS - Instalação e comandos para conhecer os conceitos
 description: A strong, little quadcopter in need of better performance
 keywords: Keys separated with commas
 hero_alt: Hero alternative text
 headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
+summary:
+  - link: about-ros
+    title: O que é ROS? Como funciona o Robot Operating System
+  - link: about-ros/beginner-commands
+    title: Instalação e primeiros comandos no ROS
+  - link: about-ros/turtle-bot
+    title: Entendendo ROS com o Turtle Simulator
+  - link: about-ros/with-python
+    title: Programando para ROS com Python
 ---
-## drone utilizado para este projeto e saiba como evitar os problemas que me custaram dias
+## Antes de começar
 
-Deixa eu te lembrar do objetivo proposto por minha pesquisa contando rapidamente como a bolsa de estudos aconteceu.
+Se você ainda não conhece os conceitos do ROS - ```master, nodes, topics e etc``` - sugiro que você comece lendo a [primeira parte deste tutorial](/posts/about-ros).
 
-Eu queria estudar sobre programação para IOT, conheci um professor de engenharia de produção que ministrava um laboratório de experiências com Drones, VRs e impressoras 3D e ele me propôs um estudo sobre drones.
+Nesta postagem, irei explicar na prática os conceitos do ROS desde a instalação até a utilização de seus recursos. 
 
-> ##### E o professor me propôs..
-> *"Criar um web service para controlar um drone com o objetivo de fazer entregas de delivery."*
+Este tutorial foi feito para estudantes que não possuem muitos conhecimentos de desenvolvimento e nem de robótica, mas precisa aprender ou possui curiosidade em conhecer o Robot Operating System.
 
-Para isso, ele e a Universidade me disponibilizaram um drone Bebop 1 da marca francesa Parrot, um notebook i5 novinho, livros sobre Ubuntu e ROS (Robot Operating System).
-
-Além de uma sala só para mim, com lousa, impressora, mesa de escritório e armários.
-
-Sou muito grato por toda a estrutura disponibilizada para o meu período de pesquisa. Dificilmente conseguiria algo igual em condições parecidas no Brasil...
-
-Mas deixando as comparações entre países de lado, apresento aqui as características deste drone relacionadas especificamente à proposta deste projeto.
-
-Se você busca informações para comprar um drone, não se baseie neste conteúdo. Existem muitos bons sites na internet para isso.
-
-Mas se você quiser aprender a controlar um drone pelo PC, entender o funcionamento do ROS e adquirir uma nova habilidade como programador, este conteúdo pode ser muito útil para você.
-
-O conteúdo deste site tem objetivo educacional e você se responsabiliza por todas as ações tomadas com base nas informações aqui descritas.
+Vamos lá!
 
 ---
 
-## Parrot Bebop (Lançado em 2014)
+## Instalando a Distribuição correta do ROS na Distribuição correta do Ubuntu
 
-![Parrot Bebop 1](https://cnet3.cbsistatic.com/img/sW0v4j97iS0_6AEJVFM3IdDBsJw=/940x0/2017/05/08/7b9f31e3-9a71-4435-9771-a66b4d1fa5a8/parrot-bebop-1-and-skycontroller.jpg '{"style":{"maxWidth" :"100%"},"description":"Parrot Sky Controller e o drone Bebop"}')
+![Ubuntu](https://i.ytimg.com/vi/t_0LBOIoXcY/maxresdefault.jpg '{"style":{"maxWidth" :"100%"}}')
 
-De um modo geral, o Bebop é um quadrocóptero compacto e leve, relativamente resistente e com peças possíveis de serem trocadas caso danificadas.
+Como expliquei na postagem de introdução o ROS funciona melhor - ou de forma mais completa - em ambientes Linux, portanto é nele que iremos realizar a instalação.
 
-Ele possui integrado todos os componentes necessários para realizar o objetivo proposto, como placa de GPS, placa de rede Wi-Fi e um sistema interno que suporta a execução de missões de planos de vôos.
+Existe uma certa relação de correspondência entre as distribuições do Ubuntu e do ROS. Sempre que uma distribuição é lançada, os desenvolvedores tentam limitar a adição de novas melhorias e passam a focar mais na solução de erros.
 
-Além de possuir, é claro, uma ótima câmera de alta definição com estabilizador de imagem virtual entre outros recursos que o tornam um ótimo drone para quem está começando a se aventurar no mundo das imagens aéreas.
+A escolha da distribuição deve ir de acordo com as necessidades de seu projeto e com a compatibilidade dos recursos de seu projeto para Robôs. Vale ressaltar que os ```packages``` desenvolvidos pela comunidade e que, por ventura você precisará utilizar, também possuem suas versões compatíveis então sempre é bom dar uma boa pesquisada antes.
 
-Pode ser controlado tanto por um controle remoto da própria marca Parrot, quanto por aplicativos controladores de drones - como o [Free Flight Pro](https://www.parrot.com/en/apps-and-services) - graças à conexão pela sua rede de Wi-Fi integrada.
+Eu utilizarei o [Ubuntu 16.04 LTS](https://releases.ubuntu.com/16.04/) pois era uma das versões compatíveis com as necessidades de minha pesquisa. Você pode baixá-lo e instalá-lo em uma partição de seu computador ou em uma máquina virtual utilizando o [Oracle VM Virtual Box](https://www.virtualbox.org/).
 
-Portanto qualquer um pode criar um aplicativo controlador para este drone seguindo os parâmetros [desta Documentação Oficial](https://developer.parrot.com/docs/SDK3/).
+A Distribuição do ROS que instalei foi a [Kinetic Kame](http://wiki.ros.org/kinetic) e as explicações contidas aqui serão baseadas nesta versão. Você pode conhecer [todas as distribuições do ROS nesta página](http://wiki.ros.org/Distributions) e escolher a versão apropriada para as suas necessidades.
 
-Aqui e nas páginas deste site irei explicar passo-a-passo como fiz para criar um controlador para este veículo pelo PC.
+### 1. Instalando o ROS Kinetic Kame
 
-Quero deixar claro que o fato de eu ter usado este não significa que os mesmos passos não funcionarão com outros drones. 
+![ROS Kinetic Kame](https://msadowski.github.io/images/kinetic_kame.png '{"style": {"maxWidth": "100%"}, "description": "Kame em japonês significa tartaruga. Ela é o mascote oficial das distribuições do ROS lançadas e uma alusão aos famosos Turtle Bots"}')
 
-Em outros drones, alguns passos terão nomes e recursos diferentes, mas a essência do controle por ROS é a mesma.
 
-O meu foco é fazer você **entender como funciona o ROS e como eu o utilizei para criar um controlador** pelo computador.
+Com o Ubuntu instalado em sua máquina, vamos por a mão na massa para instalar o ROS.
 
-Abaixo descrevo detalhes específicos a serem considerados para que você consiga realizar o projeto sem grandes problemas.
+Para trabalhar com o ROS você utilizará o ```terminal``` na maior parte do tempo, portanto, sugiro que comece a se acostumar com ele o quanto antes caso não tenha este costume. É interessante que você entenda o que são e o que fazem os comandos que está utilizando, ao invés de simplesmente copiá-los e colá-los no seu terminal. 
+
+Existem infinitos materiais na internet sobre o terminal do Ubuntu, mas adianto aqui os comandos básicos que você mais utilizará. São eles: ```cd, ls, sudo, apt, apt-get e source```. Saber o mínimo sobre esses comandos é fundamental para dar prosseguimento no ROS.
+
+
+
+
 
 ---
 
