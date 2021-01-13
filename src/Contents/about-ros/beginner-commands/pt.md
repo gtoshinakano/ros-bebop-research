@@ -11,7 +11,7 @@ summary:
     title: O que é ROS? Como funciona o Robot Operating System
   - link: about-ros/beginner-commands
     title: Instalação e primeiros comandos no ROS
-  - link: about-ros/turtle-bot
+  - link: about-ros/ros-with-turtle-bot
     title: Entendendo ROS com o Turtle Simulator
   - link: about-ros/with-python
     title: Programando para ROS com Python
@@ -59,7 +59,7 @@ Você pode seguir as instruções da [página oficial](http://wiki.ros.org/kinet
 Sem mais delongas, abra um novo terminal no seu Ubuntu (```Ctrl+Alt+T```) e execute o seguinte comando para configurar o seu PC para poder fazer o download de softwares oficiais do ROS:
 
 ```
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
 
 Como é um comando ```sudo```, o terminal pedirá para que você digite a sua senha de login configurada no momento de instalação do Ubuntu. (Após uma vez informada a senha, todos os comandos ```sudo``` feitos neste mesmo terminal nos próximos 15 minutos serão aceitos sem que precise digitar a senha novamente)
@@ -67,216 +67,85 @@ Como é um comando ```sudo```, o terminal pedirá para que você digite a sua se
 Configure as chaves do novo repositório adicionado pelo comando anterior para que o ```apt``` confie na fonte dos softwares:
 
 ```
-sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+$ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 ```
 
-Utilize o comando ```apt-get update``` para atualizar a lista dos pacotes com as últimas versões disponíveis.
+Utilize o comando ```apt-get update``` para atualizar a lista dos pacotes com as suas últimas versões disponíveis.
 
 ```
-sudo apt-get update
+$ sudo apt-get update
 ```
 
+Por fim, instale o ROS Kinetic versão completa. Este processo pode demorar alguns minutos para ser concluído.
+
+```
+$ sudo apt-get install ros-kinetic-desktop-full
+```
+
+A versão completa do pacote do ROS inclui diversas bibliotecas e ferramentas em forma de ```packages```. Inclusive o ```turtle_sim```, que é o simulador que utilizaremos na próxima parte deste tutorial, vem instalado como um pacote padrão.
+
+Para verificar se tudo foi instalado corretamente, basta executar o comando ```apt list --installed | grep ros``` e ver a lista de pacotes que possuem "ros" no nome.
+
+### 2. Configure as variáveis de ambiente para o ROS
+
+O ROS necessita de algumas variáveis e gatilhos adicionais configurados em sua máquina para que possa funcionar. Para isto, o ROS disponibiliza um arquivo *shell* executável ```*.sh``` que configura as variáveis de ambiente com apenas um comando.
+
+As variáveis de ambiente servem para informar ao ROS qual versão e distribuição do ROS utilizar. No caso, como iremos utilizar o Kinetic, este será um dos valores de variáveis a serem configuradas pelo comando.
+
+Você tem a opção de configurar essas variáveis globalmente, da qual permite a configuração em todas as futuras instâncias do terminal, ou localmente apenas naquela instância do terminal.
+
+Para que você entenda a necessidade desta configuração, abra um terminal e teste um comando do ROS sem que as variáveis estejam configuradas:
+
+```
+$ roscore
+```
+
+> *Mensagem de retorno: The program 'roscore' is currently not installed. You can install it by typing: sudo apt install python-roslaunch*
 
 
+Ao invés de fazer o que a mensagem de retorno diz, você precisa configurar as variáveis de ambiente neste terminal.
 
+```
+$ source /opt/ros/kinetic/setup.bash
+```
 
+Agora sim, esta instância do terminal está configurada para receber comandos do ROS, caso você tente o ```roscore``` novamente, você verá outra saída como resposta.
 
+No entanto, desta forma, toda vez que você precisar executar algum comando para o ROS em um recém aberto terminal, você terá que executar este ```setup.bash```. 
 
+Para configurar as variáveis de ambiente permanentemente, você deve adicionar o comando anterior no arquivo oculto ```~/.bashrc```.
 
+```
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+```
 
----
+Este comando adiciona ```source /opt/ros/kinetic/setup.bash``` no arquivo executável ```~/.bashrc```, que é um script *shell* que roda toda vez que você você abre uma nova instância do terminal. 
 
-## Sistema Operacional Interno - ARDrone3
+Este arquivo existe para evitar esforços de redundância na hora de digitar comandos. Porém, vale destacar que, caso você queira utilizar duas distribuições diferentes do ROS no mesmo computador, ```~/.bashrc``` deve incluir apenas o ```setup.bash``` do ROS que você irá utilizar.
 
-Começo falando sobre o sistema interno do Bebop responsável por controlar e gerenciar todos os componentes do drone - motores, sensores, câmera e etc. - que é o que nos permite realizar tudo o que precisamos.
-
-Quando você tira o Bebop da caixa e começa a pilotá-lo, você perceberá que existe muita coisa acontecendo por trás do que você vê na tela do controlador.
-
-Enquanto ele flutua no ar, o ARDrone3 calcula os dados recebidos por seus sensores para enviar a quantidade adequada de energia para seus motores para que o drone se mantenha no mesmo ângulo e na mesma altura em relação ao chão, por exemplo.
-
-Tudo isso levando em consideração a força gravitacional, a força do vento e muitas outras variáveis.
-
-O ARDrone3 é uma customização de um sistema baseado em UNIX (o mesmo de Linux e Android) e seu sistema de arquivos possui a arquitetura típica UNIX. 
-
-Isso significa dizer que qualquer bom especialista em Linux pode entrar em seu sistema de arquivos e realizar alterações na forma como o drone se comporta internamente.
-
-Portanto, para a finalidade de Delivery aplicada ao mundo real, o Bebop com configurações de fábrica não seria um drone muito seguro. Por conta disso e também de outros fatores da qual falarei mais adiante.
-
-Porém, ele é uma ótima ferramenta para aprender sobre drones e realizar o nosso objetivo.
-
-Felizmente, não nos aprofundaremos ao ponto de ter de alterar as configurações iniciais do drone.
-
-Mas se você quiser saber mais sobre alterações possíveis de serem feitas em seu sistema de arquivos, [leia este documento](https://fargesportfolio.com/wp-content/uploads/2018/01/BeebopHackingGuide1_7_2.pdf) escrito por Farges Maelyss. 
-
-Lembrando que **você é o responsável por qualquer dano causado em seu próprio drone** caso algo dê errado.
-
-Continue lendo para aprofundar um pouco mais.
-
----
-
-## Firmware Utilizado (4.0.6)
-
-Uma das minhas dificuldades no início era entender a diferença entre o Firmware e o Sistema Operacional, pois ambos pareciam ser a mesma coisa.
-
-A diferença é que o Firmware é um software ou um conjunto de softwares associados a um dispositivo de hardware que tem por objetivo armazenar e gerenciar a inicialização correta das rotinas de seus componentes eletrônicos.
-
-Por sua vez, o Sistema Operacional é o software que utiliza-se dos firmwares para controlar e operar suas funções de uma forma unificada e programática.
-
-É como se fosse uma orquestra com músicos instrumentistas e um maestro.
-
-No caso do Bebop, cada sensor, placa de GPS, placa de rede e controlador de motores possui seu firmware, que são os músicos instrumentistas. 
-
-E o sistema operacional ARDrone3 é o maestro que rege toda a orquestra.
-
-Cada instrumento tem a sua própria partitura e sua forma de ser tocado. Isto, quem o faz, é o firmware.
-
-O sistema operacional é o maestro que conhece cada um de seus músicos e os direciona para a execução correta da orquestra.
-
-No Bebop, o Sistema Operacional e o Firmware são instalados em um pacote só, portanto você não precisa se preocupar em instalá-los separadamente.
-
-O [último firmware pode ser baixado aqui](https://support.parrot.com/global/support/products/parrot-bebop) e instalado por um cabo USB ou você pode instalá-lo pelo próprio aplicativo do Free Flight Pro (este é o caminho mais fácil).
-
-É importante ressaltar que, para que o seu drone funcione corretamente nas últimas versões de aplicativos, **é necessário que a última versão do firmware esteja instalada** nele.
-
-Agora outros três aspectos importantes para você ter mais conhecimentos sobre o Bebop.
+Você pode ver o conteúdo do ```~/.bashrc```com o comando ```cat ~/.bashrc``` e você verá o comando ```"source source /opt/ros/kinetic/setup.bash"``` adicionado no final do arquivo.
 
 ---
 
-## Bateria, Performance e Carregador
+## O primeiro comando em ROS - roscore
 
-Tempos atrás, quando jamais eu havia tocado em um drone antes, acreditava que os drones seriam o futuro de tudo.
+Com o ROS instalado e as variáveis de ambiente configuradas será possível utilizar todos os comandos do ROS - ```roscore, rosnode, rostopic e etc```.
 
-Acreditei que seríamos capazes de mapear enormes fazendas para analisar produções agrícolas, fazer entregas automáticas de longas distâncias ou até perseguir bandidos sem correr o risco de ferir os nossos policiais...
+```roscore``` é o comando para inicializar o ```master``` do ROS. Como já expliquei na [primeira parte](/posts/about-ros) deste tutorial o *master* é o ambiente de registro que administra todos os recursos do ROS.
 
-Mas nunca tinha pensado que essas idéias seriam tão dificultadas por causa de um simples e crucial fator. A **tecnologia das baterias**.
+```
+$ roscore
+```
 
-Certa vez eu li na internet um dado interessante que comparava as evoluções nas tecnologias das baterias e dos processadores. 
+A partir dele iniciado, você pode iniciar os ```nodes``` que são os nós que o conecta aos recursos da sua aplicação para robôs.
 
-O artigo dizia que as baterias evoluiam tecnologicamente em progressão aritmética, ao passo que, os processadores evoluíam em progressão geométrica.
+Nele serão registrados também os ```topics```, que são os tópicos de interesse dos ```nodes```, e os ```services``` que são a segunda forma de comunicação entre ```nodes```.
 
-![Battery Evolution from Battery University](/static/images/battery-improvements.png '{"style":{"maxWidth" :"100%"},"description":"Melhoramentos das baterias e de outras tecnologias- fonte: batteryuniversity.com"}')
+Portanto, este é o comando que deve ser iniciado toda vez que for utilizar o ROS.
 
-Isso quer dizer, por exemplo, que enquanto novos processadores são desenvolvidos rapidamente, baterias melhores e com mais capacidade não seguem o mesmo ritmo de desenvolvimento, embora o esforço de ambas as indústrias seja o mesmo.
+O próximo passo é começar a interagir com o ROS para entender como ele funciona e para você conhecer o que é possível realizar com ele. 
 
-Podemos dizer, então, que um grande desafio da tecnologia de drones - da qual demanda de certa quantidade de energia - é a atual capacidade das baterias e a sua dificuldade de evolução.
-
-É claro que drones mais modernos e mais caros possuem baterias com capacidades para percorrer maiores distâncias e aguentar maiores pesos.
-
-No entanto, as baterias do Bebop e de drones da mesma categoria não aguentam muito mais que o seu próprio peso e 11 minutos de tempo de vôo.
-
-Isso impossibilita a sua utilização a nível ideal neste projeto, porém é o suficiente para realizarmos o nosso experimento e aprendermos com ele.
-
-### Solução no carregamento das baterias do Bebop
-
-![Bateria não carregando](/static/images/battery-not-charging.gif '{"style":{"float" :"left"},"description":"Se o LED piscar no carregador após alguns segundos, a bateria não estará carregando"}')
-
-Quando eu tirei o Bebop da caixa, não consegui carregar as baterias. De 8 a 10 segundos após colocar o carregador na tomada, seu LED vermelho apenas piscava continuamente.
-
-Solicitei outro carregador ao professor mas, mesmo assim, no novo carregador acontecia o mesmo.
-
-Pesquisei por um bom tempo na internet e a resposta veio por meio deste vídeo do [Youtube](https://www.youtube.com/watch?v=dfUOAMwQCKM).
-
-Entendi que, com o tempo sem utilização, as baterias descarregam gradativamente e atingem a um nível de carga onde o carregador não as reconhece quando conectadas a ele.
-
-Aparentemente é um gatilho de segurança presente nesses carregadores para detectar baterias impossibilitadas de funcionar ou com defeitos.
-
-A solução, como demonstrada no vídeo, é enviar uma carga elétrica de outra fonte elétrica para a bateria por alguns segundos e, rapidamente, colocá-la no carregador de fábrica.
-
-Relatei ao meu professor sobre o problema e ele providenciou uma fonte de alimentação reguladora e um multímetro.
-
-Fizemos de forma parecida com o vídeo e funcionou!
-
-![Bateria carregando](/static/images/battery-charging.gif '{"style":{"float" :"right"},"description":"O LED contínuo após alguns segundos significa que a bateria está carregando!"}')
-
-Depois de algumas tentativas fazendo exatamente como no vídeo, o LED vermelho parou de piscar, indicando que o carregador reconheceu a bateria e a estava carregando.
-
-Portanto se você está com problemas em carregar a bateria de seu Bebop, este procedimento pode ser uma solução. 
-
-Mas tenha o máximo de cuidado com os riscos de choque elétrico e de incêndio que isto pode causar.
-
-Com as baterias carregadas, podemos dar continuidade ao projeto.
-
----
-
-## Rede Wi-Fi
-
-O Bebop se conecta com o seu controlador por meio de sua rede Wi-Fi. 
-
-Isto significa que ele possui uma placa de rede wireless que "cria um roteador" da qual permite a conexão com qualquer outro dispositivo que se conecta por Wi-Fi. 
-
-![Parrot Connect](https://www.ntt-tx.co.jp/column/yasui_blog/img/20151202_drone_blog_04-02.png '{"style":{"float":"right"}}')
-
-Dispositivos como, por exemplo, smartphones, tablets, notebooks e etc...
-
-Quando você liga o seu Bebop, as ventoínhas de resfriamento iniciam e os motores das hélices se ativam após 5 segundos.
-
-O sistema de resfriamento se paraliza uma vez e, quando as ventoínhas voltam a funcionar, o Wi-Fi do drone estará pronto para receber conexões.
-
-Por padrão, o nome da rede de Wi-Fi aberta criada pelo drone é **BebopDrone-E000000** (uma numeração única).
-
-Recomendo configurar uma senha de segurança WPA para seu drone para que outras pessoas não consigam se conectar a ele.
-
-O endereço de IP local padrão do drone é **192.168.42.1** e utilizando [`telnet`](https://pt.wikipedia.org/wiki/Telnet) neste endereço você pode explorar o sistema de arquivos internos e extrair mídias de vídeo e fotos.
-
-Utilizar o `telnet` não é a forma mais fácil de extrair arquivos de vídeo e imagem do drone. Se você só quiser extrair os vídeos de seu Bebop, você pode utilizar o próprio aplicativo Free Flight de seu smartphone.
-
-Outra forma de fazer isso é se conectar por FTP nas portas padrões de ftp e é através deste protocolo que enviaremos o arquivo de missões MAVLINK mais para frente.
-
-Por se tratar de uma conexão por rede de WiFi e possuir um sistema de arquivos relativamente simples, o Bebop se torna alvo fácil para hackers. 
-
-Por isso não é um drone muito seguro para transportar mercadorias.
-
----
-
-## GPS e Magnetômetro
-
-O drone Bebop possui outros dois componentes que ajudam o ARDrone3 a se localizar. O módulo de GPS interno e o magnetômetro.
-
-O primeiro é uma placa receptora de sinais de GPS da qual calcula a sua localização real com base nos dados obtidos pelos satélistes encontrados.
-
-O segundo é um sensor da qual orienta o ARDrone3 sobre o ângulo e a direção real de onde o Bebop se encontra no momento.
-
-O GPS não é tão útil para vôos *indoor* mas, para o nosso experimento, ele será fundamental.
-
-Isso porque as missões MAVLINK - definidas com base em pontos de GPS - só são possíveis de ser realizadas no Bebop quando o seu estado de GPS estiver como "fixado".
-
-O FixState no GPS do Bebop é um dos parâmetros necessários para que o Bebop possa realizar uma missão e é obtido quando o módulo de GPS encontra no mínimo 4 satélites disponíveis.
-
-Quando o FixState for 1 ou *true*, o Bebop estará disponível para Missões, caso contrário(0 ou *false*), não.
-
-A precisão do GPS depende de vários fatores como bloqueio de sinal, condições atmosférica e a qualidade do receptor. Os dados são mais apurados também quando o receptor estiver em movimento.
-
-Portanto a melhor forma de atingir o GPS FixState é realizar vôos em locais com poucos prédios e montanhas e em dias com poucas núvens.
-
-No caso do Bebop, a precisão que eu obtive foi de uma diferença de 1 a 4 metros e com o drone em movimento e de 4 a 6 metros de diferença em relação ao GPS do celular com o drone em repouso.
-
-Nada mal para um drone pequeno da qual seus componentes devem ser menores para garantir uma boa experiência do seu usuário.
-
-O outro componente crucial para o sucesso do experimento é o magnetômetro da qual precisa estar devidamente calibrado antes de levantar vôo.
-
-O magnetômetro utiliza-se de campos magnéticos para detectar o seu real posicionamento e o ARDrone3 o interpreta em conjunto com a placa de GPS para determinar a disponibilidade para missões (GPSFixState).
-
-![Calibrate Google Maps on Android](https://www.howtogeek.com/wp-content/uploads/2020/01/Google-Maps-Compass-Calibration.png '{"style":{"float" :"right", "maxWidth": "170px", "hidden":"mobile"}}')
-
-Você se lembra de ter que calibrar a bússola do seu smartphone, no aplicativo do Google Maps para Android, para determinar precisamente para onde estava apontado o seu celular no mapa?
-
-E então você tinha que fazer uma série de movimentos em forma de 8 com o smartphone para obter a sua real orientação pelo aplicativo.
-
-No Bebop o processo segue o mesmo princípio, porém, existe um jeito correto de se fazer.
-
-No início, eu fazia as rotações do Bebop de forma lenta pois queria evitar fazer movimentos bruscos para não danificar o drone. 
-
-Mas isso não fazia com que o FixState do GPS ficasse *true*.
-
-![Drone Calibration](/static/images/calibrate-drone.gif '{"style":{"maxWidth": "300px", "float": "left"}, "description": "Calibração do Magnetômetro do Bebop pelo aplicativo FreeFight Pro para IOS"}')
-
-Pesquisando na internet, um [outro vídeo](https://youtu.be/V5-YMYb0MsI) me deu uma luz.
-
-Como escrito na descrição do vídeo, a *"velocidade com que você faz a rotação parece fazer a diferença"* no processo de calibração.
-
-Após aumentar a rapidez ao girar o drone com as mãos, deixei de ter problemas com o FixState do GPS.
-
-Portanto essa pode ser uma solução caso você não esteja conseguindo atingir o FixState.
+Mas este é o assunto da [próxima etapa deste tutorial](/posts/about-ros/ros-with-turtle-bot).
 
 ---
 

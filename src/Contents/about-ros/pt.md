@@ -11,7 +11,7 @@ summary:
     title: O que é ROS? Como funciona o Robot Operating System
   - link: about-ros/beginner-commands
     title: Instalação e primeiros comandos no ROS
-  - link: about-ros/turtle-bot
+  - link: about-ros/ros-with-turtle-bot
     title: Entendendo ROS com o Turtle Simulator
   - link: about-ros/with-python
     title: Programando para ROS com Python
