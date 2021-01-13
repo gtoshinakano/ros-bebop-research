@@ -123,7 +123,7 @@ Este comando adiciona ```source /opt/ros/kinetic/setup.bash``` no arquivo execut
 
 Este arquivo existe para evitar esforços de redundância na hora de digitar comandos. Porém, vale destacar que, caso você queira utilizar duas distribuições diferentes do ROS no mesmo computador, ```~/.bashrc``` deve incluir apenas o ```setup.bash``` do ROS que você irá utilizar.
 
-Você pode ver o conteúdo do ```~/.bashrc```com o comando ```cat ~/.bashrc``` e você verá o comando ```"source source /opt/ros/kinetic/setup.bash"``` adicionado no final do arquivo.
+Você pode ver o conteúdo do ```~/.bashrc``` com o comando ```cat ~/.bashrc``` e você verá a linha ```"source source /opt/ros/kinetic/setup.bash"``` adicionada no final do arquivo.
 
 ---
 
@@ -137,34 +137,29 @@ Com o ROS instalado e as variáveis de ambiente configuradas será possível uti
 $ roscore
 ```
 
-A partir dele iniciado, você pode iniciar os ```nodes``` que são os nós que o conecta aos recursos da sua aplicação para robôs.
+Se tudo correr bem, você verá mensagens como ***started roslaunch server http://...*** e ***auto-starting new master...***. Isto indica que o ```master``` do ROS criou o seu ecossistema com sucesso!
 
-Nele serão registrados também os ```topics```, que são os tópicos de interesse dos ```nodes```, e os ```services``` que são a segunda forma de comunicação entre ```nodes```.
+A partir dele iniciado, você pode iniciar os ```nodes``` que são os nós que conecta o master aos recursos da sua aplicação para robôs. 
 
-Portanto, este é o comando que deve ser iniciado toda vez que for utilizar o ROS.
+Nele serão registrados também os ```topics```, que são os tópicos de interesse dos ```nodes```, e os ```services``` que são a segunda forma de comunicação entre ```nodes```. Portanto, este é o comando que deve ser iniciado toda vez que for utilizar o ROS.
 
-O próximo passo é começar a interagir com o ROS para entender como ele funciona e para você conhecer o que é possível realizar com ele. 
+O próximo passo é começar a interagir com o ROS para você entender como ele funciona e conhecer o que é possível realizar com este ecossistema para robôs. 
 
-Mas este é o assunto da [próxima etapa deste tutorial](/posts/about-ros/ros-with-turtle-bot).
+Mas este é um assunto para a [próxima etapa deste tutorial](/posts/about-ros/ros-with-turtle-bot).
 
 ---
 
 ## Conclusão
 
-Procurei escrever este guia para que qualquer pessoa leiga em tecnologia pudesse conhecer alguns aspectos técnicos do Bebop Drone necessários para a reprodução deste projeto.
+Se você é como eu, que precisa aprender sobre o Robot Operating System e não tinha muitos conhecimentos sobre Ubuntu e comandos de terminal, este guia é para você.
 
-Embora o Bebop não seja um veículo perfeito para reproduzir o projeto de criação de serviço de delivery, ele possui as características principais necessárias para esta finalidade.
+Você pode instalar o ROS Kinetic seguindo os tutoriais da [documentação oficial](http://wiki.ros.org/kinetic/Installation/Ubuntu) sem quaisquer problemas, porém o conteúdo lá é para quem já tem algum conhecimento prévio sobre o assuto.
 
-Portanto é um ótimo drone para você realizar imagens aéreas, controlá-lo por GPS e se aprofundar no mundo dos drones.
+Procurei explicar cada comando de forma rápida e direta para que você não seja como eu no começo, que copiava os comandos e via se funcionava. É muito importante entender o que cada comando faz quando se trata em trabalhar com o Ubuntu.
 
-Resumindo as dicas que dei aqui em forma de lista:
+Também demonstrei alguns comandos para que você possa confirmar se tudo correu bem, como por exemplo, o ```cat``` e o ```apt list --installed```.
 
-1. Atualize o Firmware do seu Bebop pelo aplicativo FreeFlight Pro
-2. Caso tenha problemas com o carregamento de suas baterias, tente fazer o que o autor [deste vídeo](https://www.youtube.com/watch?v=dfUOAMwQCKM) faz
-3. Coloque uma senha WPA na rede de WiFi do seu drone para evitar que outros se conectem e tentem atrapalhá-lo.
-4. Faça a calibração correta do magnetômetro realizando a rotação do drone com maior rapidez.
-
-Espero que este material lhe seja útil para solucionar problemas em seu Bebop e que você consiga realizar este experimento.
+E, por fim, iniciei o contexto para você continuar nesta caminhada para aprendizado do ROS com a [próxima etapa deste tutorial](/posts/about-ros/ros-with-turtle-bot).
 
 Um forte abraço.
 
@@ -174,34 +169,10 @@ Gabriel Toshinori Nakano
 
 #### **Referências para esta Postagem**
 
-- **Materiais Oficiais da Parrot**
-  - [Parrot Oficial](https://www.parrot.com/us)
-  - [Documentação ARSDK3](https://developer.parrot.com/docs/SDK3/)
-  - [Fórum Desenvolvedores Parrot](https://forum.developer.parrot.com/search?q=%23drone-sdk%3Abebop)
-  - [Último Firmware](https://support.parrot.com/global/support/products/parrot-bebop)
-- **Hackeando o Bebop (*use por responsabilidade própria*)**
-  - [Guia Completo](https://fargesportfolio.com/wp-content/uploads/2018/01/BeebopHackingGuide1_7_2.pdf)
-  - [Conectividade do Bebop](https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf)
-- **Aplicativos**
-  - [Free Flight Pro](https://www.parrot.com/en/apps-and-services)
-- **Aprofundamento teórico**
-  - [GPS Básico](https://learn.sparkfun.com/tutorials/gps-basics/all)
-  - [A Evolução das Baterias](https://batteryuniversity.com/learn/article/bu_002_introduction?__cf_chl_jschl_tk__=325d822606f3484bc6647f799e9103fe61bcff2a-1608871331-0-Ac_smOk31ZI5uA8HJ-LfKY4PlJxaIF6nSAZWQWhuVR9b7XbRZgFcr0FMa0VZUtL2m2zOn-_HL3Hv-T48QGINdFf7IwQmen_MdmPPsRsEMkhc2uzlgrAdbu9AHoZZLnOs45FRPwI4xoFXBsaQOdT0HJQwqzMnimEZbx_hHKBhqzgGXQxUcg5y8qJ9TiP_gX2K5WzfCqeCvA0rsd2cjIf40WvmFtMANvVQMEh3isbl3JcjjWD7QGAFShscDomuLi65l9UcapnHwsgMgW8hwZ7RTantci6C_uhNTOYBGLiXFTYuwH9lXQ0GNctQBaPMaJvaK6LqArDdiIOImBEizXJ3to1cRMei1AGndcMT6CiV1qEO)
-  - [Telnet](https://www.ionos.com/digitalguide/server/tools/telnet-the-system-wide-remote-protocol/)
-- **Vídeos Citados (*faça por responsabilidade própria*)**
-  - [Resolvendo o problema de carregamento da bateria](https://www.youtube.com/watch?v=dfUOAMwQCKM)
-  - [Calibração Correta](https://youtu.be/V5-YMYb0MsI)
-
-
-
-
-
-
+- **Download e Instalação**
+  - [Download Ubuntu 16.04 LTS](https://releases.ubuntu.com/16.04/)
+  - [Sobre o ROS Kinetic Kame](http://wiki.ros.org/kinetic)
+  - [Tutorial para instalação do Kinetic Kame](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+  - [Todas as Distribuições do ROS](http://wiki.ros.org/Distributions)
 
 ---
-
-#### **Por favor, me corrija se eu estiver errado.**
-
-É provável que eu tenha cometido enganos ou que eu não tenha encontrado a melhor forma para explicar os conceitos expostos aqui nesta página, portanto, peço para que entre em contato comigo para que você possa me ajudar a explicar melhor.
-
-Meu email para contato é [gtoshinakano@gmail.com](mailto:gtoshinakano@gmail.com). Ficarei feliz em saber a sua opinião!
