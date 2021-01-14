@@ -1,5 +1,5 @@
 ---
-title: Primeiros passos com ROS - Instalação e comandos para conhecer os conceitos
+title: Como instalar o Robot Operating System (Kinetic) e executar os primeiros comandos
 description: A strong, little quadcopter in need of better performance
 keywords: Keys separated with commas
 hero_alt: Hero alternative text
@@ -20,9 +20,9 @@ summary:
 
 Se você ainda não conhece os conceitos do ROS - ```master, nodes, topics e etc``` - sugiro que você comece lendo a [primeira parte deste tutorial](/posts/about-ros).
 
-Nesta postagem, irei explicar na prática os conceitos do ROS desde a instalação até a utilização de seus recursos. 
+Nesta postagem, irei explicar na prática como instalar o ROS no Ubuntu e verificar se tudo está funcionando corretamente. 
 
-Este tutorial foi feito para estudantes que não possuem muitos conhecimentos de desenvolvimento e nem de robótica, mas precisa aprender ou possui curiosidade em conhecer o Robot Operating System.
+Este tutorial foi feito para estudantes que não possuem muitos conhecimentos de desenvolvimento e nem de robótica, mas precisam aprender ou possui curiosidade em conhecer o Robot Operating System.
 
 Vamos lá!
 
