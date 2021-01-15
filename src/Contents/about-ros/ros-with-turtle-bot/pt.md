@@ -13,7 +13,7 @@ summary:
     title: Instalação e primeiros comandos no ROS
   - link: about-ros/ros-with-turtle-bot
     title: Entendendo ROS com o Turtle Simulator
-  - link: about-ros/with-python
+  - link: about-ros/writing-package-with-python
     title: Programando para ROS com Python
 ---
 ## Antes de começar
@@ -269,9 +269,53 @@ Em seguida, vá até o terminal do ```teleop_turtle``` node e movimente um pouco
 
 Ao voltar para o terminal do comando ```rostopic echo``` você verá que apareceram alguns conjuntos de dados lineares e angulares, que são justamente as mensagens publicadas no momento em que você pressionava as teclas direcionais.
 
-O terminal se comportou como se fosse um node, inscrito no tópico desejado, para mostrar o resultado no console.
+O terminal se comportou como se fosse um node inscrito no tópico apenas para mostrar o resultado no console. Este comando continuará "ouvindo" as publicações do tópico enquanto você não encerrá-lo com ```Ctrl+C```.
 
+### 6. Solicitando serviços
 
+O último conceito que irei demonstrar é o funcionamento das services. Como expliquei na primeira parte deste tutorial sobre ROS, enquanto os ```topics``` são o método de comunicação **uni-direcional** entre nodes, ```services``` são a forma **bi-direcional**. Isto significa que o node requisitante solicita um serviço por meio de uma mensagem e recebe uma resposta do node servidor.
+
+Vamos ver como isto funciona na prática. Abra mais uma aba do terminal ```Ctrl+Shift+T``` e digite o seguinte comando para ver a lista dos services disponíveis nesta instância do master:
+
+```
+$ rosservice list
+```
+
+Você verá que, dentre os services disponíveis, existe um ```/spawn``` e é ele que iremos solicitar. Mas antes, vamos verificar o tipo de mensagem que este service utiliza:
+
+```
+$ rosservice type /spawn
+```
+
+O retorno será ```turtlesim/Spawn```. Isto significa que o ```turtlesim_node``` registrou no master que o service ```/spawn``` possui este tipo de mensagem. Para verificar a composição de quais valores este tipo de mensagem deve receber, vamos utilizar o comando ```rossrv```, que é parecido com o comando ```rosmsg show```.
+
+```
+$ rossrv show turtlesim/Spawn
+```
+
+![Turtle sim service 01](/static/images/rosservice-turtle-01.png '{"style": {"maxWidth": "100%"}}')
+
+Como pode observar, o comando exibiu dois conjuntos de mensagens. Um é o **tipo da mensagem de requisição** e outro é o **tipo da mensagem de resposta** do service.
+
+Portanto, para chamar o serviço precisamos enviar uma mensagem com os valores de ```x, y, theta``` (números de ponto flutuante) e ```name``` (texto) nos seus formatos adequados, e receberemos uma resposta ```name``` de tipo texto.
+
+```
+$ rosservice call /spawn 2 2 0.2 ""
+```
+
+E, magicamente, aparecerá uma nova tartaruga em nosso simulador!
+
+![Turtle sim service 02](/static/images/rosservice-turtle-02.png '{"style": {"maxWidth": "100%"},"description": "Nosso primeiro service requisitado!"}')
+
+Como mensagem de resposta do nosso chamado ao serviço, da qual enviamos um ```name``` com valor nulo, o node nos respondeu com uma mensagem de ```name: turtle2```. Isto significa que a nossa nova tartaruga é uma nova instância gerada pelo node turtlesim, de nome ```turtle2```.
+
+Agora podemos movimentá-la publicando em seu próprio ```topic```, que pode ser visto novamente pelo comando ```rostopic list```.
+
+![Turtle sim service 03](/static/images/rosservice-turtle-03.png '{"style": {"maxWidth": "100%"},"description": "Veja que temos disponíveis tanto os topics para turtle1 quato para turtle2"}')
+
+Existem muitas coisas que você pode fazer com o simulador, como ensinados [neste](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics) e [neste outro](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams) tutorial.
+
+No entanto, expliquei aqui o básico que você deve aprender para começar a operar aplicações para robôs com o ROS. Na [última etapa deste tutorial sobre ROS](/posts/about-ros/writing-package-with-python), vamos escrever o nosso primeiro package em python! Nos vemos lá!
 
 ---
 

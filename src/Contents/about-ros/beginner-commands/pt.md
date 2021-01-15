@@ -13,7 +13,7 @@ summary:
     title: Instalação e primeiros comandos no ROS
   - link: about-ros/ros-with-turtle-bot
     title: Entendendo ROS com o Turtle Simulator
-  - link: about-ros/with-python
+  - link: about-ros/writing-package-with-python
     title: Programando para ROS com Python
 ---
 ## Antes de começar
