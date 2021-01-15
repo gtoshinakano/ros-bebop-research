@@ -235,16 +235,41 @@ Com isto, você poderá controlar a tartaruga pressionando as teclas direcionais
 
 O ```teleop_turtle``` é um node que funciona como um controlador deveria funcionar. Ele publica as mensagens no tópico correto ao pressionar os botões para que o nosso robô inscrito neste tópico possa realizar ações.
 
-Se você instalou a versão completa do ROS, deve estar instalado em seu PC um outro *packace* chamado ```rqt_graph``` que mostra graficamente as relações de conexão entre os nodes através dos tópicos. 
+Se você instalou a versão completa do ROS, deve estar instalado em seu PC um outro *package* chamado ```rqt_graph``` que mostra graficamente as relações de conexão entre os nodes através dos tópicos. 
 
 ```
 $ rosrun rqt_graph rqt_graph
 ```
 
-![Turtle sim rqt_graph](/static/images/rostopic-turtle-03.png '{"style": {"maxWidth": "100%"},"description": ""}')
+O resultado será o seguinte:
 
+![Turtle sim rqt_graph](/static/images/rostopic-rqt-01.png '{"style": {"maxWidth": "100%"},"description": ""}')
 
+Como pode observar, esta ferramenta mostrará o relacionamento entre os nodes ```/teleop_turtle``` e ```/turtlesim```, conectados através do tópico ```/turtle1/cmd_vel```. Se você marcar outros recursos na ferramenta, você poderá ter visões diferentes do ecossistema.
 
+![Turtle sim rqt_graph-02](/static/images/rostopic-rqt-02.png '{"style": {"maxWidth": "100%"},"description": ""}')
+
+```rqt_graph``` é uma ferramenta poderosa para depurar a sua aplicação pois fornece uma visão global geral de seu ecossistema ROS. A ferramenta não exibe os relacionamentos por ```services```, apenas por ```topics``` devido à forma como os ```services``` foram implantados, mas é útil o suficiente para se encontrar problemas no ecossistema rapidamente. 
+
+### 5. Lendo tópicos publicados
+
+Se com o comando ```rostopic pub``` podemos publicar mensagens nos ```topics```, isso significa que estamos utilizando algum ```node``` para fazer essa publicação?
+
+A resposta é: **Não**. O comando ```rostopic``` é uma função nativa do ROS que lida com a interação por ```topics``` através do terminal. Portanto, para ler as mensagens publicadas pelo terminal, também não é necessário fazê-lo por meio de um node como mostrarei a seguir.
+
+Abra mais uma aba do terminal ```Ctrl+Shift+T``` e execute o seguinte comando para ler as mensagens do tópico ```/turtle1/cmd_vel```:
+
+```
+$ rostopic echo /turtle1/cmd_vel
+```
+
+Em seguida, vá até o terminal do ```teleop_turtle``` node e movimente um pouco a tartaruga por meio das setas do teclado.
+
+![Turtle sim read data](/static/images/rostopic-turtle-03.png '{"style": {"maxWidth": "100%"},"description": "Serão 5  terminais no total: master, turtlesim node, teleop_turtle node, rqt_graph node e o último"}')
+
+Ao voltar para o terminal do comando ```rostopic echo``` você verá que apareceram alguns conjuntos de dados lineares e angulares, que são justamente as mensagens publicadas no momento em que você pressionava as teclas direcionais.
+
+O terminal se comportou como se fosse um node, inscrito no tópico desejado, para mostrar o resultado no console.
 
 
 
@@ -274,6 +299,6 @@ Gabriel Toshinori Nakano
   - [Entendendo topics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
   - [Turtlesim Package](http://wiki.ros.org/turtlesim#:~:text=turtlesim%20is%20a%20tool%20made%20for%20teaching%20ROS%20and%20ROS%20packages.)
   - [YAML Wikipedia](https://pt.wikipedia.org/wiki/YAML)
-  - [Todas as Distribuições do ROS](http://wiki.ros.org/Distributions)
+  - [Rqt_graph em detalhes](https://roboticsbackend.com/rqt-graph-visualize-and-debug-your-ros-graph/)
 
 ---
