@@ -18,9 +18,9 @@ summary:
 ---
 ## Antes de começar
 
-Se você ainda não instalou o ROS no Ubuntu, sugiro que você instale seguindo [este tutorial](/posts/about-ros/beginner-commands).
+Se você ainda não instalou o ROS no Ubuntu, sugiro que você o instale seguindo [este tutorial](/posts/about-ros/beginner-commands).
 
-Se você já o instalou, mas quer entender como funcionam os recursos do ROS como ```o master, os nodes, os topics, publish/subscribe e os services```, este tutorial pode ser muito útil para você!
+Se você já o instalou e quer entender como funcionam os recursos do ROS como ```o master, os nodes, os topics, publish/subscribe e os services```, este tutorial será muito útil para você!
 
 Este tutorial foi feito para estudantes que não possuem muitos conhecimentos de desenvolvimento e nem de robótica, mas precisam aprender ou possui curiosidade em conhecer o Robot Operating System.
 
@@ -32,7 +32,9 @@ Vamos lá!
 
 ## ROS - Um ambiente para operação de robôs
 
-Como vimos na [Introdução aos conceitos do ROS](/posts/about-ros), trata-se de um software que cria um ecossistema virtual para poder operar robôs. Neste contexto, podemos considerar como robôs tanto pequenos sensores quanto grandes máquinas industriais integradas.
+Como vimos na [Introdução aos conceitos do ROS](/posts/about-ros), trata-se de um software que cria um ecossistema virtual para poder operar robôs. 
+
+Neste contexto, podemos considerar como robôs tanto pequenos sensores quanto grandes máquinas industriais integradas.
 
 **Isto quer dizer que você precisa ter conectados sensores/atuadores em seu PC para poder utilizar o ROS?**
 
@@ -44,19 +46,19 @@ Em teoria, a resposta para esta pergunta é sim. Entretanto, o ROS também foi f
 
 ![Ubuntu](https://spectrum.ieee.org/image/MzAzMjI5Nw.jpeg '{"style":{"maxWidth" :"100%"}}')
 
-Com o Ubuntu e o ROS instalados em sua máquina, vamos por a mão na massa para controlar o seu primeiro robô.
+Com o Ubuntu e o ROS instalados em sua máquina, vamos por a mão na massa para controlar o seu primeiro robô!
 
 O turtlesim é um simulador criado para ensinar os conceitos de ROS para iniciantes e a maioria dos tutoriais que você encontra pela internet começa a ensinar a partir dele.
 
 Ele é um [package](http://wiki.ros.org/turtlesim#:~:text=turtlesim%20is%20a%20tool%20made%20for%20teaching%20ROS%20and%20ROS%20packages.) que vem instalado por padrão em praticamente todas as versões do ROS e se você seguiu o processo instalação por este tutorial, provavelmente ele estará instalado em seu PC.
 
-Para confirmar se ele está instalado, vamos começar por um comando para procurar por ```packages``` instalados em sua implementação do ROS. Abra o terminal ```Ctrl+Alt+T``` e digite:
+Para confirmar se ele está instalado em seu PC, vamos começar por um comando para procurar por ```packages``` instalados em sua implementação do ROS. Abra o terminal ```Ctrl+Alt+T``` e digite:
 
 ```
 $ rospack list | grep turtle
 ```
 
-Este comando irá procurar os packages ROS instalados que possuem a entrada **turtle** em seu nome. Caso esteja mesmo instalado, o **turtlesim** virá como uma das respostas para o comando. (Você não precisa realizar este comando sempre que for executar um ```package```, o demonstrei apenas para fins educativos)
+Este comando irá procurar os packages ROS instalados que possuem a entrada **turtle** em seu nome. Caso esteja instalado, o **turtlesim** virá como uma das respostas para o comando. (Você não precisa realizar este comando sempre que for executar um ```package```, o demonstrei apenas para confirmar a instalação)
 
 Confirmada a presença do **turtlesim** podemos iniciar o seu node, mas antes, vamos por etapas.
 
@@ -78,7 +80,7 @@ Agora ele estará pronto para receber os registros de ```nodes, topics, messages
 
 ### 2. Iniciando o seu primeiro Node
 
-Com o master executando, abra uma nova aba do terminal com ```Ctrl+Shift+T```(novo atalho) e execute o seguinte comando para iniciar o **turtlesim**:
+Com o master executando, abra uma nova aba do terminal com ```Ctrl+Shift+T``` e execute o seguinte comando para iniciar o **turtlesim**:
 
 ```
 $ rosrun turtlesim turtlesim_node
@@ -133,7 +135,7 @@ Connections:
     * transport: TCPROS
 ```
 
-Se você analisar esta mensagem você poderá observar que todos os recursos ROS relacionados a este node irão aparecer.
+Se você analisar esta mensagem você poderá observar que todos os recursos ROS relacionados a este node irão aparecer:
 
 - O ```namespace``` do node
 - Os ```topics``` que ele publica e os seus tipos de ```[message]``` 
@@ -141,7 +143,7 @@ Se você analisar esta mensagem você poderá observar que todos os recursos ROS
 - Os ```services``` que ele fornece para todo o ambiente ROS
 - E outras informações a mais de conexão
 
-São todos os conceitos que eu expliquei na [primeira parte deste tutorial](/posts/about-ros)!
+São todos os conceitos que eu expliquei na [primeira parte deste tutorial](/posts/about-ros).
 
 ### 3. Controlando a sua Tartaruga
 
@@ -170,13 +172,13 @@ Subscribers:
  * /turtlesim (http://hgu-student:35917/)
 ```
 
-A explicação da resposta:
+Este comando exibe informações sobre o tópico fornecido:
 
 - ```Type``` é o tipo da mensagem da qual este tópico permite a publicação.
 - ```Publishers``` os nodes que o publicam.
 - ```Subscribers``` os nodes que se inscrevem.
 
-Agora vamos conhecer do que se trata a ```Type``` desta mensagem, pois queremos controlar a nossa tartaruga. Podemos utilizar estes dois comandos para sabermos qual o tipo de mensagem que devemos enviar ao publicar um ```topic``` de tipo ```geometry_msgs/Twist```: 
+Agora vamos conhecer do que se trata o ```Type``` desta mensagem, pois queremos controlar a nossa tartaruga. Podemos utilizar estes dois comandos para sabermos qual o tipo de mensagem que devemos enviar ao publicar um ```topic``` de tipo ```geometry_msgs/Twist```: 
 
 ```
 $ rosmsg show geometry_msgs/Twist 
@@ -215,7 +217,7 @@ Se você repetir este comando várias vezes em seu terminal, verá a sua tartaru
 
 Com isso, simulamos o envio de um comando que um controle conectado ao ambiente do ROS poderia enviar a um robô real.
 
-Mas enviar comandos desta forma o tempo todo não seria um processo viável pois o tempo para digitá-los sem erros no terminal inviabilizaria todo o processo.
+Mas enviar comandos desta forma o tempo todo não seria um processo viável pois o tempo de digitação no terminal inviabilizaria todo o processo.
 
 Para isso, desenvolvemos os ```nodes``` controladores.
 
@@ -273,7 +275,7 @@ O terminal se comportou como se fosse um node inscrito no tópico apenas para mo
 
 ### 6. Solicitando serviços
 
-O último conceito que irei demonstrar é o funcionamento das services. Como expliquei na primeira parte deste tutorial sobre ROS, enquanto os ```topics``` são o método de comunicação **uni-direcional** entre nodes, ```services``` são a forma **bi-direcional**. Isto significa que o node requisitante solicita um serviço por meio de uma mensagem e recebe uma resposta do node servidor.
+O último conceito que iremos aprender é o funcionamento das services. Como expliquei na primeira parte deste tutorial sobre ROS, enquanto os ```topics``` são o método de comunicação **uni-direcional** entre nodes, ```services``` são a forma **bi-direcional**. Isto significa que o node requisitante solicita um serviço por meio de uma mensagem e recebe uma resposta do node servidor.
 
 Vamos ver como isto funciona na prática. Abra mais uma aba do terminal ```Ctrl+Shift+T``` e digite o seguinte comando para ver a lista dos services disponíveis nesta instância do master:
 
@@ -313,23 +315,36 @@ Agora podemos movimentá-la publicando em seu próprio ```topic```, que pode ser
 
 ![Turtle sim service 03](/static/images/rosservice-turtle-03.png '{"style": {"maxWidth": "100%"},"description": "Veja que temos disponíveis tanto os topics para turtle1 quato para turtle2"}')
 
+E, com o comando a seguir, podemos mover a nossa segunda tartaruga.
+
+```
+$ rostopic pub -1 /turtle2/cmd_vel geometry_msgs/Twist -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, 1.8]'
+```
+
 Existem muitas coisas que você pode fazer com o simulador, como ensinados [neste](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics) e [neste outro](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams) tutorial.
 
-No entanto, expliquei aqui o básico que você deve aprender para começar a operar aplicações para robôs com o ROS. Na [última etapa deste tutorial sobre ROS](/posts/about-ros/writing-package-with-python), vamos escrever o nosso primeiro package em python! Nos vemos lá!
+O mais básico que você deve aprender para começar a operar robôs com o ROS foi explicado aqui. Na [última etapa deste tutorial sobre ROS](/posts/about-ros/writing-package-with-python), vamos escrever o nosso primeiro package em python! 
 
 ---
 
 ## Conclusão
 
-Se você é como eu, que precisa aprender sobre o Robot Operating System e não tinha muitos conhecimentos sobre Ubuntu e comandos de terminal, este guia é para você.
+Aprendemos na prática como podemos utilizar comandos para analisar o ambiente do ROS e acionar atuadores através dos ```topics```e dos ```services```.
 
-Você pode instalar o ROS Kinetic seguindo os tutoriais da [documentação oficial](http://wiki.ros.org/kinetic/Installation/Ubuntu) sem quaisquer problemas, porém o conteúdo lá é para quem já tem algum conhecimento prévio sobre o assuto.
+Existem inúmeros comandos de terminal para ROS para diversas funcionalidades e você pode vê-los todos [nesta página](http://wiki.ros.org/ROS/CommandLineTools) da documentação oficial do ROS.
 
-Procurei explicar cada comando de forma rápida e direta para que você não seja como eu no começo, que copiava os comandos e via se funcionava. É muito importante entender o que cada comando faz quando se trata em trabalhar com o Ubuntu.
+Procurei explicar o que faz cada comando pois, quando eu comecei, tive uma certa dificuldade de entender o ambiente do ROS enviando comandos sem conhecer direito o universo do master, nodes, topics e services.
 
-Também demonstrei alguns comandos para que você possa confirmar se tudo correu bem, como por exemplo, o ```cat``` e o ```apt list --installed```.
+Como resumo, listo aqui os comandos e uma explicação para cada um deles:
 
-E, por fim, iniciei o contexto para você continuar nesta caminhada para aprendizado do ROS com a [próxima etapa deste tutorial](/posts/about-ros/ros-with-turtle-bot).
+- ```rospack``` todas as ações relativas aos packages ROS
+- ```roscore``` inicia o master
+- ```rosrun``` inicia um package instalado através de seu nome
+- ```rosnode``` todas as ações relativas aos nodes iniciados
+- ```rostopic``` todas as ações relativas aos topics disponíveis
+- ```rosmsg``` comando sobre informações relativos aos tipos de messages publicados/inscritos por topics
+- ```rosservice``` todas as ações relativas aos services disponíveis
+- ```rossrv``` comando sobre informações relativos aos tipos das mensagens trocadas por services
 
 Um forte abraço.
 
