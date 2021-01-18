@@ -355,9 +355,11 @@ Gabriel Toshinori Nakano
 #### **Referências para esta Postagem**
 
 - **Informações Úteis**
-  - [Entendendo topics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
+  - [Entendendo Topics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
+  - [Entendendo Services](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
   - [Turtlesim Package](http://wiki.ros.org/turtlesim#:~:text=turtlesim%20is%20a%20tool%20made%20for%20teaching%20ROS%20and%20ROS%20packages.)
+  - [Mais sobre Turtlesim](https://subscription.packtpub.com/book/hardware_and_creative/9781782175193/1/ch01lvl1sec14/turtlesim-the-first-ros-robot-simulation)
   - [YAML Wikipedia](https://pt.wikipedia.org/wiki/YAML)
   - [Rqt_graph em detalhes](https://roboticsbackend.com/rqt-graph-visualize-and-debug-your-ros-graph/)
-
+  - [Todos os comandos de terminal](http://wiki.ros.org/ROS/CommandLineTools)
 ---

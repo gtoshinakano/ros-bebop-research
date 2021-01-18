@@ -323,7 +323,7 @@ Finalmente, falarei sobre os *packages* que são pacotes de software feitos para
 
 > *Os ```packages``` podem conter nodes, uma biblioteca independente do ROS, um conjunto de dados, arquivos de configuração, parte de códigos de terceiros ou qualquer outra coisa que constitua logicamente um módulo útil.*
 
-No começo, quando eu não conhecia nada sobre o ROS e tentava seguir tutoriais para controlar o meu Drone, o tempo todo o termo ```package``` aparecia e eu não sabia como identificar o que era. Portanto, resolvi falar um pouco aqui, pois eu utilizarei este termo nos próximos tutoriais e talvez você passe pela mesma dificuldade que eu tive.
+No começo, quando eu não conhecia nada sobre o ROS e tentava seguir tutoriais para controlar o meu Drone, o tempo todo citavam o termo ```package``` e eu não sabia como identificá-lo. Portanto, resolvi falar um pouco aqui, pois eu utilizaremos este termo durante este tutorial e talvez você passe pela mesma dificuldade que eu passei.
 
 Tudo o que desenvolveram e disponibilizaram na comunidade para o ROS são ```packages```. Inclusive, se você iniciar o desenvolvimento de alguma aplicação para o ROS, esta aplicação também será um package.
 

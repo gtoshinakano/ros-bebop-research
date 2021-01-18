@@ -1,6 +1,6 @@
 ---
-date: 2020-12-25
+date: 2021-01-18
 last_update: 2020-12-08
 author: Gabriel Toshinori Nakano
-hero_image: https://miro.medium.com/max/4800/0*Yzw9EPqgeoSL-qgw
+hero_image: https://thinkopen.solutions/website/image?field=thumbnail&model=blog.post&id=118
 ---
