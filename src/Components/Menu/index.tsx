@@ -17,7 +17,7 @@ const Comp: React.FunctionComponent<
 > = ({t, i18n, onSelected}) => {
 
 	const router = useRouter()
-	const path = router.pathname
+	const {pathname, asPath} = router
 
 	const goTo = ({target}) => {
 		router.push(target.value)
@@ -27,43 +27,40 @@ const Comp: React.FunctionComponent<
 	return (
 		<Container>
 			<Item header={1}>{t("research")}</Item>
-			<Item value="/" onClick={goTo} action active={path==="/"} disabled={path==="/"}>
+			<Item value="/" onClick={goTo} action active={pathname==="/"} disabled={pathname==="/"}>
 				{t("home")}
 			</Item>
 			<Item header={1}>{t("content")}</Item>
-			<Item value="/posts/about-bebop" onClick={goTo} action active={path==="/posts/about-bebop"} disabled={path==="/posts/about-bebop"}>
+			<Item value="/posts/about-bebop" onClick={goTo} action active={pathname==="/posts/about-bebop"} disabled={pathname==="/posts/about-bebop"}>
 				{t("about-bebop")}
 			</Item>
-			<Item value="/posts/about-ros" onClick={goTo} action active={path==="/posts/about-ros"} disabled={path==="/posts/about-ros"}>
+			<Item value="/posts/about-ros" onClick={goTo} action active={pathname==="/posts/about-ros/[[...slug]]"} disabled={pathname==="/posts/about-ros/[[...slug]]"}>
 				{t("about-ros")}
 			</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
-				{t("ros-bebop")}
-			</Item>
 			<Item header={1}>{t("guide")}</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/research/introduction" onClick={goTo} action active={asPath==="/posts/research/introduction"} disabled={asPath==="/posts/research/introduction"}>
+				{t("introduction")}
+			</Item>	
+			<Item value="/posts/research/installation" onClick={goTo} action active={asPath==="/posts/research/installation"} disabled={asPath==="/posts/research/installation"}>
 				{t("installation")}
 				</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/research/controlling-bebop" onClick={goTo} action active={asPath==="/posts/research/controlling-bebop"} disabled={asPath==="/posts/research/controlling-bebop"}>
 				{t("controlling")}
 				</Item>	
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/research/reading-from-bebop" onClick={goTo} action active={asPath==="/posts/research/reading-from-bebop"} disabled={asPath==="/posts/research/reading-from-bebop"}>
 				{t("reading")}
 			</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/research/bebop-gps" onClick={goTo} action active={asPath==="/posts/research/bebop-gps"} disabled={asPath==="/posts/research/bebop-gps"}>
 				{t("bebop-gps")}
-			</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
-				{t("precautions")}
-			</Item>		
+			</Item>	
 			<Item header={1}>{t("try-node")}</Item>	
-			<Item value="/posts/" onClick={goTo}  action active={path===""} disabled={path===""}>
+			<Item value="/posts/" onClick={goTo}  action active={pathname===""} disabled={pathname===""}>
 				{t("node-bebop")}
 			</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/" onClick={goTo} action active={pathname===""} disabled={pathname===""}>
 				{t("web-service")}
 			</Item>
-			<Item value="/posts/" onClick={goTo} action active={path===""} disabled={path===""}>
+			<Item value="/posts/" onClick={goTo} action active={pathname===""} disabled={pathname===""}>
 				{t("about")}
 			</Item>
 		</Container>
