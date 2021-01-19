@@ -1,10 +1,11 @@
 {
   "research": "A Pesquisa",
   "home": "Home",
-  "introduction": "Introdução",
+  "main-goal": "Objetivo Principal",
   "content": "Conteúdo da Pesquisa",
+  "context": "Contexto",
   "about-bebop": "Sobre o Bebop",
-  "about-ros": "Sobre o ROS",
+  "about-ros": "Guia Completo ROS para iniciantes",
   "ros-bebop": "Bebop e ROS",
   "guide": "Reproduza o Experimento",
   "installation": "Instalação e Requisitos",

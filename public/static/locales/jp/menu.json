@@ -1,8 +1,9 @@
 {
   "research": "研究について",
   "home": "ホーム",
-  "introduction": "Introdu",
+  "main-goal": "ゴール",
   "content": "研究の内容",
+  "context": "研究の内容",
   "about-bebop": "Bebopについて",
   "about-ros": "ROSについて",
   "ros-bebop": "BebopとROS",

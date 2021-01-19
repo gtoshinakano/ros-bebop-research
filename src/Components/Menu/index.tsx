@@ -30,16 +30,16 @@ const Comp: React.FunctionComponent<
 			<Item value="/" onClick={goTo} action active={pathname==="/"} disabled={pathname==="/"}>
 				{t("home")}
 			</Item>
-			<Item header={1}>{t("content")}</Item>
+			<Item header={1}>{t("context")}</Item>
 			<Item value="/posts/about-bebop" onClick={goTo} action active={pathname==="/posts/about-bebop"} disabled={pathname==="/posts/about-bebop"}>
 				{t("about-bebop")}
 			</Item>
 			<Item value="/posts/about-ros" onClick={goTo} action active={pathname==="/posts/about-ros/[[...slug]]"} disabled={pathname==="/posts/about-ros/[[...slug]]"}>
 				{t("about-ros")}
 			</Item>
-			<Item header={1}>{t("guide")}</Item>
+			<Item header={1}>{t("content")}</Item>
 			<Item value="/posts/research/introduction" onClick={goTo} action active={asPath==="/posts/research/introduction"} disabled={asPath==="/posts/research/introduction"}>
-				{t("introduction")}
+				{t("main-goal")}
 			</Item>	
 			<Item value="/posts/research/installation" onClick={goTo} action active={asPath==="/posts/research/installation"} disabled={asPath==="/posts/research/installation"}>
 				{t("installation")}

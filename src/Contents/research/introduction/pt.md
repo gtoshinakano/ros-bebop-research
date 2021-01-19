@@ -1,5 +1,5 @@
 ---
-title: Parrot Bebop - "Um pequeno e resistente quadrocóptero"
+title: Construindo um WebService para controlar o Bebop a partir de seu GPS
 description: A strong, little quadcopter in need of better performance
 keywords: Keys separated with commas
 hero_alt: Hero alternative text
