@@ -7,11 +7,8 @@ headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
 links:
-  prevPage: 
-    link: about-ros
-    title: O que é ROS? Como funciona o Robot Operating System
   nextPage: 
-    link: about-ros/beginner-commands
+    link: /posts/research/introduction
     title: Instalação e primeiros comandos no ROS
 
 ---

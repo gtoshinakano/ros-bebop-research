@@ -15,5 +15,7 @@
   "summary": "Summary",
   "summary-header": "This tutorial has this parts:",
   "error-server": "An error ocurred on the server",
-  "error-client": "An error ocurred on the client"
+  "error-client": "An error ocurred on the client",
+  "next": "Next",
+  "prev": "Previous"
 }

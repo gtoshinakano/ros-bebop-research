@@ -13,5 +13,7 @@
   "summary": "スマリオ",
   "summary-header": "Read this tutorial parts",
   "error-server": "サーバーエラーエラー",
-  "error-client": "クライアントエラー"
+  "error-client": "クライアントエラー",
+  "next": "次へ",
+  "prev": "戻る"
 }

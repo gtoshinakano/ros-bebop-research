@@ -24,7 +24,7 @@ const renderers = {
           width="100%" 
           title={mdProps.title}
         />
-    {mdProps.description && <small>{mdProps.description}</small>}
+        {mdProps.description && <small>{mdProps.description}</small>}
       </ImgContainer>
     )
   },

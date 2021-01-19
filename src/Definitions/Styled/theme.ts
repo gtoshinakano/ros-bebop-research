@@ -3,6 +3,7 @@ import { DefaultTheme } from "styled-components";
 // #endregion Global Imports
 
 const light: DefaultTheme = {
+    name: "light",
     borderRadius: '4px',
     backgroundColor: "#fafafa",
     palette: {
@@ -42,6 +43,7 @@ const light: DefaultTheme = {
 };
 
 const dark: DefaultTheme = {
+    name: "dark",
     borderRadius: '4px',
     backgroundColor: "#16181A",
     palette: {
