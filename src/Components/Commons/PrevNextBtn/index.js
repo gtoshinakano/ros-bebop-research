@@ -43,7 +43,7 @@ const Sticky = ({sticky, links, t}) => {
         }
       }
     );
-  }, [])
+  }, [links])
 
   useEffect(() => {
     const element = sticky.current;
@@ -62,7 +62,7 @@ const Sticky = ({sticky, links, t}) => {
         }
       }
     );
-  }, [])
+  }, [links])
 
   return(
     <>
@@ -71,9 +71,9 @@ const Sticky = ({sticky, links, t}) => {
           size="lg" 
           block 
           onClick={() => router.push(links.prevPage.link)}>
-          <LeftArrow size="20" /> {t("prev")}
+          <LeftArrow size="20" /> <strong>{t("prev")}</strong>
           <img src="https://gifprint.s3.amazonaws.com/p/gif/83894/cf1542b0255f013784fd2ea0b0aa34b1.gif" width="10" />
-          <br /><small>{links.nextPage.title}</small>
+          <br /><small>{links.prevPage.title}</small>
         </LinkButton>
         
       </Fixed>}
@@ -81,8 +81,8 @@ const Sticky = ({sticky, links, t}) => {
         <LinkButton  
           size="lg" 
           block 
-          onClick={() => console.log("oi")}>
-        <RightArrow size="20" /> {t("next")}
+          onClick={() => router.push(links.nextPage.link)}>
+        <RightArrow size="20" /> <strong>{t("next")}</strong>
           <img src="https://gifprint.s3.amazonaws.com/p/gif/83894/cf1542b0255f013784fd2ea0b0aa34b1.gif" width="10" />
           <br /><small>{links.nextPage.title}</small>
         </LinkButton>

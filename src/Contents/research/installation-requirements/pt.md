@@ -1,5 +1,5 @@
 ---
-title: Desenvolvimento de Projetos para Internet das Coisas - IOT
+title: Parte 1 - Preparando o ambiente para controlar o quadrocóptero Bebop
 description: A strong, little quadcopter in need of better performance
 keywords: Keys separated with commas
 hero_alt: Hero alternative text
@@ -7,11 +7,14 @@ headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
 links:
+  prevPage: 
+    link: /posts/research/introduction
+    title: Objetivo do Autor
   nextPage: 
-    link: /posts/research/installation-requirements
-    title: Instalação e primeiros comandos no ROS
+    link: /posts/research/controlling-with-ros
+    title: Controlando o Bebop com o ROS
 ---
-## 『Qual o seu objetivo para estudar em uma Universidade no Japão?』
+## 
 
 Esta foi uma das perguntas que tive que responder no formulário para inscrição da minha bolsa de estudos para o Japão. Em um espaço de mais ou menos 30 linhas tive que escrever, em japonês, o motivo de estar me inscrevendo àquela oportunidade.
 
@@ -31,7 +34,7 @@ Portanto, sou um cara das antigas. Um cara que conheceu o *Netscape* e já testo
 
 Hoje tudo é diferente na Internet, temos streaming e lives em vídeo, aplicativos de GPS no celular, uma coisa chamada *Cloud Computing* que ninguém precisa saber como funciona para poder usar.
 
-**A tecnologia evoluiu inimaginavelmente.**
+Está tudo conectado.
 
 Diante de tudo isso, me perguntei: **O que seria interessante eu estudar no Japão?**
 
