@@ -8,7 +8,7 @@ subheadline: Page's SubHeadline
 cta: Call to Action
 links:
   nextPage: 
-    link: /posts/research/installation-requirements
+    link: /posts/research/installation
     title: Instalação e primeiros comandos no ROS
 ---
 ## 『Qual o seu objetivo para estudar em uma Universidade no Japão?』

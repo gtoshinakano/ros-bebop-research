@@ -101,7 +101,7 @@ const Fixed = styled.div`
   }
   font-family: Noto Sans JP;
   position: fixed;
-  top: 50vh;
+  top: 95vh;
   transform: translateY(-50%);
   left: ${props => props.prev && '18px'};
   right: ${props => props.next && '18px'};
