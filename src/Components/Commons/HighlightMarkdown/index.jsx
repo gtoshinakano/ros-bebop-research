@@ -1,6 +1,9 @@
 // ./CodeBlock.js
 import React from "react"
 import Prism from "prismjs"
+import 'prismjs/components/prism-python'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import ReactMarkdown from "react-markdown"
 import Link from "next/link"
 import {Blockquote, ImgContainer, Hr, CustomLink} from "./styled"
@@ -8,9 +11,10 @@ import {Blockquote, ImgContainer, Hr, CustomLink} from "./styled"
 
 const renderers = {
   code: ({language, value}) => {
+    const plugins = language && language.split("@") 
     return (
-      <pre>
-        <code className={`language-${language}`}>{value}</code>
+      <pre className={plugins && plugins.join(" ")}>
+        <code className={`language-${plugins && plugins[0]}`}>{value}</code>
       </pre>)
     },
   image: ({src, alt, title}) => {
