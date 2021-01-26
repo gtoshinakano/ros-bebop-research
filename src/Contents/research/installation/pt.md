@@ -85,13 +85,31 @@ O processo irá levar alguns minutos para baixar e extrair os pacotes corretos e
 
 Agora vamos instalar o bebop_autonomy
 
-### 2. Criando o seu Workspace
+### 2. Instalando as dependências e ferramentas
+
+Para que o ```bebop_autonomy``` *driver* funcione corretamente é necessário que existam instaladas em seu Ubuntu algumas ferramentas de *build* e de ROS com Python. Para isto, iremos instalá-las com o seguinte comando.
+
+```
+$ sudo apt-get install build-essential python-rosdep python-catkin-tools
+```
+
+Estas são ferramentas para compilar o código do ```bebop_autonomy``` escrito em Python e instalar suas dependências.
+
+Outro software que você irá precisar é o Git para poder clonar o repositório do ```bebop_autonomy```:
+
+```
+$ sudo apt install git-all
+```
+
+Você pode fazer o download do código manualmente através do [repositório público](https://github.com/AutonomyLab/bebop_autonomy) porém, é muito mais fácil realizá-lo pelo próprio terminal.
+
+### 3. Criando o seu Workspace
 
 Como expliquei na [última parte](/posts/about-ros/writing-package-with-python) do tutorial básico sobre ROS, para desenvolvermos softwares para ROS necessitamos de um ambiente de trabalho onde ficarão os nossos arquivos de códigos fonte.
 
-Para isso, utilizaremos a ferramenta ```catkin``` que vem instalada junto com o pacote completo do ROS.
+Para isso, utilizaremos a ferramenta de *build* chamada ```catkin``` que vem instalada junto com o pacote completo do ROS.
 
-Primeiro, vamos criar a pasta onde ficarão os nossos códigos.
+Primeiro, vamos criar a pasta onde ficará o código de nossa aplicação.
 
 ```
 $ mkdir -p ~/bebop_ws/src && cd ~/bebop_ws
@@ -105,7 +123,21 @@ Agora vamos iniciar o nosso workspace com o comando:
 $ catkin init
 ```
 
-Isto fará com que nossa nova pasta ```~/bebop_ws``` seja considerada um workspace pelo ROS.
+Será criada uma pasta oculta chamada ```.catkin_tools``` com arquivos de configuração do novo Workspace. Isto fará com que a nossa nova pasta ```~/bebop_ws``` seja considerada um workspace pelo ROS para que ele tenha as informações corretas de apontamento dos recursos. 
+
+### 4. Instalar o bebop_autonomy
+
+Agora vamos baixar e criar uma cópia do [bebop_autonomy](https://bebop-autonomy.readthedocs.io/en/latest/installation.html) em sua pasta ```~/bebop_ws/src```:
+
+```
+$ git clone https://github.com/AutonomyLab/bebop_autonomy.git src/bebop_autonomy
+```
+
+A [Parrot]() desenvolveu seus drones para que desenvolvedores também pudessem criar seus próprios aplicativos de pilotagem e disponibilizou um SDK (*Software Development Kit*) para esta finalidade. 
+
+O ```bebop_autonomy``` é um *package* desenvolvido pela comunidade do ROS com base na [Documentação Oficial do ARDroneSDK3](https://developer.parrot.com/docs/SDK3/) e com ele é possível conectar os recursos ao ROS, receber e enviar comandos ao drone.
+
+
 
 
 
