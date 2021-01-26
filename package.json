@@ -26,7 +26,8 @@
     "react-query": "^2.26.2",
     "react-query-devtools": "^2.6.3",
     "styled-components": "^5.2.1",
-    "styled-icons": "^10.22.0"
+    "styled-icons": "^10.22.0",
+    "url-metadata": "^2.5.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.56",

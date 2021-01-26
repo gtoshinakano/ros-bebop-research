@@ -15,7 +15,7 @@ links:
 
 Esta foi uma das perguntas que tive que responder no formulário para inscrição da minha bolsa de estudos para o Japão. Em um espaço de mais ou menos 30 linhas tive que escrever, em japonês, o motivo de estar me inscrevendo àquela oportunidade.
 
-Eu sempre fui criativo e gostei de criar minhas invenções, que resultavam em algo mais ou menos útil e em uma boa bagunça para arrumar mais tarde. 
+Eu sempre fui criativo e gostei de criar minhas invenções, que resultavam em algo mais ou menos útil e em uma boa bagunça para arrumar mais tarde... 
 
 Construí desde um minhocário para decompor restos de comida para produzir adubo orgânico até um sistema de irrigação de vasos à base de mangueiras de silicone e canetas perfuradas. 
 
@@ -37,11 +37,11 @@ Diante de tudo isso, me perguntei: **O que seria interessante eu estudar no Jap�
 
 Pensei comigo mesmo: No Japão usa-se muita tecnologia, pois tem muitas máquinas para comprar bebidas, portas automáticas em todos os lugares, assentos de privada aquecidos e com jatinho de água para lavar depois do número 2...
 
-Me perguntei novamente: **O que um japonês parecido comigo deve estudar?** 
+Me perguntei novamente: **O que um japonês parecido comigo deve querer estudar?** 
 
 Pensei em robôs e *animes*. E, dessas duas coisas, o que complementaria muito bem os meus conhecimentos seria estudar algo relacionado a robótica.
 
-Eu trabalho com desenvolvimento para a Internet desde que me formei na faculdade, portanto, dessa parte eu entendo. Por outro lado, eu não conheço nada de robótica. Coisas como, por exemplo, conectar uma máquina ao PC e programar para que ela faça alguma coisa.
+Eu trabalho com desenvolvimento para a Internet desde que me formei na faculdade, portanto, dessa parte eu entendo alguma coisa. Por outro lado, eu não conheço nada sobre robótica. Coisas como, por exemplo, conectar uma máquina ao PC e programar para que ela faça alguma coisa.
 
 E justamente agora com o advento da internet 5G, o conceito de tecnologia ascendente a partir de agora é a Internet das Coisas - o IOT. O conceito consiste basicamente em conectar os objetos da vida cotidiana na internet com o objetivo de torná-los cada vez mais úteis e mais inteligentes.
 

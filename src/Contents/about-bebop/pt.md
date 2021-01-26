@@ -7,13 +7,15 @@ headline: Page's Headline
 subheadline: Page's SubHeadline
 cta: Call to Action
 ---
-## Conheça o drone utilizado para este projeto e saiba como evitar os problemas que me custaram dias
+## Bebop 1 - O drone utilizado para a pesquisa
+
+### Aprenda como evitar os problemas que me custaram dias para solucionar!
 
 Deixa eu te lembrar do objetivo proposto por minha pesquisa contando rapidamente como a bolsa de estudos aconteceu.
 
 Eu queria estudar sobre programação para IOT, conheci um professor de engenharia de produção que ministrava um laboratório de experiências com Drones, VRs e impressoras 3D e ele me propôs um estudo sobre drones.
 
-> ##### E o professor me propôs..
+> ##### O professor me propôs..
 > *"Criar um web service para controlar um drone com o objetivo de fazer entregas de delivery."*
 
 Para isso, ele e a Universidade me disponibilizaram um drone Bebop 1 da marca francesa Parrot, um notebook i5 novinho, livros sobre Ubuntu e ROS (Robot Operating System).

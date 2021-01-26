@@ -115,7 +115,7 @@ Primeiro, vamos criar a pasta onde ficará o código de nossa aplicação.
 $ mkdir -p ~/bebop_ws/src && cd ~/bebop_ws
 ```
 
-Como pode observar executamos dois comandos: criamos a pasta com ```mkdir``` e entramos nela através do ```cd```.
+Como pode observar executamos dois comandos: criamos a pasta com ```mkdir``` e entramos em ```~/bebop_ws``` através do comando ```cd```.
 
 Agora vamos iniciar o nosso workspace com o comando:
 
@@ -135,7 +135,7 @@ $ git clone https://github.com/AutonomyLab/bebop_autonomy.git src/bebop_autonomy
 
 A [Parrot]() desenvolveu seus drones para que desenvolvedores também pudessem criar seus próprios aplicativos de pilotagem e disponibilizou um SDK (*Software Development Kit*) para esta finalidade. 
 
-O ```bebop_autonomy``` é um *package* desenvolvido pela comunidade do ROS com base na [Documentação Oficial do ARDroneSDK3](https://developer.parrot.com/docs/SDK3/) e com ele é possível conectar os recursos ao ROS, receber e enviar comandos ao drone.
+O ```bebop_autonomy``` é um *package* desenvolvido pela comunidade do ROS com base na Documentação Oficial do [ARDroneSDK3](https://developer.parrot.com/docs/SDK3/) e com ele é possível conectar os recursos ao ROS, receber e enviar comandos ao drone.
 
 
 

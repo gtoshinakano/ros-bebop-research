@@ -28,7 +28,7 @@ export const Blockquote = styled.blockquote`
     font-size: 1.1em;
     margin-bottom: 0.6em;
   }
-  a{
+  a strong{
     font-size:0.7em;
     color: inherit;
   }

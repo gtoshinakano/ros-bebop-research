@@ -56,7 +56,7 @@ Dois alunos doutorandos da Universidade de Stanford trabalhavam no laboratório 
 
 > *"Enquanto trabalhavam em robôs para realizar tarefas de manipulação em ambientes humanos, os dois alunos notaram que muitos de seus colegas tinham seu progresso atrasado pela natureza diversa da robótica: um desenvolvedor de software poderia não ter o conhecimento de hardware necessário, alguém que trabalha no estado-da-arte em planejamemento de rotas poderia não ter conhecimentos em visão computacional, por exemplo. Para remediar essa situação , os dois estudantes se propuseram a fazer um sistema base, que proveria um ponto de partida para todos na academia trabalharem em cima."*
 >
-> [Robot Operating Sistem - Wikipedia](https://pt.wikipedia.org/wiki/Robot_Operating_System)
+> [**Robot Operating Sistem - Wikipedia**](https://pt.wikipedia.org/wiki/Robot_Operating_System)
 
 Para se trabalhar com robótica são exigidas muitas áreas de conhecimento. A **natureza diversa da robótica** citada no texto é justamente o que dificulta o aprendizado sobre o desenvolvimento de robôs.
 
@@ -161,7 +161,7 @@ Portanto, **o Master é o primeiro recurso que deve ser inicializado no ROS** pe
 
 > *Os nodes são processos que performam computação. O ROS foi projetado para ser modular em uma escala refinada; um sistema de controle de robô geralmente contém muitos **nós (nodes)**. Por exemplo, um node controla um telêmetro a laser, um outro controla os motores das rodas, um outro rastreia a localização, um outro executa o planejamento do caminho e por aí vai...*
 >
-> [ROS Concepts - ros.org](http://wiki.ros.org/ROS/Concepts)
+> [**ROS Concepts - ros.org**](http://wiki.ros.org/ROS/Concepts)
 
 Como em uma corda, os nós ficam entre uma ponta e a outra. Em uma extremidade fica o master e cada corda o conecta a um recurso do ROS que performa algum tipo de computação.
 
@@ -322,6 +322,8 @@ As mensagens de requisição e resposta são registradas no master como ```servi
 Finalmente, falarei sobre os *packages* que são pacotes de software feitos para serem utilizados no ROS. Segundo o ROS Wiki:
 
 > *Os ```packages``` podem conter nodes, uma biblioteca independente do ROS, um conjunto de dados, arquivos de configuração, parte de códigos de terceiros ou qualquer outra coisa que constitua logicamente um módulo útil.*
+>
+> [**ROS Packages - ros.org**](http://wiki.ros.org/Packages)
 
 No começo, quando eu não conhecia nada sobre o ROS e tentava seguir tutoriais para controlar o meu Drone, o tempo todo citavam o termo ```package``` e eu não sabia como identificá-lo. Portanto, resolvi falar um pouco aqui, pois eu utilizaremos este termo durante este tutorial e talvez você passe pela mesma dificuldade que eu passei.
 

@@ -8,11 +8,18 @@ import {FileUser} from "@styled-icons/remix-line/FileUser"
 import {Email} from "@styled-icons/entypo/Email"
 import moment from "moment"
 import {useRouter} from "next/router"
+import {useQuery} from 'react-query'
+import axios from 'axios'
 
 const Hero = (props) => {
 
   const {t, date} = props
   const router = useRouter()
+
+  const {data, isLoading} = useQuery("profile", async () => {
+    const {data} = await axios.get("/api/profile")
+    return data
+  }, {staleTime: Infinity})
 
   return(
     <HeroContainer
@@ -21,7 +28,7 @@ const Hero = (props) => {
       <Container>
         <h1>{props.header}</h1>
         <Avatar>
-          <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/18951501_10203096811459409_400331603628819510_n.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=Jw9qpGIiSDkAX83LVoT&_nc_ht=scontent-lax3-2.xx&oh=70bc074e1fcd5c6e6bff3b8185858e36&oe=5FF77F16" alt />
+          {!isLoading && data && <img src={data.image} alt />}
           <small>
             <b>{t("author")}</b>
             <br /> <span>{moment(date).format("MMMM D, YYYY")}</span>
