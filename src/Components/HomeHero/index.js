@@ -5,21 +5,21 @@ import cover from "@Static/images/home-cover.png"
 
 const HomeHero = (props) => {
 
-  let animate = useRef(null)
+  /*let animate = useRef(null)
   useEffect(() => {
     const timeline = gsap.timeline()
     timeline.to(animate, {x:1000, ease:"bounce.in", duration: 3})
     
-  }, [])
+  }, [])*/
   return(
     <HeroContainer
       bg={props.bg}
     >
-      <img 
+      {/*<img 
         src='https://www.fotoaparatas.lt/images/eshop/868175-1-parrot-bebop-drone-1-red-01.png'
         ref={(el) => (animate = el)}
         width='100'
-      />
+      />*/}
     </HeroContainer>
   )
 }

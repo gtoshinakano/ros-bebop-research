@@ -19,7 +19,7 @@ function Home(props) {
         language: language
       }
     }).then((res) => res.data)
-  }, {staleTime: Infinity})
+  }, {})
 
   const t = props.t
 
