@@ -154,6 +154,8 @@ Um forte abraço!
 
 Gostaria de agradecer imensamente à minha família que me apoia desde sempre em minha jornada e ao professor responsável Kikuchi Yoshihito que aceitou me receber em seu laboratório e me apresentou os conceitos que demonstro neste site.
 
-Agradeço também ao [HIECC - Hokkaido International Exchange and Cooperation Center](https://www.hiecc.or.jp/), o órgão do governo de Hokkaido que tornou possível o meu intercâmbio, à [Hokkai Gakuen University](https://www.hgu.jp/) a Universidade que frequentei durante toda a minha estadia no Japão.
+Agradeço também ao [HIECC - Hokkaido International Exchange and Cooperation Center](https://www.hiecc.or.jp/), o órgão do governo de Hokkaido que tornou possível o meu intercâmbio em meio à pandemia, à [Hokkai Gakuen University](https://www.hgu.jp/) a Universidade que frequentei durante toda a minha estadia no Japão.
 
-Pessoalmente, gostaria de agradecer à Yuki Matsubara, a minha orientadora por parte do HIECC, à Megumi, a minha única companheira de intercâmbio em tempos de pandemia, e aos meus irmãos de consideração Hit e Massaki que já estavam no Japão e sempre me recebem com grande alegria.
+Pessoalmente, gostaria de agradecer à Yuki Matsubara e à Keiko Matsui, as minhas amigas por parte do HIECC, à Megumi, a minha única colega de intercâmbio em tempos de pandemia, e aos meus irmãos de consideração Hit e Massaki que já estavam no Japão e sempre me recebem com grande alegria.
+
+E, para todos que eu encontrei no Japão, お世話になりました、また会いましょう！
