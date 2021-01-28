@@ -17,61 +17,59 @@ ROSの機能を理解しPCを利用したBebopドローンの制御法を詳し�
 
 ![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"style":{"float":"right","maxWidth" :"40%"},"hidden":"mobile","description": "Rascunho do \\"Helicóptero\\" de Leonardo Da Vinci"}')
 
-Leonardo da Vinci era um talentoso artista de sua época. 
+レオナルドダヴィンチは当時の才能ある芸術家でした。
 
-Poucos sabem que, somente após os 30 anos, passou a dedicar-se aos estudos da matemática e da engenharia. 
+しかし彼が数学と工学の研究に専念し始めたのは実は30歳を過ぎてからだとはあまり知られていません。
 
-Desde então suas obras passaram a ter uma amplitude inimaginável de área, gênero e finalidade, o que o tornou reconhecido mundialmente por sua contribuição em avanços tecnológicos nas áreas da engenharia ótica, hidráulica e civil.
+そこから彼の作品は想像を絶する広さの領域、性別、目的を持つようになり、光学、油圧、土木工学の分野での技術進歩への貢献が世界的に認められるようになりました。
 
 ![Image of Da Vinci](static/images/da-vinci.jpg '{"title":"Da Vinci", "style":{"float": "left"}}')
 
-Eu não sou gênio e muito menos um artista talentoso como Leonardo da Vinci.
+私はダヴィンチのような才能ある芸術家ではないし天才でもありません。
 
-__Sou um programador__. 
+__私はプログラマーだ__. 
 
-Minha inspiração em Da Vinci e em outras personalidades como Thomas Edison, Steve Jobs e Bill Gates me fizeram seguir o caminho da criatividade e do aprendizado constante.
+私はダヴィンチや、トーマスエジソン、スティーブジョブズ、ビルゲイツなどの偉人のえいきょうをうけて創造性と絶え間ない学習の道を歩むことができました。
 
-A oportunidade de estudar em uma Universidade em outro país nasceu de um desejo de conhecer novas tecnologias e da conexão com pessoas que me incentivaram a desbravar este novo horizonte.
+外国の大学で学ぶ機会は、新たな技術の取得やこの新しい地平を探求するよう私を励ましてくれた人々との繋がりによって実現できました。
 
-No inicio de 2020, em plena pandemia do novo corona vírus, infelizmente meu país não soube tomar as melhores ações para prevenir o avanço das infecções.
+2020年初頭新型コロナウイルスによるパンデミック状態の真っ只中で残念ながら私の母国はは感染の拡大を防ぐための最善の行動をとることができませんでした。
 
-Graças a isso, por um bom tempo fomos o segundo país com o maior número de infecções e os números aumentavam, dia após dia.
+その影響で長い間母国での感染数は世界でも2番目に多い数値でその数は日々増加していました。
 
-Lembro que vi em um noticiário na TV, um vídeo filmado por um drone utilizado para alertar as pessoas a ficarem dentro de suas casas.
+人々にステイホームを促すためドローンを使った映像がニュースで放送されていた事がとても印象的でした。
 
 ![Drone alerting people](https://j.gifs.com/2xLOY1.gif '{"style":{"maxWidth":"43%","float":"right"},"url":"https://imgflip.com/gif/4oqbao"}')
 
-E foi aí que percebi que este poderia ser o melhor momento para estudar sobre programação de drones!
+その時気づきました：”これはドローンプログラミングを研究するのに最適な時期であるかもしれない！”と。
 
-Mas o mundo estava inseguro e instável demais para eu correr em direção a um sonho...
+しかし世界は混乱と不安で満たされ私は自分夢に向かって走ることができませんでした...
 
-Os governos confusos queriam movimentar a economia, os aeroportos foram fechados, muitas pessoas não conseguiam voltar para seus países.
+世界的な混乱の中各国の政府は経済の改善に頭を悩ませ、感染防止のため空港は閉鎖多くの人々が帰国することすらかなわない状況でした。
 
-E o intercâmbio que normalmente, começaria em Abril, no início do ano letivo Japonês, teve de ser adiado por tempo indeterminado.
+そして通常では日本の新学期始まる４月からの技術研修は無期限の延期となり私にとって最も不安な時期でした。
 
-E esse foi o pior período de incertezas para mim.
+技術研修が確定した私は既に仕事も退職しており厳しい冬のために服を買ったり、ブラジルからの贈り物なども準備していましたがこの状況下ではいつ行けるのか、本当に行けるかさえも分からない状況にありました。
 
-Havia deixado o meu emprego, comprado roupas para um inverno rigoroso, presentes brasileiros e agora eu já não sabia mais quando iria ou se conseguiria mesmo ir.
+幸い私は日本に入国する為の条件ほ満たしていた事で空港での運航受け入れが再開した際最無事入国できました。
 
-Por sorte eu me enquadrava em certas condições que me possibilitavam entrar no Japão com uma certa facilidade, então quando os aeroportos japoneses voltaram a funcionar, fui um dos primeiros a poder ingressar.
+入国後私は14日間検疫を行いついに研究が行われる北海道に到着することが出来ました。
 
-Entrei no Japão, fiz a quarentena de 14 dias e, finalmente, cheguei em Hokkaido, o local onde ocorreria a minha pesquisa.
+技術研修は2か月遅れのスケジュールで開始されましたが10か月間の研修を経てこの資料を作成し皆様と共有することができました。
 
-A pesquisa deu início com 2 meses de atraso, entretanto, os 10 meses que se seguiram foram suficientes para poder escrever este material e compartilhá-lo com você.
-
-A experiência na Hokkai Gakuen University Engineering Campus, em Sapporo - Hokkaido, me tornou um programador mais completo e abriu caminho para novas possibilidades aqui ou em qualquer lugar do mundo.
+北海道札幌市にある北海学園大学工学部での経験により私をより完全なプログラマーとして世界で活躍する為の新たな可能性への道を見出すことが出来ました。
 
 ![Great Power](https://media1.tenor.com/images/4c3b395bb7e3b40b780ac97f287b6ab3/tenor.gif?itemid=4589950 '{"style":{"maxWidth":"59%","float":"right"}, "description":"Clichê do Tio Ben (O Homem Aranha)"}')
 
-Portanto, sinto que devo contribuir compartilhando este conhecimento com você, porque eu acredito que quanto mais conhecimento temos, maior o nosso dever em compartilhá-lo para tornar o mundo melhor e mais instruído.
+なので私はこの知識を皆様と共有することによって何かしら貢献したいと感じています。私はより多くの知識を持つ人は周りとの情報共有義務があると考えそれによってより人々の理解を深め世界環境の改善につながると信じています。
 
-Espero que este material lhe seja útil para aprender um pouco sobre robótica, drones e programação para IOT e que este pedaço da minha história te inspire a se tornar um melhor programador, engenheiro ou qualquer outra profissão que faça sentido para você.
+この資料がロボット工学、ドローン、IOTプログラミングを学ぶ上で少しでも役立ち私の話や経験が刺激となり皆様がより優れたプログラマー、エンジニア、もしくは自分にとって意味のある職業を見つけるための手助けとなることを願っています。
 
-Me dediquei a escrever de forma que qualquer pessoa pudesse entender este conteúdo pois eu tive dificuldade em encontrar materiais fáceis de entender durante a minha pesquisa.
+研究中わかりやすい資料がなかなか見つからなかったので誰もがこの内容を理解できるように執筆に専念しました。
 
-Mas não use este material como única fonte de conhecimento para a área pois, certamente, não será o suficiente. 
+しかしそれは確かに十分ではないのでこの資料は当分野での唯一の知識源ではないとご理解ください。
 
-Esta documentação se encontra no [Github](https://github.com/gtoshinakano/ros-bebop-research). Se você encontrar algum conteúdo errado ou muito difícil de entender, entre em contato comigo pelo email gtoshinakano@gmail.com com suas sugestões. Ficarei feliz em saber sua opinião!
+このドキュメントは[Github]（https://github.com/gtoshinakano/ros-bebop-research）にてご覧いただけます。間違い、または理解が困難なコンテンツがございましたら、gtoshinakano @ gmail.comまでご連絡ください。是非ご意見をお聞かせください！
 
 ---
 ### O que você encontrará neste material:
@@ -94,66 +92,66 @@ Esta documentação se encontra no [Github](https://github.com/gtoshinakano/ros-
 
 ## Sobre a proposta de pesquisa
 
-No final de 2019 me surgiu a oportunidade de estudar em Hokkaido, no Japão, e o tema que escolhi para pesquisar foi o desenvolvimento para Internet das Coisas - IOT. 
+2019年末私は日本の北海道で留学をする機会がありその際研究のテーマに選んだのがモノのインターネット-IOTの開発でした。
 
-IOT é, simplificadamente falando, um conceito que consiste em conectar objetos úteis da vida cotidiana na internet, para fazer com que estes objetos se tornem ainda mais úteis e inteligentes. 
+IOTは簡単に言えば日常生活の有用なオブジェクトをインターネット上で接続してそれらをさらに有用で効率的にすることで構成される概念です。
 
-Como, por exemplo, uma cafeteira que pode ser controlada remotamente pela internet para preparar o café com um simples toque no celular, aprender com os hábitos do usuário e escolher o melhor horário para preparar um café quentinho.
+たとえばインターネットを介してリモートで制御できるコーヒーメーカーのように携帯電話に触れるだけでコーヒーを準備しユーザーの習慣から学びホットコーヒーを準備するのに最適な時間を選択できます。
 
-E por aí vai...
+等々 ...
 
-Eu já havia viajado ao Japão algumas vezes antes e sempre me encantava a forma pela qual o Japão utilizava a tecnologia em sua vida cotidiana. 
+私は以前何度か日本へ旅行に来たことがあり日常生活でのテクノロジーの活用法がとても好きでした。
 
-Os robôs estão por toda parte.
+ロボットはいたるところにあります。
 
-Mas não estou falando dos robôs que você vê nos animes derrotando inimigos e salvando a Terra...
+しかし私は敵を打ち負かして地球を救うアニメで見られるようなロボットについて話しているわけではありません...
 
-Falo de robôs como pequenos sensores nos banheiros, máquinas e/ou enormes estruturas mecânicas inteligentes. Eles estão por toda parte no Japão. 
+私は浴室や、機械、巨大な高性能機械構造の小さなセンサーとしてのロボットについて話します。彼らは日本でもいたるところで見られます。
 
-No Brasil, estes robôs são utilizados com menor frequência e a tecnologia geralmente é importada de outros países, o que torna o mercado de robótica menos desenvolvidos do que em outros países.
+ブラジルではこれらのロボットの使用頻度は低く技術は一般的に他の国から輸入されているためロボット市場は他の国よりも開発が進んでいません。
 
-Minha curiosidade como programador era aprender como era possível conectar objetos ao computador e, a partir disso, ler dados e realizar comandos. Meu objetivo era aprender a desenvolver para IOT.
+プログラマーとして私の好奇心はオブジェクトをコンピューターに接続しそこからデータを読み取ってコマンドを実行する方法を学ぶこと。そして目標は、IOTの開発方法を学ぶことでした。
 
-Foi isso o que eu aprendi e compartilho aqui com você. 
+これは私が学んだことでありここで皆様と共有します。
 
-O professor responsável pela minha pesquisa, Kikuchi Yoshihito, me apresentou o conceito perfeito para começar a aprender sobre conexão com robôs por meio da conexão e controle de drones.
+私の研究を担当した菊池義仁教授はドローンの接続と制御を通じてロボットとの接続を学び始める為の完璧なコンセプトを紹介してくれました。
 
-O objetivo para a pesquisa sugerido pelo professor era de criar um web service para controlar um drone com o objetivo de fazer entregas de delivery. 
+教授が提案した研究の目標は配達用ドローンを制御するWebサービスを作成することでした。
 
-Para isso, tive que passar por várias etapas de aprendizado e desafios, até me tornar capaz de programar para controlar o drone e alcançar esse objetivo.
+そこでドローンを制御してその目標を達成するプログラムができるようになるまで学習と課題のいくつかの段階を経なければなりませんでした。
 
-Portanto gostaria de dizer que o conteúdo que apresento nesta documentação é direcionado apenas para realizar este objetivo e serei o mais detalhado possível para que você possa replicar este experimento com sucesso.
+なのでこのドキュメントで紹介する内容はこの目的を達成することのみを目的としておりこの実験を正常に再現できるように可能な限り詳細に説明いたします。
 
-Navegue pelo menu para começar a aprender a como controlar um drone Bebop a partir de seu computador!
-
----
-
-## Sobre o Autor
-
-Olá! Meu nome é Gabriel Toshinori Nakano, Brasileiro, 32 anos, programador Web Full Stack.
-
-Desde que me formei na faculdade de Tecnologia em Análise e Desenvolvimento de Sistemas trabalho desenvolvendo soluções Web utilizando tecnologias como JAVA, PHP, SQL, HTML, CSS, Javascript e Typescript.
-
-Meu foco atual é trabalhar com Javascript/Typescript pois é a linguagem da qual nos possibilita desenvolver uma inifinidade de soluções. 
-
-Inclusive esta documentação foi criada a partir do zero com a utilização do framework [NextJS](https://nextjs.org/)!
-
-Eu me considero um criador e minha criação são meus códigos e suas utilidades.
-
-Mas eu gosto também de assuntos como Psicologia, Filosofia, Marketing e Negócios.
-
-Sou apaixonado por conhecimento e gosto sempre de contribuir com o próximo de alguma maneira.
-
-E espero contribuir para você por meio deste material!
-
-Um forte abraço!
+自らのコンピューターを使ってBebopドローンの制御法を学ぶ為にメニュー項目をご覧になってください！
 
 ---
 
-## Agradecimentos pessoais
+## 作者について
 
-Gostaria de agradecer imensamente à minha família que me apoia desde sempre em minha jornada e ao professor responsável Kikuchi Yoshihito que aceitou me receber em seu laboratório e me apresentou os conceitos que demonstro neste site.
+こんにちは！私の名前はガブリエル・トシノリ・ナカノ、ブラジル人、32歳、フルスタックWebプログラマーです。
 
-Agradeço também ao [HIECC - Hokkaido International Exchange and Cooperation Center](https://www.hiecc.or.jp/), o órgão do governo de Hokkaido que tornou possível o meu intercâmbio, à [Hokkai Gakuen University](https://www.hgu.jp/) a Universidade que frequentei durante toda a minha estadia no Japão.
+システム分析開発技術学部を卒業して以来JAVA、PHP、SQL、HTML、CSS、Javascript、Typescriptなどの技術を使用したWebソリューションの開発に取り組んでいます。
 
-Pessoalmente, gostaria de agradecer à Yuki Matsubara, a minha orientadora por parte do HIECC, à Megumi, a minha única companheira de intercâmbio em tempos de pandemia, e aos meus irmãos de consideração Hit e Massaki que já estavam no Japão e sempre me recebem com grande alegria.
+私の現在の焦点はJavascript / Typescriptを使用することです。これはJavascript / Typescriptが多数のソリューションの開発を可能にする言語だからです。
+
+このドキュメントはフレームワーク[NextJS]（https://nextjs.org/）を使用してゼロから作成しました。
+
+私は自分自身をクリエーターだと考えており自身の創作は自作コードとその使用法です。
+
+それと私は心理学、哲学、マーケティング、ビジネスなどの科目も好きです。
+
+私は知識に情熱を持ち常に何らかの形で他の人に貢献したいと思っています。
+
+そしてこの資料を通して皆様に貢献したいと思っています！
+
+よろしくお願いします！
+
+---
+
+## 個人的な感謝
+
+いつも私の旅を支えてくれた家族と研究室で私を迎えこのウェブサイトで示しているコンセプトを紹介してくれた責任ある先生の菊池義仁に心から感謝します。
+
+また技術研修を可能にしてくれた北海道政府機関である[HIECC-北海道国際交流協力センター]（https://www.hiecc.or.jp/）、[北海学園大学]（https：/）にも感謝しています。 /www.hgu.jp/）在日中通っていた大学。
+
+個人的にはHIECCのアドバイザーである松原優吉パンデミック時の唯一の交換仲間であるめぐみそしてすでに日本にいていつも大喜びで迎えてくれた思いやりのある兄弟のヒットとマサキに感謝します。
