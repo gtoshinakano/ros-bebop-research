@@ -15,7 +15,7 @@ ROSの機能を理解しPCを利用したBebopドローンの制御法を詳し�
 
 ## 作者からのコメント
 
-![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"style":{"float":"right","maxWidth" :"40%"},"hidden":"mobile","description": "Rascunho do \\"Helicóptero\\" de Leonardo Da Vinci"}')
+![Image of Da Vinci](static/images/da-vinci-fly.jpg '{"style":{"float":"right","maxWidth" :"40%"},"hidden":"mobile","description": "レオナルドダヴィンチによる \\"ヘリコプター\\" の下書き"}')
 
 レオナルドダヴィンチは当時の才能ある芸術家でした。
 
@@ -59,7 +59,7 @@ __私はプログラマーだ__.
 
 北海道札幌市にある北海学園大学工学部での経験により私をより完全なプログラマーとして世界で活躍する為の新たな可能性への道を見出すことが出来ました。
 
-![Great Power](https://media1.tenor.com/images/4c3b395bb7e3b40b780ac97f287b6ab3/tenor.gif?itemid=4589950 '{"style":{"maxWidth":"59%","float":"right"}, "description":"Clichê do Tio Ben (O Homem Aranha)"}')
+![Great Power](https://media1.tenor.com/images/4c3b395bb7e3b40b780ac97f287b6ab3/tenor.gif?itemid=4589950 '{"style":{"maxWidth":"59%","float":"right"}, "description":"ベン．パーカーの名言(映画スパイダーマンより)"}')
 
 なので私はこの知識を皆様と共有することによって何かしら貢献したいと感じています。私はより多くの知識を持つ人は周りとの情報共有義務があると考えそれによってより人々の理解を深め世界環境の改善につながると信じています。
 
@@ -90,7 +90,7 @@ __私はプログラマーだ__.
 
 ---
 
-## Sobre a proposta de pesquisa
+## 研究の概要について
 
 2019年末私は日本の北海道で留学をする機会がありその際研究のテーマに選んだのがモノのインターネット-IOTの開発でした。
 
