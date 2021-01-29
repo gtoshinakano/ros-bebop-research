@@ -118,7 +118,7 @@ This is what I've learned and I will share it with you.
 
 The professor responsible for my research, Kikuchi Yoshihito, introduced me to the perfect concept for learning about robot connectivity and controlling.
 
-The goal for the research suggested by the professor was to create a web service to control a drone in order to simulate a delivery service.
+The goal for the research suggested by the professor was to create a web service to control a drone in order to simulate a delivery service system.
 
 For that, I had to go through several stages of learning and challenges, until I was able to program to control the drone.
 

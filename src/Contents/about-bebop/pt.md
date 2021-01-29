@@ -1,5 +1,5 @@
 ---
-title: Parrot Bebop - "Um pequeno e resistente quadrocóptero"
+title: Parrot Bebop - "Um pequeno e resistente quadricóptero"
 description: A strong, little quadcopter in need of better performance
 keywords: Keys separated with commas
 hero_alt: Hero alternative text
@@ -20,7 +20,7 @@ Eu queria estudar sobre programação para IOT, conheci um professor de engenhar
 
 Para isso, ele e a Universidade me disponibilizaram um drone Bebop 1 da marca francesa Parrot, um notebook i5 novinho, livros sobre Ubuntu e ROS (Robot Operating System).
 
-Além de uma sala só para mim, com lousa, impressora, mesa de escritório e armários.
+Além disso, uma sala só para mim, com lousa, impressora, mesa de escritório e armários.
 
 Sou muito grato por toda a estrutura disponibilizada para o meu período de pesquisa. Dificilmente conseguiria algo igual em condições parecidas no Brasil...
 
@@ -38,7 +38,7 @@ O conteúdo deste site tem objetivo educacional e você se responsabiliza por to
 
 ![Parrot Bebop 1](https://cnet3.cbsistatic.com/img/sW0v4j97iS0_6AEJVFM3IdDBsJw=/940x0/2017/05/08/7b9f31e3-9a71-4435-9771-a66b4d1fa5a8/parrot-bebop-1-and-skycontroller.jpg '{"style":{"maxWidth" :"100%"},"description":"Parrot Sky Controller e o drone Bebop"}')
 
-De um modo geral, o Bebop é um quadrocóptero compacto e leve, relativamente resistente e com peças possíveis de serem trocadas caso danificadas.
+De um modo geral, o Bebop é um quadricóptero compacto e leve, relativamente resistente e com peças possíveis de serem trocadas caso danificadas.
 
 Ele possui integrado todos os componentes necessários para realizar o objetivo proposto, como placa de GPS, placa de rede Wi-Fi e um sistema interno que suporta a execução de missões de planos de vôos.
 
@@ -76,7 +76,7 @@ Isso significa dizer que qualquer bom especialista em Linux pode entrar em seu s
 
 Portanto, para a finalidade de Delivery aplicada ao mundo real, o Bebop com configurações de fábrica não seria um drone muito seguro. Por conta disso e também de outros fatores da qual falarei mais adiante.
 
-Porém, ele é uma ótima ferramenta para aprender sobre drones e realizar o nosso objetivo.
+Porém, ele é uma ótima ferramenta para aprender sobre drones e sobre ROS, pois ele é um dos poucos drones compatíveis com o ROS.
 
 Felizmente, não nos aprofundaremos ao ponto de ter de alterar as configurações iniciais do drone.
 
