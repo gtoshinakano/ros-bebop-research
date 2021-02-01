@@ -271,7 +271,7 @@ Summarizing the tips I gave here:
 
 I hope that this material will be useful for you to solve problems in your Bebop and that you will be able to reproduce this experiment.
 
-See you on another page
+See you on another page!
 
 Gabriel Toshinori Nakano
 
@@ -282,14 +282,14 @@ Gabriel Toshinori Nakano
 - **Parrot's Official Content**
   - [Parrot Oficial](https://www.parrot.com/us)
   - [ARSDK3 Documentation](https://developer.parrot.com/docs/SDK3/)
-  - [Parrot Developer Forum](https://forum.developer.parrot.com/search?q=%23drone-sdk%3Abebop)
+  - [Parrot Developers Forum](https://forum.developer.parrot.com/search?q=%23drone-sdk%3Abebop)
   - [Latest Firmware](https://support.parrot.com/global/support/products/parrot-bebop)
 - **Hacking Bebop (*use por responsabilidade própria*)**
   - [Complete Guide](https://fargesportfolio.com/wp-content/uploads/2018/01/BeebopHackingGuide1_7_2.pdf)
   - [Bebop Connectivity](https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf)
 - **Apps**
   - [Free Flight Pro](https://www.parrot.com/en/apps-and-services)
-- **Go Deep in Theory**
+- **Go Deep in the Theory**
   - [GPS Basics](https://learn.sparkfun.com/tutorials/gps-basics/all)
   - [The Battery evolution](https://batteryuniversity.com/learn/article/bu_002_introduction?__cf_chl_jschl_tk__=325d822606f3484bc6647f799e9103fe61bcff2a-1608871331-0-Ac_smOk31ZI5uA8HJ-LfKY4PlJxaIF6nSAZWQWhuVR9b7XbRZgFcr0FMa0VZUtL2m2zOn-_HL3Hv-T48QGINdFf7IwQmen_MdmPPsRsEMkhc2uzlgrAdbu9AHoZZLnOs45FRPwI4xoFXBsaQOdT0HJQwqzMnimEZbx_hHKBhqzgGXQxUcg5y8qJ9TiP_gX2K5WzfCqeCvA0rsd2cjIf40WvmFtMANvVQMEh3isbl3JcjjWD7QGAFShscDomuLi65l9UcapnHwsgMgW8hwZ7RTantci6C_uhNTOYBGLiXFTYuwH9lXQ0GNctQBaPMaJvaK6LqArDdiIOImBEizXJ3to1cRMei1AGndcMT6CiV1qEO)
   - [Telnet](https://www.ionos.com/digitalguide/server/tools/telnet-the-system-wide-remote-protocol/)
