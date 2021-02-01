@@ -174,31 +174,31 @@ With charged batteries, we can proceed to our project.
 
 ## Wi-Fi Network
 
-O Bebop se conecta com o seu controlador por meio de sua rede Wi-Fi. 
+Bebop connects to its controller via its integrated Wi-Fi network.
 
-Isto significa que ele possui uma placa de rede wireless que "cria um roteador" da qual permite a conexão com qualquer outro dispositivo que se conecta por Wi-Fi. 
+This means that it has a wireless network card that "creates a router" from which it allows connection to any other device that connects via Wi-Fi.
 
 ![Parrot Connect](https://www.ntt-tx.co.jp/column/yasui_blog/img/20151202_drone_blog_04-02.png '{"style":{"float":"right"}}')
 
-Dispositivos como, por exemplo, smartphones, tablets, notebooks e etc...
+Devices such as smartphones, tablets, notebooks and etc...
 
-Quando você liga o seu Bebop, as ventoínhas de resfriamento iniciam e os motores das hélices se ativam após 5 segundos.
+When you turn on your Bebop, the cooling fans start and the propeller engines start after 5 seconds.
 
-O sistema de resfriamento se paraliza uma vez e, quando as ventoínhas voltam a funcionar, o Wi-Fi do drone estará pronto para receber conexões.
+The cooling system stops once, and when the fans are back on, the drone's Wi-Fi will be ready to receive connections.
 
-Por padrão, o nome da rede de Wi-Fi aberta criada pelo drone é **BebopDrone-E000000** (uma numeração única).
+By default, the name of the open Wi-Fi network created by the drone is **BebopDrone-E000000** (unique number).
 
-Recomendo configurar uma senha de segurança WPA para seu drone para que outras pessoas não consigam se conectar a ele.
+I recommend setting up a WPA security password for your drone so that other people cannot connect to it.
 
-O endereço de IP local padrão do drone é **192.168.42.1** e utilizando [`telnet`](https://pt.wikipedia.org/wiki/Telnet) neste endereço você pode explorar o sistema de arquivos internos e extrair mídias de vídeo e fotos.
+The default IP Address is **192.168.42.1** and by using [`telnet`](https://pt.wikipedia.org/wiki/Telnet) at this address you can explore its file system and extract video or photo medias from it.
 
-Utilizar o `telnet` não é a forma mais fácil de extrair arquivos de vídeo e imagem do drone. Se você só quiser extrair os vídeos de seu Bebop, você pode utilizar o próprio aplicativo Free Flight de seu smartphone.
+Using `telnet` isn't the easiest way to extract files from the drone. If you just want to extract these files from Bebop, you canuse the FreeFlight Pro App itself.
 
-Outra forma de fazer isso é se conectar por FTP nas portas padrões de ftp e é através deste protocolo que enviaremos o arquivo de missões MAVLINK mais para frente.
+Another way to do this is by connecting to it via FTP. We will use this protocol to send MAVLINK mission files to the drone later on.
 
-Por se tratar de uma conexão por rede de WiFi e possuir um sistema de arquivos relativamente simples, o Bebop se torna alvo fácil para hackers. 
+Because it is a WiFi network connection and has a relatively simple file system, Bebop becomes an easy target for hackers.
 
-Por isso não é um drone muito seguro para transportar mercadorias.
+So it is not a very safe drone to use on a delivery system.
 
 ---
 
