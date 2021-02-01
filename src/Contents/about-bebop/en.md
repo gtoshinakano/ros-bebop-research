@@ -90,33 +90,33 @@ Keep reading to learn more.
 
 ## Firmware (4.0.6)
 
-Uma das minhas dificuldades no início era entender a diferença entre o Firmware e o Sistema Operacional, pois ambos pareciam ser a mesma coisa.
+One of my difficulties at the beginning was to understand the difference between the Firmware and the Operating System, as both seemed to me to be the same thing.
 
-A diferença é que o Firmware é um software ou um conjunto de softwares associados a um dispositivo de hardware que tem por objetivo armazenar e gerenciar a inicialização correta das rotinas de seus componentes eletrônicos.
+But the difference is that Firmware is software or a set of software associated with a hardware device that aims to store and manage the correct routines initialization of its electronic components.
 
-Por sua vez, o Sistema Operacional é o software que utiliza-se dos firmwares para controlar e operar suas funções de uma forma unificada e programática.
+On the other hand, the Operating System is the software that uses the firmware to control and operate its functions in a unified and programmatic way.
 
-É como se fosse uma orquestra com músicos instrumentistas e um maestro.
+It's like an orchestra with instrumentalists and a conductor.
 
-No caso do Bebop, cada sensor, placa de GPS, placa de rede e controlador de motores possui seu firmware, que são os músicos instrumentistas. 
+In the case of Bebop, each sensor, GPS card, network card and engine controller has its firmware, which are the musicians.
 
-E o sistema operacional ARDrone3 é o maestro que rege toda a orquestra.
+And the ARDrone3 operating system is the conductor that conduct the entire orchestra.
 
-Cada instrumento tem a sua própria partitura e sua forma de ser tocado. Isto, quem o faz, é o firmware.
+Each instrument has its own score and its way of being played. This, who does it, is the firmware.
 
-O sistema operacional é o maestro que conhece cada um de seus músicos e os direciona para a execução correta da orquestra.
+The operating system is the conductor who knows each of his musicians and directs them to the correct performance of the orchestra.
 
-No Bebop, o Sistema Operacional e o Firmware são instalados em um pacote só, portanto você não precisa se preocupar em instalá-los separadamente.
+In Bebop, the Operating System and Firmware are installed in one package, so you don't have to worry about installing them separately.
 
-O [último firmware pode ser baixado aqui](https://support.parrot.com/global/support/products/parrot-bebop) e instalado por um cabo USB ou você pode instalá-lo pelo próprio aplicativo do Free Flight Pro (este é o caminho mais fácil).
+The [latest firmware can be downloaded here](https://support.parrot.com/global/support/products/parrot-bebop) and installed via a USB cable or you can install it via the Free Flight Pro App itself (the easiest way).
 
-É importante ressaltar que, para que o seu drone funcione corretamente nas últimas versões de aplicativos, **é necessário que a última versão do firmware esteja instalada** nele.
+It is important to note that, for your drone to work correctly in the latest versions of applications, **it is necessary that the latest version of the firmware is installed** on it.
 
-Agora outros três aspectos importantes para você ter mais conhecimentos sobre o Bebop.
+Now three other important aspects for you to have more knowledge about Bebop.
 
 ---
 
-## Bateria, Performance e Carregador
+## Battery, Performance and the Charger
 
 Tempos atrás, quando jamais eu havia tocado em um drone antes, acreditava que os drones seriam o futuro de tudo.
 
