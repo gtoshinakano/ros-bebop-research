@@ -126,7 +126,7 @@ O retorno será ```std_msgs/UInt8```. Para ver como devemos enviar os valores de
 $ rosmsg show std_msgs/UInt8
 ```
 
-Você verá que os valores possíveis para este topic são números inteiros(UInt8) não sinalizados, ou seja, sem sinais de + (positivos) ou - (negativos) e de 8bits (de 0 a 255).
+Você verá que os valores possíveis para este topic são números inteiros (UInt8) não sinalizados, ou seja, sem sinais de + (positivos) ou - (negativos) e de 8bits (de 0 a 255).
 
 Este tipo numérico específico sugere a não necessidade de valores negativos ou de pontos flutuantes, portanto, qualquer valor nas condições acima servem.
 
@@ -144,9 +144,42 @@ Entretanto, para que o Bebop efetivamente entenda o comando e performe a animaç
 
 Se você publicar o tópico com um destes valores, o Bebop entenderá o comando e realizará a animação. Caso contrário, o tópico será publicado, mas nada ocorrerá com o drone.
 
-Dei este exemplo para mostrar que para publicar tópicos no ROS você pode enviar a mensagem com valores que satisfaçam à condição do tipo da mensagem, porém, o robô pode não compreender o valor da mensagem e não performar nenhuma ação após isto.
+Este exemplo foi apenas para mostrar que, para publicar tópicos no ROS, você pode enviar a mensagem com valores que satisfaçam à condição do tipo da mensagem, porém, o robô pode não compreender o valor da mensagem e não performar nenhuma ação após isto.
 
-Portanto, certifique-se com os comandos acima o tipo e o valor da mensagem sempre que for publicar nos ```topics```.
+Portanto, certifique-se, utilizando os comandos acima, sobre o tipo e o valor da mensagem sempre que precisar publicar nos ```topics```.
+
+### Decolar e aterrissar o Bebop 
+
+Vimos até agora que os topics registrados pelo node do ```bebop``` servem para enviarmos comandos, e que cada tópico possui o seu tipo de mensagem para que o comando seja compreendido corretamente pelo drone.
+
+Agora vamos realizar o nosso primeiro vôo do Bebop controlado pelo ROS. Certifique-se de que você irá utilizar dois comandos, um para decolar e outro para aterrissar, portanto sugiro que copie o comando de aterrissar para usá-lo com maior facilidade.
+
+Você poderá observar que o tipo de mensagem para ambos os comandos ```/bebop/takeoff``` e ```/bebop/land``` são do tipo ```std_msgs/Empty```, ou seja, o valor para a mensagem pode ser ***vazio***.
+
+Para decolar, utilize:
+
+```
+$ rostopic pub --once /bebop/takeoff std_msgs/Empty
+```
+
+Para aterrissar, utilize:
+
+```
+$ rostopic pub --once /bebop/land std_msgs/Empty
+```
+
+A sintaxe correta para o comando de publicação de um topic no ROS é:
+
+```py
+$ rostopic pub [--once] [topic name] [msg type] [msg value]
+```
+
+- ```--once``` é opcional, e é um parâmetro que indica ao terminal que a publicação ocorrerá apenas uma vez e encerrará a execução logo em seguida.
+- ```topic name``` é o nome do topic da qual deseja publicar
+- ```msg type``` é necessário declarar o tipo de mensagem que se está publicando
+- ```msg value``` o valor da mensagem publicada no topic e deve ser escrito na notação [YAML](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html).
+
+Você verá que alguns tipos de messages possuem formas complexas como matrizes ou objetos complexos de chave e valor. Para estes casos, o valor da mensagem deve estar escrito no formato [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/).
 
 
 ---
