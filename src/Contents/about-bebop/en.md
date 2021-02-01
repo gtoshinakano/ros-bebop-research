@@ -202,55 +202,55 @@ So it is not a very safe drone to use on a delivery system.
 
 ---
 
-## GPS e Magnetômetro
+## GPS and Magnetometer
 
-O drone Bebop possui outros dois componentes que ajudam o ARDrone3 a se localizar. O módulo de GPS interno e o magnetômetro.
+The Bebop drone has two other components that help the ARDrone3 for locating itself. The internal GPS module and the magnetometer.
 
-O primeiro é uma placa receptora de sinais de GPS da qual calcula a sua localização real com base nos dados obtidos pelos satélistes encontrados.
+The first is a GPS signal receiving board that calculates its real location based on the data obtained by the satellites found.
 
-O segundo é um sensor da qual orienta o ARDrone3 sobre o ângulo e a direção real de onde o Bebop se encontra no momento.
+The second is a sensor that guides the ARDrone3 about the actual angle and the actual direction of Bebop.
 
-O GPS não é tão útil para vôos *indoor* mas, para o nosso experimento, ele será fundamental.
+GPS is not so useful for indoor flights, but for our experiment, it will be essential.
 
-Isso porque as missões MAVLINK - definidas com base em pontos de GPS - só são possíveis de ser realizadas no Bebop quando o seu estado de GPS estiver como "fixado".
+This is because MAVLINK missions - defined based on GPS points - are only possible to be performed on Bebop when its GPS status is "fixed".
 
-O FixState no GPS do Bebop é um dos parâmetros necessários para que o Bebop possa realizar uma missão e é obtido quando o módulo de GPS encontra no mínimo 4 satélites disponíveis.
+The FixState in Bebop's GPS is one of the required parameters for Bebop to be able to perform a mission and it is obtained only when the GPS module finds at least 4 available satellites.
 
-Quando o FixState for 1 ou *true*, o Bebop estará disponível para Missões, caso contrário(0 ou *false*), não.
+When FixState is 1 or *true*, Bebop is available for Missions, otherwise (0 or *false*), not.
 
-A precisão do GPS depende de vários fatores como bloqueio de sinal, condições atmosférica e a qualidade do receptor. Os dados são mais apurados também quando o receptor estiver em movimento.
+The accuracy of the GPS depends on several factors such as signal interference, weather conditions and the quality of the receiver. The data is also more accurate when the receiver is in motion.
 
-Portanto a melhor forma de atingir o GPS FixState é realizar vôos em locais com poucos prédios e montanhas e em dias com poucas núvens.
+Therefore, the best way to obtain GPS FixState is to fly in places with few buildings and mountains and on days with few clouds.
 
-No caso do Bebop, a precisão que eu obtive foi de uma diferença de 1 a 4 metros e com o drone em movimento e de 4 a 6 metros de diferença em relação ao GPS do celular com o drone em repouso.
+In the case of Bebop, the accuracy I obtained was a difference of 1 to 4 meters with the drone moving and 4 to 6 meters of difference with the drone stopped (in relation to the Cellphone GPS).
 
-Nada mal para um drone pequeno da qual seus componentes devem ser menores para garantir uma boa experiência do seu usuário.
+Not bad for a small drone whose components must be smaller to ensure a good user experience.
 
-O outro componente crucial para o sucesso do experimento é o magnetômetro da qual precisa estar devidamente calibrado antes de levantar vôo.
+The other crucial component for the success of the experiment is the magnetometer that needs to be properly calibrated before taking off.
 
-O magnetômetro utiliza-se de campos magnéticos para detectar o seu real posicionamento e o ARDrone3 o interpreta em conjunto com a placa de GPS para determinar a disponibilidade para missões (GPSFixState).
+The magnetometer uses magnetic fields to detect its real positioning and ARDrone3 interprets it together with the GPS card to determine availability for missions (FixState).
 
 ![Calibrate Google Maps on Android](https://www.howtogeek.com/wp-content/uploads/2020/01/Google-Maps-Compass-Calibration.png '{"style":{"float" :"right", "maxWidth": "170px", "hidden":"mobile"}}')
 
-Você se lembra de ter que calibrar a bússola do seu smartphone, no aplicativo do Google Maps para Android, para determinar precisamente para onde estava apontado o seu celular no mapa?
+Do you remember having to calibrate your smartphone's compass in the Google Maps Android app to determine precisely where your phone was pointing on the map?
 
-E então você tinha que fazer uma série de movimentos em forma de 8 com o smartphone para obter a sua real orientação pelo aplicativo.
+And then you had to do a series of 8-shaped movements with your smartphone to get your real orientation through the app.
 
-No Bebop o processo segue o mesmo princípio, porém, existe um jeito correto de se fazer.
+In Bebop the process follows the same principle, however, there is a correct way to do it.
 
-No início, eu fazia as rotações do Bebop de forma lenta pois queria evitar fazer movimentos bruscos para não danificar o drone. 
+At first, I was doing Bebop's rotations slowly because I wanted to avoid sudden movements to not damage the drone.
 
-Mas isso não fazia com que o FixState do GPS ficasse *true*.
+But that didn't make the GPS FixState *true*.
 
-![Drone Calibration](/static/images/calibrate-drone.gif '{"style":{"maxWidth": "300px", "float": "left"}, "description": "Calibração do Magnetômetro do Bebop pelo aplicativo FreeFight Pro para IOS"}')
+![Drone Calibration](/static/images/calibrate-drone.gif '{"style":{"maxWidth": "300px", "float": "left"}, "description": "Calibrating Bebop Manetometer by the FreeFight Pro for IOS"}')
 
-Pesquisando na internet, um [outro vídeo](https://youtu.be/V5-YMYb0MsI) me deu uma luz.
+Searching on the internet, [another vídeo](https://youtu.be/V5-YMYb0MsI) gave me some hints.
 
-Como escrito na descrição do vídeo, a *"velocidade com que você faz a rotação parece fazer a diferença"* no processo de calibração.
+As written in the video description, *"the speed at which you perform the rotation, seems to make a difference."* in the calibration process.
 
-Após aumentar a rapidez ao girar o drone com as mãos, deixei de ter problemas com o FixState do GPS.
+After increasing the speed when rotating the drone by hand, I stopped having problems with the GPS FixState.
 
-Portanto essa pode ser uma solução caso você não esteja conseguindo atingir o FixState.
+So this may be a solution if you are unable to reach FixState.
 
 ---
 
