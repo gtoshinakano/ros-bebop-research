@@ -11,7 +11,7 @@ links:
     link: /posts/research/introduction
     title: Objetivo do Autor
   nextPage: 
-    link: /posts/research/controlling-with-ros
+    link: /posts/research/controlling-bebop
     title: Controlando o Bebop com ROS
 ---
 ## Primeiras coisas em primeiro
@@ -137,9 +137,87 @@ A [Parrot]() desenvolveu seus drones para que desenvolvedores também pudessem c
 
 O ```bebop_autonomy``` é um *package* desenvolvido pela comunidade do ROS com base na Documentação Oficial do [ARDroneSDK3](https://developer.parrot.com/docs/SDK3/) e com ele é possível conectar os recursos ao ROS, receber e enviar comandos ao drone.
 
+Ele é um ```package``` de softwares que inicia os ```nodes``` necessários para o controle de drones Bebop, possui suas dependências e iremos instalá-las agora com o comando:
 
+```
+$ rosdep update
+$ rosdep install ---from-paths src -i
+```
 
+Este primeiro comando irá atualizar o ```rosdep``` com as dependências que ele ainda não tenha configurado. O segundo irá instalar todas as dependências a partir da pasta ```src``` de seu workspace.
 
+Caso esses comandos retornem algum erro, um dos motivos pode ser que o seu terminal não esteja com as variáveis do ROS configuradas. No tutoral sobre ROS explico como fazer para configurá-las corretamente com ```source```.
+
+Finalmente iremos compilar o nosso package com o comando:
+
+```
+$ catkin build
+```
+
+Se tudo funcionar corretamente, você verá que a instalação de todos os packages foram concluídos sem erros. Caso o comando retorne erros, provavelmente os comandos ```rosdep update``` e ```rosdep install``` não ocorreram de forma correta.
+
+Você pode confirmar a instalação do package com o comando ```rospack list```. Você verá o package ```bebop_driver``` listado no resultado.
+
+---
+
+## Executando o bebop_autonomy driver
+
+Com o nosso workspace instalado e compilado, podemos finalmente executar o nosso Driver.
+
+Primeiro de tudo, precisaremos configurar o nosso terminal com as novas definições do ROS com o bebop_autonomy:
+
+```
+$ source ~/bebop_ws/devel/setup.bash
+```
+
+Lembre-se, este processo deve ser feito em todas as novas instâncias do terminal ou ser [configurado no arquivo](/posts/about-ros/beginner-commands) ```~/.bashrc``` para que todas as instâncias iniciem configuradas.
+
+Agora vamos iniciar o nosso master:
+
+```
+$ roscore
+```
+
+Conecte o seu PC ao Wi-Fi do Bebop e, em uma nova aba do terminal, vamos iniciar o ```node``` do nosso driver:
+
+```
+$ roslaunch bebop_driver bebop_node.launch
+```
+
+![Roslaunch bebop_driver](/static/images/roslaunch-bebop.gif '{"style":{"maxWidth":"100%","float":"none"}}')
+
+Este comando iniciará o node do package ```bebop_driver```, registrará os topics e messages do novo ambiente com o Bebop conectado. Caso você realize este comando sem que o Bebop esteja conectado, você verá alguns erros de saída no terminal.
+
+Você poderá confirmar os node e topics iniciados  com os comandos ```rosnode list``` e ```rostopic list``` para ter certeza de que tudo foi iniciado corretamente. Você verá os novos namespaces que surgiram como por exemplo ```/bebop_driver```, ```/bebop/takeoff``` e entre outros.
+
+Agora o nosso ambiente ROS está pronto para que possamos comandar o nosso drone!
+
+---
+
+## Conclusão
+
+Você aprendeu aqui como instalar o ROS Kinetic no Ubuntu e o bebop_autonomy driver através de comandos de terminal. 
+
+Em seguida criamos o nosso workspace, instalamos suas dependências e executamos o código para iniciá-lo na sua instânca do ROS.
+
+A partir disso você será capaz de enviar comandos ao Bebop, ler seus dados e escrever seus próprios packages de códigos para utilizar o drone da forma como quiser.
+
+No próximo passo mostrarei como de fato enviar comandos ao drone e como controlar a sua posição. clique aqui para [prosseguir](/posts/research/controlling-bebop)!
+
+Um forte abraço
+
+Gabriel Toshinori Nakano
+
+---
+
+#### **Referências**
+
+- **Materiais Citados**
+  - [Ubuntu 16.04](https://releases.ubuntu.com/16.04/)
+  - [Free Flight PRO (iOS ou Android)](https://play.google.com/store/apps/details?id=com.parrot.freeflight3)
+  - [Bebop_autonomy driver](https://bebop-autonomy.readthedocs.io/)
+  - [Repositório público do bebop_autonomy](https://github.com/AutonomyLab/bebop_autonomy)
+  - [ARDroneSDK3](https://developer.parrot.com/docs/SDK3/)
 
 
 
