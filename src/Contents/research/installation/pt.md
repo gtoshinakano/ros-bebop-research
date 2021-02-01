@@ -202,7 +202,7 @@ Em seguida criamos o nosso workspace, instalamos suas dependências e executamos
 
 A partir disso você será capaz de enviar comandos ao Bebop, ler seus dados e escrever seus próprios packages de códigos para utilizar o drone da forma como quiser.
 
-No próximo passo mostrarei como de fato enviar comandos ao drone e como controlar a sua posição. clique aqui para [prosseguir](/posts/research/controlling-bebop)!
+No próximo passo mostrarei como de fato enviar comandos ao drone e como controlar a sua posição. [Clique aqui para prosseguir](/posts/research/controlling-bebop)!
 
 Um forte abraço
 
