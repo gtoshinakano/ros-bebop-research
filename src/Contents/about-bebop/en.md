@@ -244,56 +244,56 @@ But that didn't make the GPS FixState *true*.
 
 ![Drone Calibration](/static/images/calibrate-drone.gif '{"style":{"maxWidth": "300px", "float": "left"}, "description": "Calibrating Bebop Manetometer by the FreeFight Pro for IOS"}')
 
-Searching on the internet, [another vídeo](https://youtu.be/V5-YMYb0MsI) gave me some hints.
+Searching on the internet, [another vídeo](https://youtu.be/V5-YMYb0MsI) gave me some hint.
 
 As written in the video description, *"the speed at which you perform the rotation, seems to make a difference."* in the calibration process.
 
 After increasing the speed when rotating the drone by hand, I stopped having problems with the GPS FixState.
 
-So this may be a solution if you are unable to reach FixState.
+So this may be a solution if you are unable to obtain the GPS FixState.
 
 ---
 
-## Conclusão
+## Conclusion
 
-Procurei escrever este guia para que qualquer pessoa leiga em tecnologia pudesse conhecer alguns aspectos técnicos do Bebop Drone necessários para a reprodução deste projeto.
+I tried to write this guide so that any person could know some technical aspects necessary for the reproduction of this project.
 
-Embora o Bebop não seja um veículo perfeito para reproduzir o projeto de criação de serviço de delivery, ele possui as características principais necessárias para esta finalidade.
+Although Bebop is not a perfect vehicle to be used in a real life delivery service project, it has the main characteristics necessary for this purpose.
 
-Portanto é um ótimo drone para você realizar imagens aéreas, controlá-lo por GPS e se aprofundar no mundo dos drones.
+But it is a great drone for you to take aerial images, control it by GPS and delve into the world of drones.
 
-Resumindo as dicas que dei aqui em forma de lista:
+Summarizing the tips I gave here:
 
-1. Atualize o Firmware do seu Bebop pelo aplicativo FreeFlight Pro
-2. Caso tenha problemas com o carregamento de suas baterias, tente fazer o que o autor [deste vídeo](https://www.youtube.com/watch?v=dfUOAMwQCKM) faz
-3. Coloque uma senha WPA na rede de WiFi do seu drone para evitar que outros se conectem e tentem atrapalhá-lo.
-4. Faça a calibração correta do magnetômetro realizando a rotação do drone com maior rapidez.
+1. Update your Bebop's Firmware via the FreeFlight Pro app
+2. If you have problems charging your batteries, try to do what the author does [in this video](https://www.youtube.com/watch?v=dfUOAMwQCKM) faz
+3. Configure a WPA password on your drone's WiFi network to prevent others from connecting and trying to hijack your drone.
+4. Calibrate the magnetometer correctly by rotating the drone faster in its process.
 
-Espero que este material lhe seja útil para solucionar problemas em seu Bebop e que você consiga realizar este experimento.
+I hope that this material will be useful for you to solve problems in your Bebop and that you will be able to reproduce this experiment.
 
-Um forte abraço.
+See you on another page
 
 Gabriel Toshinori Nakano
 
 ---
 
-#### **Referências para esta Postagem**
+#### **References for this post**
 
-- **Materiais Oficiais da Parrot**
+- **Parrot's Official Content**
   - [Parrot Oficial](https://www.parrot.com/us)
-  - [Documentação ARSDK3](https://developer.parrot.com/docs/SDK3/)
-  - [Fórum Desenvolvedores Parrot](https://forum.developer.parrot.com/search?q=%23drone-sdk%3Abebop)
-  - [Último Firmware](https://support.parrot.com/global/support/products/parrot-bebop)
-- **Hackeando o Bebop (*use por responsabilidade própria*)**
-  - [Guia Completo](https://fargesportfolio.com/wp-content/uploads/2018/01/BeebopHackingGuide1_7_2.pdf)
-  - [Conectividade do Bebop](https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf)
-- **Aplicativos**
+  - [ARSDK3 Documentation](https://developer.parrot.com/docs/SDK3/)
+  - [Parrot Developer Forum](https://forum.developer.parrot.com/search?q=%23drone-sdk%3Abebop)
+  - [Latest Firmware](https://support.parrot.com/global/support/products/parrot-bebop)
+- **Hacking Bebop (*use por responsabilidade própria*)**
+  - [Complete Guide](https://fargesportfolio.com/wp-content/uploads/2018/01/BeebopHackingGuide1_7_2.pdf)
+  - [Bebop Connectivity](https://academic.csuohio.edu/yuc/mobile/GPS-Knocking-My-Neighbors-Kid-Drone-compressed.pdf)
+- **Apps**
   - [Free Flight Pro](https://www.parrot.com/en/apps-and-services)
-- **Aprofundamento teórico**
-  - [GPS Básico](https://learn.sparkfun.com/tutorials/gps-basics/all)
-  - [A Evolução das Baterias](https://batteryuniversity.com/learn/article/bu_002_introduction?__cf_chl_jschl_tk__=325d822606f3484bc6647f799e9103fe61bcff2a-1608871331-0-Ac_smOk31ZI5uA8HJ-LfKY4PlJxaIF6nSAZWQWhuVR9b7XbRZgFcr0FMa0VZUtL2m2zOn-_HL3Hv-T48QGINdFf7IwQmen_MdmPPsRsEMkhc2uzlgrAdbu9AHoZZLnOs45FRPwI4xoFXBsaQOdT0HJQwqzMnimEZbx_hHKBhqzgGXQxUcg5y8qJ9TiP_gX2K5WzfCqeCvA0rsd2cjIf40WvmFtMANvVQMEh3isbl3JcjjWD7QGAFShscDomuLi65l9UcapnHwsgMgW8hwZ7RTantci6C_uhNTOYBGLiXFTYuwH9lXQ0GNctQBaPMaJvaK6LqArDdiIOImBEizXJ3to1cRMei1AGndcMT6CiV1qEO)
+- **Go Deep in Theory**
+  - [GPS Basics](https://learn.sparkfun.com/tutorials/gps-basics/all)
+  - [The Battery evolution](https://batteryuniversity.com/learn/article/bu_002_introduction?__cf_chl_jschl_tk__=325d822606f3484bc6647f799e9103fe61bcff2a-1608871331-0-Ac_smOk31ZI5uA8HJ-LfKY4PlJxaIF6nSAZWQWhuVR9b7XbRZgFcr0FMa0VZUtL2m2zOn-_HL3Hv-T48QGINdFf7IwQmen_MdmPPsRsEMkhc2uzlgrAdbu9AHoZZLnOs45FRPwI4xoFXBsaQOdT0HJQwqzMnimEZbx_hHKBhqzgGXQxUcg5y8qJ9TiP_gX2K5WzfCqeCvA0rsd2cjIf40WvmFtMANvVQMEh3isbl3JcjjWD7QGAFShscDomuLi65l9UcapnHwsgMgW8hwZ7RTantci6C_uhNTOYBGLiXFTYuwH9lXQ0GNctQBaPMaJvaK6LqArDdiIOImBEizXJ3to1cRMei1AGndcMT6CiV1qEO)
   - [Telnet](https://www.ionos.com/digitalguide/server/tools/telnet-the-system-wide-remote-protocol/)
-- **Vídeos Citados (*faça por responsabilidade própria*)**
-  - [Resolvendo o problema de carregamento da bateria](https://www.youtube.com/watch?v=dfUOAMwQCKM)
-  - [Calibração Correta](https://youtu.be/V5-YMYb0MsI)
+- **Cited Videos (*do at your own risk*)**
+  - [Solving Battery not Charging](https://www.youtube.com/watch?v=dfUOAMwQCKM)
+  - [Correct Calibration](https://youtu.be/V5-YMYb0MsI)
 

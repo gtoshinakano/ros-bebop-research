@@ -260,7 +260,7 @@ Procurei escrever este guia para que qualquer pessoa leiga em tecnologia pudesse
 
 Embora o Bebop não seja um veículo perfeito para reproduzir o projeto de criação de serviço de delivery, ele possui as características principais necessárias para esta finalidade.
 
-Portanto é um ótimo drone para você realizar imagens aéreas, controlá-lo por GPS e se aprofundar no mundo dos drones.
+Mas é um ótimo drone para você realizar imagens aéreas, controlá-lo por GPS e se aprofundar no mundo dos drones.
 
 Resumindo as dicas que dei aqui em forma de lista:
 
