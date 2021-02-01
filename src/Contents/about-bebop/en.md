@@ -118,61 +118,61 @@ Now three other important aspects for you to have more knowledge about Bebop.
 
 ## Battery, Performance and the Charger
 
-Tempos atrás, quando jamais eu havia tocado em um drone antes, acreditava que os drones seriam o futuro de tudo.
+Before the research, when I had never touched a drone before, I believed that drones would be the future of everything.
 
-Acreditei que seríamos capazes de mapear enormes fazendas para analisar produções agrícolas, fazer entregas automáticas de longas distâncias ou até perseguir bandidos sem correr o risco de ferir os nossos policiais...
+I believed that we would be able to map huge farms to analyze agricultural production, make automatic deliveries over long distances or even chase bandits without running the risk of injuring our policemen...
 
-Mas nunca tinha pensado que essas idéias seriam tão dificultadas por causa de um simples e crucial fator. A **tecnologia das baterias**.
+But I had never thought that these ideas would be so difficult because of a simple and crucial factor. The **battery technology**.
 
-Certa vez eu li na internet um dado interessante que comparava as evoluções nas tecnologias das baterias e dos processadores. 
+I once read an interesting piece of information on the internet that compared the evolution of battery and processor technologies.
 
-O artigo dizia que as baterias evoluiam tecnologicamente em progressão aritmética, ao passo que, os processadores evoluíam em progressão geométrica.
+The article said that batteries evolved technologically in arithmetic progression, whereas processors evolved in geometric progression.
 
-![Battery Evolution from Battery University](/static/images/battery-improvements.png '{"style":{"maxWidth" :"100%"},"description":"Melhoramentos das baterias e de outras tecnologias- fonte: batteryuniversity.com"}')
+![Battery Evolution from Battery University](/static/images/battery-improvements.png '{"style":{"maxWidth" :"100%"},"description":"Improvement on Batteries over other technologies- Source: batteryuniversity.com"}')
 
-Isso quer dizer, por exemplo, que enquanto novos processadores são desenvolvidos rapidamente, baterias melhores e com mais capacidade não seguem o mesmo ritmo de desenvolvimento, embora o esforço de ambas as indústrias seja o mesmo.
+This means, for example, that while new processors are developed quickly, better and more capable batteries do not follow the same pace of development, although the effort of both industries is the same.
 
-Podemos dizer, então, que um grande desafio da tecnologia de drones - da qual demanda de certa quantidade de energia - é a atual capacidade das baterias e a sua dificuldade de evolução.
+We can say, then, that a major challenge of drone technology - which requires a certain amount of energy - is the current capacity of the batteries and its evolution pace.
 
-É claro que drones mais modernos e mais caros possuem baterias com capacidades para percorrer maiores distâncias e aguentar maiores pesos.
+It is clear that more modern and expensive drones have batteries with the capacity to travel great distances and carry more weight.
 
-No entanto, as baterias do Bebop e de drones da mesma categoria não aguentam muito mais que o seu próprio peso e 11 minutos de tempo de vôo.
+However, batteries from Bebop and drones of the same category can't take much more than their own weight and 11 minutes of flight time.
 
-Isso impossibilita a sua utilização a nível ideal neste projeto, porém é o suficiente para realizarmos o nosso experimento e aprendermos com ele.
+This makes it impossible to use it optimally in this project, but it is enough to carry out our experiment and learn from it.
 
-### Solução no carregamento das baterias do Bebop
+### Solving Bebop battery not charging issue
 
-![Bateria não carregando](/static/images/battery-not-charging.gif '{"style":{"float" :"left"},"description":"Se o LED piscar no carregador após alguns segundos, a bateria não estará carregando"}')
+![Bebop battery is not charging](/static/images/battery-not-charging.gif '{"style":{"float" :"left"},"description":"If the LED blinks in the charger after few seconds, the battery is NOT charging"}')
 
-Quando eu tirei o Bebop da caixa, não consegui carregar as baterias. De 8 a 10 segundos após colocar o carregador na tomada, seu LED vermelho apenas piscava continuamente.
+When I unboxed Bebop, I couldn't charge the batteries. From 8 to 10 seconds after plugging the charger in, the red LED had just blinked continuously.
 
-Solicitei outro carregador ao professor mas, mesmo assim, no novo carregador acontecia o mesmo.
+I asked the professor for another charger but the same happened to the new charger.
 
-Pesquisei por um bom tempo na internet e a resposta veio por meio deste vídeo do [Youtube](https://www.youtube.com/watch?v=dfUOAMwQCKM).
+I searched on the internet for a few days and the answer came through this [Youtube](https://www.youtube.com/watch?v=dfUOAMwQCKM) video.
 
-Entendi que, com o tempo sem utilização, as baterias descarregam gradativamente e atingem a um nível de carga onde o carregador não as reconhece quando conectadas a ele.
+I noticed that, with time without use, the batteries gradually discharge and reach a level of charge where the charger does not recognize them when connected to it.
 
-Aparentemente é um gatilho de segurança presente nesses carregadores para detectar baterias impossibilitadas de funcionar ou com defeitos.
+Apparently, it is a safety mechanism present in these chargers to detect batteries that are unable to function or have some kind of defect.
 
-A solução, como demonstrada no vídeo, é enviar uma carga elétrica de outra fonte elétrica para a bateria por alguns segundos e, rapidamente, colocá-la no carregador de fábrica.
+The solution, as shown in the video, is to send an electrical charge from another electrical source to the battery for a a minute and quickly place it in the factory charger.
 
-Relatei ao meu professor sobre o problema e ele providenciou uma fonte de alimentação reguladora e um multímetro.
+I reported to professor about the problem and he provided a regulating power supply and a multimeter.
 
-Fizemos de forma parecida com o vídeo e funcionou!
+We did it similarly to the video and it worked!
 
-![Bateria carregando](/static/images/battery-charging.gif '{"style":{"float" :"right"},"description":"O LED contínuo após alguns segundos significa que a bateria está carregando!"}')
+![Battery is charging](/static/images/battery-charging.gif '{"style":{"float" :"right"},"description":"The continuous LED light means that the battery is charging"}')
 
-Depois de algumas tentativas fazendo exatamente como no vídeo, o LED vermelho parou de piscar, indicando que o carregador reconheceu a bateria e a estava carregando.
+After a few attempts doing exactly as in the video, the red LED stopped flashing, indicating that the charger recognized the battery and was charging it.
 
-Portanto se você está com problemas em carregar a bateria de seu Bebop, este procedimento pode ser uma solução. 
+So if you are having trouble charging your Bebop battery, this procedure may be a solution.
 
-Mas tenha o máximo de cuidado com os riscos de choque elétrico e de incêndio que isto pode causar.
+But be extremely careful with the risks of electric shock and fire that this can cause. Remember, you are the only responsible for any trouble caused by your actions.
 
-Com as baterias carregadas, podemos dar continuidade ao projeto.
+With charged batteries, we can proceed to our project.
 
 ---
 
-## Rede Wi-Fi
+## Wi-Fi Network
 
 O Bebop se conecta com o seu controlador por meio de sua rede Wi-Fi. 
 
