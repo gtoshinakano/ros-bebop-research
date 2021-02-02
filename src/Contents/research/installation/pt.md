@@ -140,11 +140,16 @@ O ```bebop_autonomy``` é um *package* desenvolvido pela comunidade do ROS com b
 Ele é um ```package``` de softwares que inicia os ```nodes``` necessários para o controle de drones Bebop, possui suas dependências e iremos instalá-las agora com o comando:
 
 ```
+$ sudo rosdep init
 $ rosdep update
-$ rosdep install ---from-paths src -i
+$ rosdep install --from-paths src -i --rosdistro kinetic
 ```
 
-Este primeiro comando irá atualizar o ```rosdep``` com as dependências que ele ainda não tenha configurado. O segundo irá instalar todas as dependências a partir da pasta ```src``` de seu workspace.
+Você só precisará executar o ```sudo rosdep init``` caso ainda não o tenha feito antes.
+
+O segundo comando irá atualizar o ```rosdep``` com as dependências que ele ainda não tenha configurado. 
+
+O terceiro irá instalar todas as dependências a partir da pasta ```src``` de seu workspace considerando a distribuição Kinetic do ROS.
 
 Caso esses comandos retornem algum erro, um dos motivos pode ser que o seu terminal não esteja com as variáveis do ROS configuradas. No tutoral sobre ROS explico como fazer para configurá-las corretamente com ```source```.
 
@@ -156,7 +161,7 @@ $ catkin build
 
 Se tudo funcionar corretamente, você verá que a instalação de todos os packages foram concluídos sem erros. Caso o comando retorne erros, provavelmente os comandos ```rosdep update``` e ```rosdep install``` não ocorreram de forma correta.
 
-Você pode confirmar a instalação do package com o comando ```rospack list```. Você verá o package ```bebop_driver``` listado no resultado.
+Você pode confirmar a instalação do package após o ```source``` no novo arquivo de configuração e, em seguida, com o comando ```rospack list```. Você verá o package ```bebop_driver``` listado no resultado.
 
 ---
 
