@@ -206,19 +206,44 @@ Os valores possíveis para linear x, y, z e angular z são entre -1 e 1. Você p
 $ rostopic pub --once /bebop/cmd_vel geometry_msgs/Twist '[1.0, 0.0, 0.0]' '[1.0]'
 ```
 
+Este comando publicará a mensagem com os valores ```[linear.x 1.0; linear.y 0.0, linear.z 0.0] e [angular.z 1.0]'``` formatados como vetores em YAML para movimentar o Bebop. 
 
+Como não é nada prático digitar este comando toda vez que for enviar um comando para pilotar o Bebop, existe um ótimo package que fará o trabalho duro para você. O [teleop_tools](http://wiki.ros.org/teleop_tools) publica as mensagens apenas com as direcionais do teclado. 
+
+Vamos à instalação:
+
+```
+$ cd ~/bebop_ws/src
+$ git clone https://github.com/ros-teleop/teleop_tools.git
+```
+
+Após clonar o repositório (TESTE)
+
+Para iniciar o ```key_teleop```, utilize o seguinte comando:
+
+```
+$ rosrun key_teleop key_teleop.py
+```
+
+Este package fornece um node em Python que implementa um simples controle através do teclado. É um package muito útil para movimentar robôs quando não se tem um *joystick* por perto. 
+
+Com ele só é possível enviar comandos linear.x e angular.z, mas será o suficiente para controlar o nosso drone. Com o Bebop flutuando, você pode testar pressionando as direcionais do teclado.
+
+Agora que você pode controlar o Bebop através do teclado, vamos para a próxima etapa, que é [ler os dados do Bebop](/posts/research/reading-from-bebop)!
 
 ---
 
 ## Conclusão
 
-Você aprendeu aqui como instalar o ROS Kinetic no Ubuntu e o bebop_autonomy driver através de comandos de terminal. 
+Aqui iniciamos o nosso ambiente do ROS e iniciamos o Bebop Autonomy com o Bebop conectado ao PC.
 
-Em seguida criamos o nosso workspace, instalamos suas dependências e executamos o código para iniciá-lo na sua instânca do ROS.
+Vimos que o Bebop Driver do Bebop Autonomy registra os topics para interagir com os recursos do drone e expliquei como fazer para ver o tipo da mensagem que deve ser publicada no topic.
 
-A partir disso você será capaz de enviar comandos ao Bebop, ler seus dados e escrever seus próprios packages de códigos para utilizar o drone da forma como quiser.
+Em seguida, decolamos e aterrissamos o drone com o comando ```rostopic pub``` nos respectivos topics.
 
-No próximo passo mostrarei como de fato enviar comandos ao drone e como controlar a sua posição. clique aqui para [prosseguir](/posts/research/controlling-bebop)!
+E, por fim, instalamos o ```teleop_tools``` para nos ajudar a controlar o drone com maior facilidade utilizando as setas direcionais do teclado.
+
+No próximo passo mostrarei como ler os dados das mensagens publicadas nos topics. Clique aqui para [continuar](/posts/research/reading-from-bebop)!
 
 Um forte abraço
 
@@ -229,11 +254,10 @@ Gabriel Toshinori Nakano
 #### **Referências**
 
 - **Materiais Citados**
-  - [Ubuntu 16.04](https://releases.ubuntu.com/16.04/)
-  - [Free Flight PRO (iOS ou Android)](https://play.google.com/store/apps/details?id=com.parrot.freeflight3)
-  - [Bebop_autonomy driver](https://bebop-autonomy.readthedocs.io/)
-  - [Repositório público do bebop_autonomy](https://github.com/AutonomyLab/bebop_autonomy)
-  - [ARDroneSDK3](https://developer.parrot.com/docs/SDK3/)
+  - [Bebop_autonomy](https://bebop-autonomy.readthedocs.io/)
+  - [Enviando comandos com Bebop_autonomy](https://bebop-autonomy.readthedocs.io/en/latest/piloting.html)
+  - [Guia de YAML](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+  - [Teleop_tools](http://wiki.ros.org/teleop_tools)
 
 
 
