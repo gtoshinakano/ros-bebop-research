@@ -11,7 +11,7 @@ links:
     link: /posts/research/installation
     title: Instalação e primeiros comandos no ROS
 ---
-## 『What is your motivation to study at a University in Japan?』
+## 『What is your motivation to study at an University in Japan?』
 
 This was one of the questions I had to answer on the application form for my scholarship to Japan. In a space of about 30 lines I had to write, in Japanese, the reason for applying for that opportunity.
 
