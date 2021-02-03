@@ -181,6 +181,32 @@ $ rostopic pub [--once] [topic name] [msg type] [msg value]
 
 Você verá que alguns tipos de messages possuem formas complexas como matrizes ou objetos complexos de chave e valor. Para estes casos, o valor da mensagem deve estar escrito no formato [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/).
 
+### Controlando o Bebop
+
+Como pode observar na lista de topics disponíveis com ```rostopic list``` existe um topic parecido com o topic responsável por [movimentar a tartaruga](/posts/about-ros/ros-with-turtle-bot) em nosso simulador.
+
+O topic ```/bebop/cmd_vel``` é responsável por controlar a forma como o Bebop se move enquanto estiver flutuando. Pilotar o drone significa publicar mensagens neste tópico.
+
+Veja o tipo de mensagem para este topic:
+
+```py
+linear.x  (+)      Translate forward
+          (-)      Translate backward
+linear.y  (+)      Translate to left
+          (-)      Translate to right
+linear.z  (+)      Ascend
+          (-)      Descend
+angular.z (+)      Rotate counter clockwise
+          (-)      Rotate clockwise
+```
+
+Os valores possíveis para linear x, y, z e angular z são entre -1 e 1. Você pode saber com mais detalhes [nesta página](https://bebop-autonomy.readthedocs.io/en/latest/piloting.html#piloting), mas veja um exemplo de publicação:
+
+```
+$ rostopic pub --once /bebop/cmd_vel geometry_msgs/Twist '[1.0, 0.0, 0.0]' '[1.0]'
+```
+
+
 
 ---
 
