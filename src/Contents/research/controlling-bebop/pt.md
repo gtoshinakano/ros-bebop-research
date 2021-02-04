@@ -44,7 +44,7 @@ $ roscore
 $ roslaunch bebop_driver bebop_node.launch
 ```
 
-Lembre-se de que o terminal precisa estar com as variáveis de ambiente configuradas - ```source ~/bebop_ws/devel/setup.bash``` - para que os comandos funcionem.
+Lembre-se de que o terminal precisará estar com as variáveis de ambiente configuradas - ```source ~/bebop_ws/devel/setup.bash``` - para que os comandos funcionem.
 
 ### Verificando os ```topics``` e seus tipos de ```message```
 
@@ -210,14 +210,28 @@ Este comando publicará a mensagem com os valores ```[linear.x 1.0; linear.y 0.0
 
 Como não é nada prático digitar este comando toda vez que for enviar um comando para pilotar o Bebop, existe um ótimo package que fará o trabalho duro para você. O [teleop_tools](http://wiki.ros.org/teleop_tools) publica as mensagens apenas com as direcionais do teclado. 
 
-Vamos à instalação:
+Vamos à sua instalação:
 
 ```
 $ cd ~/bebop_ws/src
 $ git clone https://github.com/ros-teleop/teleop_tools.git
 ```
 
-Após clonar o repositório (TESTE)
+Após clonar o repositório temos que re-compilar o nosso workspace com o novo package adicionado:
+
+```py
+# Volte para a pasta ~/bebop_ws no terminal
+$ cd ..
+$ catkin build
+```
+
+Como o nosso workspace atualizou seus recursos, temos que configurar as variáveis de ambiente novamente:
+
+```
+$ source ~/bebop_ws/devel/setup.bash
+```
+
+Para ter a certeza de que os novos recursos foram instalados corretamente, você pode procurar por ```key_teleop``` ou ```joy_teleop``` no comando ```rospack list```.
 
 Para iniciar o ```key_teleop```, utilize o seguinte comando:
 
