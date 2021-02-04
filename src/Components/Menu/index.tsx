@@ -47,10 +47,10 @@ const Comp: React.FunctionComponent<
 			<Item value="/posts/research/controlling-bebop" onClick={goTo} action active={asPath==="/posts/research/controlling-bebop"} disabled={asPath==="/posts/research/controlling-bebop"}>
 				{t("controlling")}
 				</Item>	
-			{/*<Item value="/posts/research/reading-from-bebop" onClick={goTo} action active={asPath==="/posts/research/reading-from-bebop"} disabled={asPath==="/posts/research/reading-from-bebop"}>
+			<Item value="/posts/research/reading-from-bebop" onClick={goTo} action active={asPath==="/posts/research/reading-from-bebop"} disabled={asPath==="/posts/research/reading-from-bebop"}>
 				{t("reading")}
 			</Item>
-			<Item value="/posts/research/bebop-gps" onClick={goTo} action active={asPath==="/posts/research/bebop-gps"} disabled={asPath==="/posts/research/bebop-gps"}>
+			{/*<Item value="/posts/research/bebop-gps" onClick={goTo} action active={asPath==="/posts/research/bebop-gps"} disabled={asPath==="/posts/research/bebop-gps"}>
 				{t("bebop-gps")}
 			</Item>	
 			<Item header={1}>{t("try-node")}</Item>	
